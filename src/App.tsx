@@ -1,25 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import Nav from './components/Nav'
+import Header from './components/Header'
+import Main from './components/Main'
+
+import GlobalStyles from './components/styles/Global.styled';
+
+
 
 function App() {
+  const [cartOpen, setCartOpen] = useState(false)
+  const openCart: any = () => {
+    console.log('openCart')
+    setCartOpen(prevValue => !prevValue)
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <GlobalStyles />
+      <Nav openCart={openCart}/>
+      <Header cartOpen={cartOpen}/>
+      <Main/>
+    </>
   );
 }
 
