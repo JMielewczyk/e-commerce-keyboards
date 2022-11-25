@@ -19,9 +19,9 @@ function App() {
         <GlobalStyles />
         <Nav cartOpen={cartOpen} openCart={openCart}/>
         <Routes>
-         <Route path='home' element={<Main/>} ></Route>
-         <Route path='home/product/shoes/:shoeName' element={<ShoesElement cartOpen={cartOpen} />}></Route>
-         <Route path='*' element={<Navigate to="home" replace/>}></Route>
+         <Route path='/home' element={<Main/>} ></Route>
+         <Route path='/home/product/shoes/:shoeName' element={<ShoesElement cartOpen={cartOpen} />}></Route>
+         <Route path='*' element={<Navigate to="/home" replace/>}></Route>
       </Routes>
     </Router>
   );

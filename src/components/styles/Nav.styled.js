@@ -9,9 +9,6 @@ width: 100vw;
 height: 60px;
 padding: 0 20px;
 padding: 0 20px;
-
-
-
 .menu-background {
         position: fixed;
         top: 0;
