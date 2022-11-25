@@ -10,11 +10,7 @@ import previous from '../images/icons/icon-previous.svg'
 
 import { StyledHeader } from './styles/Header.styled.js'
 
-interface Props {
-  cartOpen: boolean;
-}
-
-const Header = ({cartOpen}: Props) => {
+const Header = () => {
     const [imageIndex, setImageIndex] = useState(0)
     const images = [image1, image2, image3, image4]
 
@@ -30,20 +26,6 @@ const Header = ({cartOpen}: Props) => {
        } 
        setImageIndex(prevValue => prevValue -1)
     }
-
-    const handleCartOrder = () => {
-        const order = false;
-        if(order) {
-            return (
-                <p>Some product</p>
-            )
-        } else {
-            return (
-                <p>Your cart is empty</p> 
-            )
-        }
-    }
-
     return (
         <StyledHeader>
             <div className='image-wrapper'>
@@ -51,14 +33,6 @@ const Header = ({cartOpen}: Props) => {
             </div>
             <div onClick={handleSliderNext} className='button-container-next' ><img className='button-next' src={next} alt="" /></div>
             <div onClick={handleSliderPrevious} className='button-container-previous' ><img className='button-previous' src={previous} alt="" /></div>
-            <div className={cartOpen ? "cart-container active" : "cart-container"}>
-                <div className="cart-header">
-                    <p className='cart-name'>Cart</p>
-                </div>
-                <div className='cart-order'>
-                    {handleCartOrder()}
-                </div>
-            </div>
         </StyledHeader>
     )
 }
