@@ -1,22 +1,29 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import {Link} from 'react-router-dom'
 
 import {keyboards} from '../../../data/keyboards'
 
 const FeaturedProduct = () => {
+    const [productIndex, setProductIndex] = useState(0)
 
-    const mapAllProducts = keyboards.map(item => (
-    <Link to={`/home/product/keyboards/${item.name}`}>
-        <div className='featured-product'>
-            <img src={item.images[0]} alt={`${item.name}`}/>
-            <p className='keyboard-model'>{item.name}</p>
-            <p className='price'>{item.price}</p>
-        </div>
-    </Link>
-    ))
+    useEffect(() => {
+       const interval = setInterval(() => {
+            if(productIndex === keyboards.length - 1) return setProductIndex(0)
+            setProductIndex(prevValue => prevValue + 1)
+        }, 2000)
+        return () => clearInterval(interval)
+    },[productIndex])
 
     return (
-       {mapAllProducts}
+        <>
+         <Link className={'featured-product-container'} key={keyboards[productIndex].name} to={`/home/product/keyboards/${keyboards[productIndex].name}`}>
+            <div className='featured-product'>
+                <img src={process.env.PUBLIC_URL + keyboards[productIndex].imageTemplate} alt={`${keyboards[productIndex].name}`}/>
+                <p className='keyboard-model'>{keyboards[productIndex].name}</p>
+                <p className='price'>{keyboards[productIndex].currency + keyboards[productIndex].price}</p>
+            </div>
+        </Link> 
+        </>
     )
 }
 

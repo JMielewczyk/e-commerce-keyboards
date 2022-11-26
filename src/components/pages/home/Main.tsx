@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
-
 import { Link } from 'react-router-dom';
+
+import FeaturedProduct from './FeaturedProduct'
 
 import { StyledMain } from '../../styles/Main.styled'
 import { StyledMainHeader } from '../../styles/MainHeader.styled'
@@ -33,13 +34,11 @@ const Main = () => {
                 <button onClick={handleStarted} className='btnGetStarted'>Enter<p className='enter-symbol'>⮐</p></button>
             </div>
             <StyledMainHeader>
-                <h3 className='featued-text'>Featured keyboards</h3>
+                <div className='featured-text-container' >
+                <h3 className='featured-text'>Featured keyboards</h3>
                 <p className='featured-text2'>Picked by many</p>
-                <div className='featured-product'>
-                    <img src="" alt=""/>
-                    <p className='keyboard-model'>Quienix70</p>
-                    <p className='price'>$100</p>
                 </div>
+                <FeaturedProduct/>
             </StyledMainHeader>
             {keyboardsList}
         </StyledMain>

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
-export const StyledHeader = styled.header`
-width: 100vw;
+export const StyledProductHeader = styled.header`
+width: 100%;
 height: 30vh;
 overflow: hidden;
 position: relative;
@@ -9,6 +9,7 @@ position: relative;
     display: flex;
     width: 100%;
     height: 100%;
+    border-radius: 20px;
         .product-image {
             width: 100%;
             height: 100%;
@@ -31,9 +32,18 @@ position: relative;
         transform: translateY(-50%);
         background-color: white;
         border-radius: 100%;
+        opacity: 0.8;
+        cursor: pointer;
+        transition: .1s;
         .button-next, .button-previous {
             width: 40%;
-            height: 40%;
-    }
+            height: 40%; 
+    } 
 }
+.button-container-next:active {
+        transform: translate(20%, -50%)
+    }
+.button-container-previous:active {
+        transform: translate(-20%, -50%)
+    }
 `

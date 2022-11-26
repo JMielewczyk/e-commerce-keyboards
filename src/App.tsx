@@ -11,7 +11,6 @@ function App() {
   const [cartOpen, setCartOpen] = useState(false)
 
   const openCart: any = () => {
-    console.log('openCart')
     setCartOpen(prevValue => !prevValue)
   }
   return (

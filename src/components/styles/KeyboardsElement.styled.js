@@ -4,10 +4,11 @@ import styled from 'styled-components'
 export const StyledKeyboardsElement = styled.main`
 display: flex;
 flex-direction: column;
-gap: 25px;
+justify-content: space-around;
+/* gap: 25px; */
 width: 100vw;
-height: 70vh;
-padding: 20px;
+min-height: calc(100vh - 60px); // 60px is the Nav height
+padding: 10px;
 .company-name {
     color: hsl(26, 100%, 55%);
     letter-spacing: 1px;
@@ -51,9 +52,10 @@ padding: 20px;
     justify-content: space-between;
     align-items: center;
     border-radius: 8px;
-    background-color: hsl(223, 64%, 98%);
+    background-color: hsl(223, 64%, 96%);
     height: 50px;
     padding: 25px;
+    overflow-y: hidden;
     .amount {
         font-weight: 700;
     }
