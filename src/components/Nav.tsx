@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {NavLink} from 'react-router-dom'
+import {NavLink, Link} from 'react-router-dom'
 
 import { StyledNav } from './styles/Nav.styled'
 
@@ -48,7 +48,7 @@ const Nav = ({ openCart, cartOpen }: Props) => {
             </div>
             <div className='container'>
                 <img onClick={handleMenuOpen} className='hamburger-image' src={Menu} alt="" />
-                <h2>keyboards</h2>
+                <Link className="logo-text" to="/home">keyboards</Link>
             </div>
             <div className='container'>
                 <img onClick={openCart} className='cart-image' src={Cart} alt="" />

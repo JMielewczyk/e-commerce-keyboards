@@ -11,10 +11,9 @@ border: 1px solid black;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-image: url(/img/startBackground.jpg);
-    /* background-repeat: no-repeat; */ 
-    background-position: center;
-    filter: blur(3px);
+    background-image: url(/img/start-background-light.jpg);
+    background-repeat: no-repeat; 
+    background-size: 100vh;
     z-index: 2;
     transition: .3s;
     &.active {
@@ -32,11 +31,10 @@ border: 1px solid black;
     &.active {
         transform: translateX(100vw);
     }
-    .startLogo {
+    .company-name {
         position: absolute;
-        top: 5vh;
-        left: 5vw;
-        filter: brightness(100);
+        top: 15px;
+        left: 15px;
     }
     .startText {
         position: absolute;

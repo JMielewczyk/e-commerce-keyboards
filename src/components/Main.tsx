@@ -10,7 +10,7 @@ const Main = () => {
     const [started, setStarted] = useState(false)
 
     const keyboardsList = keyboards.map(item =>(
-    <Link key={item.name} to={`product/shoes/${item.name}`}>
+    <Link key={item.name} to={`product/keyboards/${item.name}`}>
     <div className="product">
         <p className="shoeTitle">{item.name}</p>
     </div>

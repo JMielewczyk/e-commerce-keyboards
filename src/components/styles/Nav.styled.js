@@ -54,14 +54,18 @@ padding: 0 20px;
     .hamburger-image{
         width: 25px;
         height: 20px;
+        cursor: pointer;
     }
      .cart-image, .avatar-image {
         width: 30px;
         height: 30px;
+        cursor: pointer;
     }
-    .logo-image {
-        margin-bottom: 5px;
-        height: 25px;
+    .logo-text {
+        font-size: 24px;
+        text-decoration: none;
+        color: black;
+        cursor: pointer;
     }
 }
 
