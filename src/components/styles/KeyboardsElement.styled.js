@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 
-export const StyledShoesElement = styled.main`
+export const StyledKeyboardsElement = styled.main`
 display: flex;
 flex-direction: column;
 gap: 25px;
@@ -14,10 +14,10 @@ padding: 20px;
     font-weight: 700;
     text-transform: uppercase;
 }
-.shoe-title {
+.keyboard-title {
     font-size: 32px;
 }
-.shoe-description {
+.keyboard-description {
     color: hsl(219, 9%, 45%);
 }
 .price-container {

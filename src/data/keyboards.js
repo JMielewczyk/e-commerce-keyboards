@@ -1,5 +1,5 @@
 
-export const sneakers = [{
+export const keyboards = [{
         name: 'fall-limited-edition',
         discount: true,
         discountValue: 50,

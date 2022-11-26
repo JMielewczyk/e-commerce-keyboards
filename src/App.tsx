@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate} from 'react-router-do
 
 import Nav from './components/Nav'
 import Main from './components/Main'
-import ShoesElement from './components/ShoesElement';
+import ShoesElement from './components/KeyboardsElement';
 
 import GlobalStyles from './components/styles/Global.styled';
 
@@ -20,7 +20,7 @@ function App() {
         <Nav cartOpen={cartOpen} openCart={openCart}/>
         <Routes>
          <Route path='/home' element={<Main/>} ></Route>
-         <Route path='/home/product/shoes/:shoeName' element={<ShoesElement cartOpen={cartOpen} />}></Route>
+         <Route path='/home/product/shoes/:keyboardName' element={<ShoesElement cartOpen={cartOpen} />}></Route>
          <Route path='*' element={<Navigate to="/home" replace/>}></Route>
       </Routes>
     </Router>

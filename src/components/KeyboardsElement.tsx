@@ -7,23 +7,22 @@ import minus from '../images/icons/icon-minus.svg'
 import plus from '../images/icons/icon-plus.svg'
 import cart from '../images/icons/icon-cart.svg'
 
-import { StyledShoesElement } from './styles/ShoesElement.styled'
+import {StyledKeyboardsElement} from './styles/KeyboardsElement.styled'
 
-import { sneakers } from '../data/sneakers'
+import { keyboards } from '../data/keyboards'
 
 interface Props {
     cartOpen: boolean
 }
 
 const ShoesElement = ({cartOpen}:Props) => {
-    const {shoeName} = useParams();
-    console.log(shoeName)
+    const {keyboardName} = useParams();
+    
     const [orderAmount, setOrderAmount] = useState(0)
     
     const handlePrice = () => {
-        sneakers.forEach(item => {
-        if(item.name === shoeName) {
-            console.log('działa')
+        keyboards.forEach(item => {
+        if(item.name === keyboardName) {
             const actualPrice = () => {
             const price = item.price * (item.discountValue / 100)
             return price.toFixed(2)
@@ -60,11 +59,11 @@ const ShoesElement = ({cartOpen}:Props) => {
     }
     
     return (
-    <StyledShoesElement>      
+    <StyledKeyboardsElement>      
      <Header/>
-        <p className='company-name'>sneaker company</p>
-            <h2 className='shoe-title'>Fall Limited Edition Sneakers</h2>
-            <p className='shoe-description'>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.</p>
+        <p className='company-name'>keyboards</p>
+            <h2 className='keyboard-title'>Fall Limited Edition Keyboards</h2>
+            <p className='keyboard-description'>These low-profile keyboard are your perfect fast clickers. Featuring a durable rubber outer, they'll withstand bilions of clicks & drops from table (not tested). </p>
             {handlePrice()}
             <div className='amount-container' >
                 <img onClick={() => handleAmount('minus')} src={minus} alt="" />
@@ -72,7 +71,7 @@ const ShoesElement = ({cartOpen}:Props) => {
                 <img onClick={() => handleAmount('plus')} src={plus} alt="" />
             </div>
             <button className="addToCartBtn"><img src={cart} alt="" />Add to cart</button>
-    </StyledShoesElement>
+    </StyledKeyboardsElement>
     )
 }
 

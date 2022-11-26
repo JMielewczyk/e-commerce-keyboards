@@ -4,7 +4,6 @@ import {NavLink} from 'react-router-dom'
 import { StyledNav } from './styles/Nav.styled'
 
 import Menu from '../images/icons/icon-menu.svg'
-import Logo from '../images/icons/logo.svg'
 import Cart from '../images/icons/icon-cart.svg'
 import Avatar from '../images/avatars/image-avatar.png'
 import Cross from '../images/icons/icon-close.svg'
@@ -49,7 +48,7 @@ const Nav = ({ openCart, cartOpen }: Props) => {
             </div>
             <div className='container'>
                 <img onClick={handleMenuOpen} className='hamburger-image' src={Menu} alt="" />
-                <img className='logo-image' src={Logo} alt="" />
+                <h2>keyboards</h2>
             </div>
             <div className='container'>
                 <img onClick={openCart} className='cart-image' src={Cart} alt="" />

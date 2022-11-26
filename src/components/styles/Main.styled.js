@@ -12,6 +12,7 @@ border: 1px solid black;
     width: 100vw;
     height: 100vh;
     background-image: url(/img/startBackground.jpg);
+    /* background-repeat: no-repeat; */ 
     background-position: center;
     filter: blur(3px);
     z-index: 2;
@@ -49,19 +50,43 @@ border: 1px solid black;
         
     }
     .btnGetStarted {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         position: absolute;
         bottom: 15vh;
         left: 50vw;
         transform: translateX(-50%);
-        width: 50vw;
+        width: 150px;
         height: 60px;
         min-width: 120px;
-        background-color: hsl(26, 100%, 55%);
+        background-color: #E0E0D1;
+        color: grey;
         border: none;
         border-radius: 10px;
         font-size: 16px;
         font-weight: 700;
+        border-right: 5px solid #BDBDAF;
+        border-bottom: 5px solid #CCCCBE;
+        border-left: 5px solid #ADADA1;
+        border-top: 5px solid #ADADA1;
+        box-shadow: 0 0 7px black;
+        transition: .1s;
+        .enter-symbol {
+            font-size: 22px;
+            position: absolute;
+            top: 56%;
+            left: 65%;
+            transform: translateY(-50%);
+        }
     }
+    .btnGetStarted:active {
+        transform: translateX(-50%) scale(0.95);
+        box-shadow: 0 0 7px 1px black;
+        .enter-symbol {
+            transform: translateY(-49.6%);
+        }
+        }
 }
 .product {
     width: 100vw;
