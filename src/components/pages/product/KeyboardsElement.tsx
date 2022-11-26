@@ -1,21 +1,21 @@
 import React , { useState } from 'react'
 import { useParams } from 'react-router-dom'
 
-import Header from './Header'
+import ProductHeader from './ProductHeader'
 
-import minus from '../images/icons/icon-minus.svg'
-import plus from '../images/icons/icon-plus.svg'
-import cart from '../images/icons/icon-cart.svg'
+import minus from '../../../images/icons/icon-minus.svg'
+import plus from '../../../images/icons/icon-plus.svg'
+import cart from '../../../images/icons/icon-cart.svg'
 
-import {StyledKeyboardsElement} from './styles/KeyboardsElement.styled'
+import {StyledKeyboardsElement} from '../../styles/KeyboardsElement.styled'
 
-import { keyboards } from '../data/keyboards'
+import { keyboards } from '../../../data/keyboards'
 
 interface Props {
     cartOpen: boolean
 }
 
-const ShoesElement = ({cartOpen}:Props) => {
+const KeyboardsElement = ({cartOpen}:Props) => {
     const {keyboardName} = useParams();
     
     const [orderAmount, setOrderAmount] = useState(0)
@@ -60,7 +60,7 @@ const ShoesElement = ({cartOpen}:Props) => {
     
     return (
     <StyledKeyboardsElement>      
-     <Header/>
+     <ProductHeader/>
         <p className='company-name'>keyboards</p>
             <h2 className='keyboard-title'>Fall Limited Edition Keyboards</h2>
             <p className='keyboard-description'>These low-profile keyboard are your perfect fast clickers. Featuring a durable rubber outer, they'll withstand bilions of clicks & drops from table (not tested). </p>
@@ -75,5 +75,5 @@ const ShoesElement = ({cartOpen}:Props) => {
     )
 }
 
-export default ShoesElement;
+export default KeyboardsElement;
 

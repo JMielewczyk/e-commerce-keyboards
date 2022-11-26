@@ -63,6 +63,7 @@ padding: 0 20px;
     }
     .logo-text {
         font-size: 24px;
+        font-weight: 700;
         text-decoration: none;
         color: black;
         cursor: pointer;

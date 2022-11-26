@@ -1,33 +1,43 @@
 
 export const keyboards = [{
-        name: 'fall-limited-edition',
+        name: 'Quionix75',
         discount: true,
         discountValue: 50,
-        price: 250.00,
+        price: 110.00,
         currency: '$',
+        imageTemplate: '../images/product/k2/k2-template.jpg',
+        images: ['/image/product/k2/k2-template.jpg', '/image/product/k2/k2.jpg']
     }, {
-        name: 'winter-limited-edition',
+        name: 'Outer65',
         discount: true,
         discountValue: 50,
-        price: 350.00,
+        price: 80.00,
         currency: '$',
+        imageTemplate: '../images/product/k2/k2-template.jpg',
+        images: ['/image/product/k2/k2-template.jpg', '/image/product/k2/k2.jpg']
     }, {
-        name: 'summer-limited-edition',
+        name: 'Krox80',
         discount: true,
         discountValue: 50,
-        price: 150.00,
+        price: 110.00,
         currency: '$',
+        imageTemplate: '../images/product/k2/k2-template.jpg',
+        images: ['/image/product/k2/k2-template.jpg', '/image/product/k2/k2.jpg']
     }, {
-        name: 'special-limited-edition',
+        name: 'Logitec',
         discount: true,
         discountValue: 50,
-        price: 400.00,
+        price: 110.00,
         currency: '$',
+        imageTemplate: '../images/product/k2/k2-template.jpg',
+        images: ['/image/product/k2/k2-template.jpg', '/image/product/k2/k2.jpg']
     }, {
-        name: 'worker-limited-edition',
+        name: 'Crossx',
         discount: true,
         discountValue: 50,
-        price: 200.00,
+        price: 110.00,
         currency: '$',
+        imageTemplate: '../images/product/k2/k2-template.jpg',
+        images: ['/image/product/k2/k2-template.jpg', '/image/product/k2/k2.jpg']
     }
     ]
