@@ -1,11 +1,48 @@
 import styled from 'styled-components'
 
-export const StyledMain = styled.main`
-width: 100%;
-height: calc(100vh - 60px); // 60px - Navigation height
-border: 1px solid black;
+import keycapsImage from '../../images/products/keycaps.jpg'
+import bareboneImage from '../../images/products/barebone.jpg'
+import switchesImage from '../../images/products/switches.jpg'
+import prebuiltImage from '../../images/products/prebuilt.jpg'
 
-.product {
+export const StyledMain = styled.main`
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 20px;
+padding: 20px;
+.keycaps-container, .barebonekits-container, .switches-container, .prebuiltkeyboards-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 250px;
+    background-position: center;
+    background-size: cover;
+    text-decoration: none;
+       .text {
+        color: white;
+        font-size: 32px;
+    }
+}
+
+.keycaps-container {
+    background-image: url(${keycapsImage});
+}
+.barebonekits-container {
+    background-image: url(${bareboneImage});
+}
+.switches-container {
+    background-image: url(${switchesImage});
+}
+.prebuiltkeyboards-container {
+    background-image: url(${prebuiltImage});
+}
+
+
+.products-keyboards {
     width: 100vw;
     height: 30vh;
 }

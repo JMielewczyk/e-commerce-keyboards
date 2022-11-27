@@ -29,7 +29,7 @@ const featuredAnimation = keyframes`
         }
 `
 
-export const StyledMainHeader = styled.header`
+export const StyledHomeHeader = styled.header`
 display: flex;
 flex-direction: column;
 gap: 5%;
