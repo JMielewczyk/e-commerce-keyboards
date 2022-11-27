@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 
+import backgroundImage from '../../images/startBackground/start-background-light.jpg'
 
 export const StyledMain = styled.main`
 width: 100%;
@@ -11,7 +12,7 @@ border: 1px solid black;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-image: url(/img/start-background-light.jpg);
+    background-image: url(${backgroundImage});
     background-repeat: no-repeat; 
     background-size: 100vh;
     z-index: 2;

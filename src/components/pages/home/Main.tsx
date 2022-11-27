@@ -21,9 +21,6 @@ const Main = () => {
     const handleStarted = () => {
         setStarted(prevValue => !prevValue)
     }
-
-
-
     return (
         <StyledMain>
             <div className={started ? "startBackground active" : "startBackground"}>
@@ -34,10 +31,6 @@ const Main = () => {
                 <button onClick={handleStarted} className='btnGetStarted'>Enter<p className='enter-symbol'>⮐</p></button>
             </div>
             <StyledMainHeader>
-                <div className='featured-text-container' >
-                <h3 className='featured-text'>Featured keyboards</h3>
-                <p className='featured-text2'>Picked by many</p>
-                </div>
                 <FeaturedProduct/>
             </StyledMainHeader>
             {keyboardsList}

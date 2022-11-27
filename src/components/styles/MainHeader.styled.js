@@ -2,23 +2,29 @@ import styled, { keyframes } from 'styled-components'
 
 const featuredAnimation = keyframes`
         0% {
+            transform: translateX(-100vw);
+            opacity: 0;
+            visibility: hidden;
+        }
+        5% {
             opacity: 0;
         }
-        10% {
-            opacity: 0;
-        }
-        20% {
+        15% {
+            transform: translate(0);
             visibility: visible;
             opacity: 1;
         }
-        80% {
+        85% {
+            transform: translateX(0);
+            visibility: visible;
             opacity: 1;
         }
-        90% {
-            visibility: hidden;
+        95% {
             opacity: 0;
         }
         100% {
+            transform: translateX(100vw);
+            visibility: hidden;
             opacity: 0;
         }
 `
@@ -30,15 +36,18 @@ gap: 5%;
 align-items: center;
 width: 100vw;
 height: 45vh;
-border: 1px solid red;
-padding: 10px;
+padding: 25px;
 background-color: #E0E0D1;
+.featured-text-container {
+    width: 100%;
+}
 .featured-product-container {
     visibility: hidden;
     text-decoration: none;
-    width: 90%;
-    height: 60%;
+    width: 100%;
+    height: 70%;
     animation: ${featuredAnimation} 3s;
+    border-radius: 20px;
 }
 .featured-product {
     display: flex;
@@ -47,7 +56,6 @@ background-color: #E0E0D1;
     align-items: center;
     flex-direction: column;
     height: 100%;
-    border-radius: 20px;
     overflow-y: hidden; 
     .keyboard-model, .price {
         position: absolute;
@@ -66,7 +74,9 @@ background-color: #E0E0D1;
     z-index: -1;
     width: 100%;
     height: 100%;
-    filter: blur(3px);
+    background-position: center;
+    background-size: cover;
+    filter: blur(10px);
 }
 }
 `
