@@ -4,22 +4,22 @@ import { useParams } from 'react-router-dom'
 import next from '../../../../images/icons/icon-next.svg'
 import previous from '../../../../images/icons/icon-previous.svg'
 
-import { keyboards } from '../../../../data/keyboards'
+import { products } from '../../../../data/products'
 
 
 
 import { StyledProductHeader } from '../../../styles/ProductHeader.styled.js'
 
 const Header = () => {
-    const {keyboardName} = useParams()
+    const {product} = useParams()
     const [imageIndex, setImageIndex] = useState(0)
 
-    const product: any = keyboards.filter(item => {
-        if(item.name === keyboardName) {
+    const productFilter: any = products[0].keyboards.filter(item => {
+        if(item.name === product) {
             return item
         }
     })
-    const images = product[0].images;
+    const images = productFilter[0].images;
 
     const handleSliderNext = () => {
         if(imageIndex === images.length - 1) {

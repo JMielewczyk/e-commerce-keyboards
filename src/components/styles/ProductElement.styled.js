@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 
-export const StyledKeyboardsElement = styled.main`
+export const StyledProductElement = styled.main`
 display: flex;
 flex-direction: column;
 justify-content: space-around;
