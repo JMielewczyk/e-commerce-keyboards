@@ -3,13 +3,13 @@ import { useParams } from 'react-router-dom'
 
 import ProductHeader from './ProductHeader'
 
-import minus from '../../../images/icons/icon-minus.svg'
-import plus from '../../../images/icons/icon-plus.svg'
-import cart from '../../../images/icons/icon-cart.svg'
+import minus from '../../../../images/icons/icon-minus.svg'
+import plus from '../../../../images/icons/icon-plus.svg'
+import cart from '../../../../images/icons/icon-cart.svg'
 
-import {StyledKeyboardsElement} from '../../styles/KeyboardsElement.styled'
+import {StyledKeyboardsElement} from '../../../styles/KeyboardsElement.styled'
 
-import { keyboards } from '../../../data/keyboards'
+import { keyboards } from '../../../../data/keyboards'
 
 interface Props {
     cartOpen: boolean

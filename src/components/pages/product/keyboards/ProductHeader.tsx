@@ -1,14 +1,14 @@
 import React, { useState}  from 'react'
 import { useParams } from 'react-router-dom'
 
-import next from '../../../images/icons/icon-next.svg'
-import previous from '../../../images/icons/icon-previous.svg'
+import next from '../../../../images/icons/icon-next.svg'
+import previous from '../../../../images/icons/icon-previous.svg'
 
-import { keyboards } from '../../../data/keyboards'
+import { keyboards } from '../../../../data/keyboards'
 
 
 
-import { StyledProductHeader } from '../../styles/ProductHeader.styled.js'
+import { StyledProductHeader } from '../../../styles/ProductHeader.styled.js'
 
 const Header = () => {
     const {keyboardName} = useParams()

@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Routes, Route, Navigate} from 'react-router-do
 
 import Nav from './components/Nav'
 import HomePage from './components/pages/home/Home'
-import KeyboardsElement from './components/pages/product/KeyboardsElement';
+import KeyboardsElement from './components/pages/product/keyboards/KeyboardsElement';
+import Keycaps from './components/pages/product/keycaps/Keycaps'
 
 import GlobalStyles from './components/styles/Global.styled';
 
@@ -18,8 +19,13 @@ function App() {
         <GlobalStyles />
         <Nav cartOpen={cartOpen} openCart={openCart}/>
         <Routes>
-         <Route path='/home' element={<HomePage/>} ></Route>
-         <Route path='/home/product/keyboards/:keyboardName' element={<KeyboardsElement cartOpen={cartOpen} />}></Route>
+         <Route index element={<HomePage/>} />
+         <Route path='/home' element={<HomePage/>}/>
+         <Route path='/home/product/keyboards/:keyboardName' element={<KeyboardsElement cartOpen={cartOpen} />}/>
+         <Route path='/home/product/keycaps' element={<Keycaps/>}/>
+         <Route path='/home/product/barebonekits' element={<Keycaps/>}/>
+         <Route path='/home/product/switches' element={<Keycaps/>}/>
+         <Route path='/home/product/prebuiltkeyboards' element={<Keycaps/>}/>
          <Route path='*' element={<Navigate to="/home" replace/>}></Route>
       </Routes>
     </Router>

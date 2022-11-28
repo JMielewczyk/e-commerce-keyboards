@@ -15,7 +15,7 @@ const Main = () => {
     </Link>))
 
     const categoriesMap = categories.map(item => (
-        <Link key={item} className={`${item.toLowerCase()}-container`} to={`home/products/${item.toLowerCase()}`}>
+        <Link key={item} className={`${item.toLowerCase()}-container`} to={`/home/product/${item.toLowerCase()}`}>
             <p className="text" >{item}</p>
         </Link>   
     ))
