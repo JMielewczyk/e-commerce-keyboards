@@ -3,7 +3,7 @@ import {Link, useParams} from 'react-router-dom'
 
 import { products } from '../../../data/products'
 
-const categories = ['Keycaps', 'BareboneKits', 'Switches', 'PrebuiltKeyboards']
+const categories = ['Keycaps', 'BareboneKits', 'Switches', 'Keyboards']
 
 const Main = () => {
     // const keyboardsList = keyboards.map(item =>(

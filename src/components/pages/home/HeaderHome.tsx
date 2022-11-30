@@ -19,7 +19,7 @@ const FeaturedProduct = () => {
     <div className='featured-text-container' >
         <h3 className='featured-text'>Featured keyboards</h3>
     </div>
-    <Link className='featured-product-container' key={keyboards[productIndex].name} to={`/home/keyboard/${keyboards[productIndex].name}`}>
+    <Link className='featured-product-container' key={keyboards[productIndex].name} to={`/home/keyboards/${keyboards[productIndex].name}`}>
         <div className="featured-product">
             <img src={process.env.PUBLIC_URL + keyboards[productIndex].imageTemplate} alt={`${keyboards[productIndex].name}`}/>
             <p className='keyboard-model'>{keyboards[productIndex].name}</p>

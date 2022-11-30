@@ -12,7 +12,7 @@ justify-content: center;
 align-items: center;
 gap: 20px;
 padding: 20px;
-.keycaps-container, .barebonekits-container, .switches-container, .prebuiltkeyboards-container {
+.keycaps-container, .barebonekits-container, .switches-container, .keyboards-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -37,10 +37,9 @@ padding: 20px;
 .switches-container {
     background-image: url(${switchesImage});
 }
-.prebuiltkeyboards-container {
+.keyboards-container {
     background-image: url(${prebuiltImage});
 }
-
 
 .products-keyboards {
     width: 100vw;
