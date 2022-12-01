@@ -3,10 +3,9 @@
     "keyboards": [
       {
         "name": "Quionix75",
-        "title": "Fall Limited Edition Keyboards",
         "description": "These low-profile keyboard are your perfect fast clickers. Featuring a durable rubber outer, they'll withstand bilions of clicks & drops from table (not tested).",
         "discount": true,
-        "discountValue": 50,
+        "discountValue": 20,
         "price": 110.00,
         "currency": "$",
         "imageTemplate": "/image/product/keyboards/k2/k2-template.jpg",
@@ -19,10 +18,9 @@
       },
       {
         "name": "Outer65",
-        "title": "Fall Limited Edition Keyboards",
         "description": "These low-profile keyboard are your perfect fast clickers. Featuring a durable rubber outer, they'll withstand bilions of clicks & drops from table (not tested).",
         "discount": true,
-        "discountValue": 50,
+        "discountValue": 10,
         "price": 80.00,
         "currency": "$",
         "imageTemplate": "/image/product/keyboards/Outer65/outer1.jpg",
@@ -35,10 +33,9 @@
       },
       {
         "name": "Krox80",
-        "title": "Fall Limited Edition Keyboards",
         "description": "These low-profile keyboard are your perfect fast clickers. Featuring a durable rubber outer, they'll withstand bilions of clicks & drops from table (not tested).",
         "discount": true,
-        "discountValue": 50,
+        "discountValue": 15,
         "price": 60.00,
         "currency": "$",
         "imageTemplate": "/image/product/keyboards/Krox80/krox1.jpg",
@@ -51,10 +48,9 @@
       },
       {
         "name": "LogiteC",
-        "title": "Fall Limited Edition Keyboards",
         "description": "These low-profile keyboard are your perfect fast clickers. Featuring a durable rubber outer, they'll withstand bilions of clicks & drops from table (not tested).",
         "discount": true,
-        "discountValue": 50,
+        "discountValue": 30,
         "price": 100.00,
         "currency": "$",
         "imageTemplate": "/image/product/keyboards/LogiteC/logi1.jpg",
@@ -66,10 +62,9 @@
       },
       {
         "name": "CrossX",
-        "title": "Fall Limited Edition Keyboards",
         "description": "These low-profile keyboard are your perfect fast clickers. Featuring a durable rubber outer, they'll withstand bilions of clicks & drops from table (not tested).",
         "discount": true,
-        "discountValue": 50,
+        "discountValue": 25,
         "price": 150.00,
         "currency": "$",
         "imageTemplate": "/image/product/keyboards/CrossX/cross1.jpg",
@@ -83,11 +78,10 @@
     "keycaps": [
       {
         "name": "Black",
-        "title": "Fall Limited Edition Keyboards",
-        "description": "These low-profile keyboard are your perfect fast clickers. Featuring a durable rubber outer, they'll withstand bilions of clicks & drops from table (not tested).",
-        "discount": true,
-        "discountValue": 50,
-        "price": 110.00,
+        "description": "Compatible with major-sizes keyboard including but not limited to 60%, 64-key, 65%, TKL, 75%, 96%, 1800 compact, Alice, and full-size keyboards.",
+        "discount": false,
+        "discountValue": 10,
+        "price": 15.00,
         "currency": "$",
         "imageTemplate": "/image/product/keycaps/black/black1.jpg",
         "images": [
@@ -98,11 +92,10 @@
       },
       {
         "name": "BlackGold",
-        "title": "Fall Limited Edition Keyboards",
-        "description": "These low-profile keyboard are your perfect fast clickers. Featuring a durable rubber outer, they'll withstand bilions of clicks & drops from table (not tested).",
+        "description": "Compatible with major-sizes keyboard including but not limited to 60%, 64-key, 65%, TKL, 75%, 96%.",
         "discount": true,
-        "discountValue": 50,
-        "price": 80.00,
+        "discountValue": 15,
+        "price": 24.00,
         "currency": "$",
         "imageTemplate": "/image/product/keycaps/blackgold/blackgold1.jpg",
         "images": [
@@ -113,17 +106,125 @@
       },
       {
         "name": "Creamkeycapset",
-        "title": "Fall Limited Edition Keyboards",
-        "description": "These low-profile keyboard are your perfect fast clickers. Featuring a durable rubber outer, they'll withstand bilions of clicks & drops from table (not tested).",
-        "discount": true,
-        "discountValue": 50,
-        "price": 80.00,
+        "description": "Compatible with major-sizes keyboard including but not limited to 60%, 64-key, 65%, TKL, 75%, 96%, 1800 compact, Alice, and full-size keyboards.",
+        "discount": false,
+        "discountValue": 5,
+        "price": 25.00,
         "currency": "$",
         "imageTemplate": "/image/product/keycaps/creamkeycapset/cream1.jpg",
         "images": [
           "/image/product/keycaps/creamkeycapset/cream1.jpg",
           "/image/product/keycaps/creamkeycapset/cream2.jpg",
           "/image/product/keycaps/creamkeycapset/cream3.jpg"
+        ]
+      }
+    ],
+    "barebonekits": [
+      {
+        "name": "ACR TOP 75 Kit",
+        "description": "Note: This keyboard comes completely un-assembled. Top Mount Barebone Kit Brass Plate (plate files will be available)/Additional FR4 Plate for the Space Gray Aluminum Version Akko double-shot TPU plate mount stabilizer (supports screw-in stabilizer) South-facing PCBa Akko 5-pin Hotswap Socket Case foam is moulded Backlit RGB (Acrylic version only – backlit was removed on aluminum version to optimize sound profile).",
+        "discount": false,
+        "discountValue": 10,
+        "price": 130.00,
+        "currency": "$",
+        "imageTemplate": "/image/product/barebonekits/acrpro/acrpro1.jpg",
+        "images": [
+          "/image/product/barebonekits/acrpro/acrpro1.jpg",
+          "/image/product/barebonekits/acrpro/acrpro2.jpg",
+          "/image/product/barebonekits/acrpro/acrpro3.jpg"
+        ]
+      },
+      {
+        "name": "ACR v2",
+        "description": "Note: This keyboard comes completely un-assembled. Top Mount Barebone Kit Brass Plate (plate files will be available)/Additional FR4 Plate for the Space Gray Aluminum Version Akko double-shot TPU plate mount stabilizer (supports screw-in stabilizer) South-facing PCBa Akko 5-pin Hotswap Socket Case foam is moulded Backlit RGB (Acrylic version only – backlit was removed on aluminum version to optimize sound profile).",
+        "discount": false,
+        "discountValue": 10,
+        "price": 70.00,
+        "currency": "$",
+        "imageTemplate": "/image/product/barebonekits/acrv2/acr1.jpg",
+        "images": [
+          "/image/product/barebonekits/acrv2/acr1.jpg",
+          "/image/product/barebonekits/acrv2/acr2.jpg",
+          "/image/product/barebonekits/acrv2/acr3.jpg"
+        ]
+      },
+      {
+        "name": "MOD002",
+        "description": "Note: This keyboard comes completely un-assembled. Top Mount Barebone Kit Brass Plate (plate files will be available)/Additional FR4 Plate for the Space Gray Aluminum Version Akko double-shot TPU plate mount stabilizer (supports screw-in stabilizer) South-facing PCBa Akko 5-pin Hotswap Socket Case foam is moulded Backlit RGB (Acrylic version only – backlit was removed on aluminum version to optimize sound profile).",
+        "discount": false,
+        "discountValue": 10,
+        "price": 169.99,
+        "currency": "$",
+        "imageTemplate": "/image/product/barebonekits/mod002/mod002-1.jpg",
+        "images": [
+          "/image/product/barebonekits/mod002/mod002-1.jpg",
+          "/image/product/barebonekits/mod002/mod002-2.jpg",
+          "/image/product/barebonekits/mod002/mod002-3.jpg"
+        ]
+      },
+      {
+        "name": "MOD004",
+        "description": "Note: This keyboard comes completely un-assembled. Top Mount Barebone Kit. Brass Plate (plate files will be available)/Additional FR4 Plate for the Space Gray Aluminum Version. Akko double-shot TPU plate mount stabilizer (supports screw-in stabilizer). South-facing PCBa. 5-pin Hotswap Socket. Case foam is moulded. Backlit RGB (Acrylic version only – backlit was removed on aluminum version to optimize sound profile).",
+        "discount": false,
+        "discountValue": 10,
+        "price": 149.99,
+        "currency": "$",
+        "imageTemplate": "/image/product/barebonekits/mod004/mod004.jpg",
+        "images": [
+          "/image/product/barebonekits/mod004/mod004.jpg"
+        ]
+      },
+      {
+        "name": "MOD007s",
+        "description": "Note: This keyboard comes completely un-assembled. Top Mount Barebone Kit. Brass Plate (plate files will be available)/Additional FR4 Plate for the Space Gray Aluminum Version. Akko double-shot TPU plate mount stabilizer (supports screw-in stabilizer). South-facing PCBa. 5-pin Hotswap Socket. Case foam is moulded. Backlit RGB (Acrylic version only – backlit was removed on aluminum version to optimize sound profile).",
+        "discount": false,
+        "discountValue": 10,
+        "price": 59.99,
+        "currency": "$",
+        "imageTemplate": "/image/product/barebonekits/mod007s/mod007s.jpg",
+        "images": [
+          "/image/product/barebonekits/mod007s/mod007s.jpg"
+        ]
+      }
+    ],
+    "switches": [
+      {
+        "name": "White switch",
+        "description": "Lubricants used during hand-lube process:",
+        "discount": false,
+        "discountValue": 10,
+        "price": 16.99,
+        "currency": "$",
+        "imageTemplate": "/image/product/switches/white/white1.jpg",
+        "images": [
+          "/image/product/switches/white/white1.jpg",
+          "/image/product/switches/white/white2.jpg"
+        ]
+      },
+      {
+        "name": "Blue switch",
+        "description": "Lubricants used during hand-lube process:",
+        "discount": false,
+        "discountValue": 10,
+        "price": 16.99,
+        "currency": "$",
+        "imageTemplate": "/image/product/switches/blue/blue1.jpg",
+        "images": [
+          "/image/product/switches/blue/blue1.jpg",
+          "/image/product/switches/blue/blue2.jpg"
+        ]
+      },
+      {
+        "name": "Purple switch",
+        "description": "Lubricants used during hand-lube process:",
+        "discount": false,
+        "discountValue": 10,
+        "price": 16.99,
+        "currency": "$",
+        "imageTemplate": "/image/product/switches/purple/purple1.jpg",
+        "images": [
+          "/image/product/switches/purple/purple1.jpg",
+          "/image/product/switches/purple/purple2.jpg"
         ]
       }
     ]

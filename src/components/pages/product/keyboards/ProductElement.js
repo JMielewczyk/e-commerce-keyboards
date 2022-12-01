@@ -10,7 +10,7 @@ import cart from '../../../../images/icons/icon-cart.svg'
 import { StyledProductElement } from '../../../styles/ProductElement.styled'
 
 
-const ProductElement = ({cartOpen}) => {
+const ProductElement = ({ cartOpen }) => {
 
     const [data, setData] = useState(null)
     const [loading, setLoading] = useState(true)
@@ -44,15 +44,15 @@ const ProductElement = ({cartOpen}) => {
             {
                 if(item.name === product) {
                     const actualPrice = () => {
-                        const price = item.price * (item.discountValue / 100)
+                        const price = item.price -  (item.price * (item.discountValue / 100))
                         price.toFixed(2)
                         return price;
                     }
                     if(item.discount) {
                         return (
-                        <>
+                        <div className='product-wrapper' key={item.name}>
                             <p className='product-category'>{category}</p>
-                            <h2 className='product-title'>{item.title}</h2>
+                            <h2 className='product-title'>{item.name}</h2>
                             <p className='product-description'>{item.description}</p>
                             <div key={item.name} className='price-container'>
                                 <div className='discounted-price-container'>
@@ -67,14 +67,14 @@ const ProductElement = ({cartOpen}) => {
                                 <img onClick={() => handleAmount('plus')} src={plus} alt="" />
                             </div>
                             <button className="addToCartBtn"><img src={cart} alt="" />Add to cart</button>
-                        </>
+                        </div>
                         )
                     }   
                     else {
                         return (
-                        <>
+                        <div className='product-wrapper' key={item.name}>
                             <p className='product-category'>{category}</p>
-                            <h2 className='product-title'>{item.title}</h2>
+                            <h2 className='product-title'>{item.name}</h2>
                             <p className='product-description'>{item.description}</p>
                             <p className='actual-price'>{item.currency + item.price.toFixed(2)}</p>
                             <div className='amount-container' >
@@ -83,7 +83,7 @@ const ProductElement = ({cartOpen}) => {
                                 <img onClick={() => handleAmount('plus')} src={plus} alt="" />
                             </div>
                             <button className="addToCartBtn"><img src={cart} alt="" />Add to cart</button>
-                        </>
+                        </div>
                         )
                     }
                 }

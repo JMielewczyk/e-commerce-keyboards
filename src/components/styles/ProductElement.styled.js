@@ -4,11 +4,15 @@ import styled from 'styled-components'
 export const StyledProductElement = styled.main`
 display: flex;
 flex-direction: column;
-justify-content: space-around;
-/* gap: 25px; */
 width: 100vw;
 min-height: calc(100vh - 60px); // 60px is the Nav height
-padding: 10px;
+padding: 10px 20px 40px 10px;
+.product-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
 .product-category {
     color: hsl(26, 100%, 55%);
     letter-spacing: 1px;
