@@ -9,16 +9,16 @@ justify-content: space-around;
 width: 100vw;
 min-height: calc(100vh - 60px); // 60px is the Nav height
 padding: 10px;
-.company-name {
+.product-category {
     color: hsl(26, 100%, 55%);
     letter-spacing: 1px;
     font-weight: 700;
     text-transform: uppercase;
 }
-.keyboard-title {
+.product-title {
     font-size: 32px;
 }
-.keyboard-description {
+.product-description {
     color: hsl(219, 9%, 45%);
 }
 .price-container {

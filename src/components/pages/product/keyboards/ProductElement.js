@@ -50,18 +50,40 @@ const ProductElement = ({cartOpen}) => {
                     }
                     if(item.discount) {
                         return (
-                        <div key={item.name} className='price-container'>
-                        <div className='discounted-price-container'>
-                          <p className='actual-price'>{item.currency + actualPrice()}</p>
-                          <p className='discount'>{item.discountValue + '%'}</p>
-                        </div>
-                          <p className='old-price'>{item.currency + item.price.toFixed(2)}</p>
-                        </div>
+                        <>
+                            <p className='product-category'>{category}</p>
+                            <h2 className='product-title'>{item.title}</h2>
+                            <p className='product-description'>{item.description}</p>
+                            <div key={item.name} className='price-container'>
+                                <div className='discounted-price-container'>
+                                    <p className='actual-price'>{item.currency + actualPrice()}</p>
+                                    <p className='discount'>{item.discountValue + '%'}</p>
+                                </div>
+                            <p className='old-price'>{item.currency + item.price.toFixed(2)}</p>
+                            </div>
+                            <div className='amount-container' >
+                                <img onClick={() => handleAmount('minus')} src={minus} alt="" />
+                                <p className='amount'>{orderAmount}</p>
+                                <img onClick={() => handleAmount('plus')} src={plus} alt="" />
+                            </div>
+                            <button className="addToCartBtn"><img src={cart} alt="" />Add to cart</button>
+                        </>
                         )
                     }   
                     else {
                         return (
-                        <p className='actual-price'>{item.currency + item.price.toFixed(2)}</p>
+                        <>
+                            <p className='product-category'>{category}</p>
+                            <h2 className='product-title'>{item.title}</h2>
+                            <p className='product-description'>{item.description}</p>
+                            <p className='actual-price'>{item.currency + item.price.toFixed(2)}</p>
+                            <div className='amount-container' >
+                                <img onClick={() => handleAmount('minus')} src={minus} alt="" />
+                                <p className='amount'>{orderAmount}</p>
+                                <img onClick={() => handleAmount('plus')} src={plus} alt="" />
+                            </div>
+                            <button className="addToCartBtn"><img src={cart} alt="" />Add to cart</button>
+                        </>
                         )
                     }
                 }
@@ -80,16 +102,7 @@ const ProductElement = ({cartOpen}) => {
     return (
     <StyledProductElement>
         <ProductHeader/>
-         <p className='company-name'>keyboards</p>
-            <h2 className='keyboard-title'>Fall Limited Edition Keyboards</h2>
-            <p className='keyboard-description'>These low-profile keyboard are your perfect fast clickers. Featuring a durable rubber outer, they'll withstand bilions of clicks & drops from table (not tested). </p>
             {loadContent(category)}
-            <div className='amount-container' >
-                <img onClick={() => handleAmount('minus')} src={minus} alt="" />
-                <p className='amount'>{orderAmount}</p>
-                <img onClick={() => handleAmount('plus')} src={plus} alt="" />
-            </div>
-            <button className="addToCartBtn"><img src={cart} alt="" />Add to cart</button>
     </StyledProductElement>
     )
 }

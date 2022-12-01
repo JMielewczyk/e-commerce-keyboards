@@ -3,11 +3,13 @@
     "keyboards": [
       {
         "name": "Quionix75",
+        "title": "Fall Limited Edition Keyboards",
+        "description": "These low-profile keyboard are your perfect fast clickers. Featuring a durable rubber outer, they'll withstand bilions of clicks & drops from table (not tested).",
         "discount": true,
         "discountValue": 50,
         "price": 110.00,
         "currency": "$",
-        "imageTemplate": "../image/product/keyboards/k2/k2-template.jpg",
+        "imageTemplate": "/image/product/keyboards/k2/k2-template.jpg",
         "images": [
           "/image/product/keyboards/k2/k2.jpg",
           "/image/product/keyboards/k2/k2-2.jpg",
@@ -17,11 +19,13 @@
       },
       {
         "name": "Outer65",
+        "title": "Fall Limited Edition Keyboards",
+        "description": "These low-profile keyboard are your perfect fast clickers. Featuring a durable rubber outer, they'll withstand bilions of clicks & drops from table (not tested).",
         "discount": true,
         "discountValue": 50,
         "price": 80.00,
         "currency": "$",
-        "imageTemplate": "../image/product/keyboards/Outer65/outer1.jpg",
+        "imageTemplate": "/image/product/keyboards/Outer65/outer1.jpg",
         "images": [
           "/image/product/keyboards/Outer65/outer1.jpg",
           "/image/product/keyboards/Outer65/outer2.jpg",
@@ -31,11 +35,13 @@
       },
       {
         "name": "Krox80",
+        "title": "Fall Limited Edition Keyboards",
+        "description": "These low-profile keyboard are your perfect fast clickers. Featuring a durable rubber outer, they'll withstand bilions of clicks & drops from table (not tested).",
         "discount": true,
         "discountValue": 50,
         "price": 60.00,
         "currency": "$",
-        "imageTemplate": "../image/product/keyboards/Krox80/krox1.jpg",
+        "imageTemplate": "/image/product/keyboards/Krox80/krox1.jpg",
         "images": [
           "/image/product/keyboards/Krox80/krox1.jpg",
           "/image/product/keyboards/Krox80/krox2.jpg",
@@ -45,11 +51,13 @@
       },
       {
         "name": "LogiteC",
+        "title": "Fall Limited Edition Keyboards",
+        "description": "These low-profile keyboard are your perfect fast clickers. Featuring a durable rubber outer, they'll withstand bilions of clicks & drops from table (not tested).",
         "discount": true,
         "discountValue": 50,
         "price": 100.00,
         "currency": "$",
-        "imageTemplate": "../image/product/keyboards/LogiteC/logi1.jpg",
+        "imageTemplate": "/image/product/keyboards/LogiteC/logi1.jpg",
         "images": [
           "/image/product/keyboards/LogiteC/logi1.jpg",
           "/image/product/keyboards/LogiteC/logi2.jpg",
@@ -58,11 +66,13 @@
       },
       {
         "name": "CrossX",
+        "title": "Fall Limited Edition Keyboards",
+        "description": "These low-profile keyboard are your perfect fast clickers. Featuring a durable rubber outer, they'll withstand bilions of clicks & drops from table (not tested).",
         "discount": true,
         "discountValue": 50,
         "price": 150.00,
         "currency": "$",
-        "imageTemplate": "../image/product/keyboards/CrossX/cross1.jpg",
+        "imageTemplate": "/image/product/keyboards/CrossX/cross1.jpg",
         "images": [
           "/image/product/keyboards/CrossX/cross1.jpg",
           "/image/product/keyboards/CrossX/cross2.jpg",
@@ -70,8 +80,52 @@
         ]
       }
     ],
-    "keycaps": {
-      "name": "black"
-    }
+    "keycaps": [
+      {
+        "name": "Black",
+        "title": "Fall Limited Edition Keyboards",
+        "description": "These low-profile keyboard are your perfect fast clickers. Featuring a durable rubber outer, they'll withstand bilions of clicks & drops from table (not tested).",
+        "discount": true,
+        "discountValue": 50,
+        "price": 110.00,
+        "currency": "$",
+        "imageTemplate": "/image/product/keycaps/black/black1.jpg",
+        "images": [
+          "/image/product/keycaps/black/black1.jpg",
+          "/image/product/keycaps/black/black2.jpg",
+          "/image/product/keycaps/black/black3.jpg"
+        ]
+      },
+      {
+        "name": "BlackGold",
+        "title": "Fall Limited Edition Keyboards",
+        "description": "These low-profile keyboard are your perfect fast clickers. Featuring a durable rubber outer, they'll withstand bilions of clicks & drops from table (not tested).",
+        "discount": true,
+        "discountValue": 50,
+        "price": 80.00,
+        "currency": "$",
+        "imageTemplate": "/image/product/keycaps/blackgold/blackgold1.jpg",
+        "images": [
+          "/image/product/keycaps/blackgold/blackgold1.jpg",
+          "/image/product/keycaps/blackgold/blackgold2.jpg",
+          "/image/product/keycaps/blackgold/blackgold3.jpg"
+        ]
+      },
+      {
+        "name": "Creamkeycapset",
+        "title": "Fall Limited Edition Keyboards",
+        "description": "These low-profile keyboard are your perfect fast clickers. Featuring a durable rubber outer, they'll withstand bilions of clicks & drops from table (not tested).",
+        "discount": true,
+        "discountValue": 50,
+        "price": 80.00,
+        "currency": "$",
+        "imageTemplate": "/image/product/keycaps/creamkeycapset/cream1.jpg",
+        "images": [
+          "/image/product/keycaps/creamkeycapset/cream1.jpg",
+          "/image/product/keycaps/creamkeycapset/cream2.jpg",
+          "/image/product/keycaps/creamkeycapset/cream3.jpg"
+        ]
+      }
+    ]
   }
 }

@@ -16,6 +16,9 @@ gap: 20px;
     overflow: hidden;
     background-color: cadetblue;
     border-radius: 20px;
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
     &__image-wrapper {
         width: 100%;
         height: 300px;
@@ -34,6 +37,9 @@ gap: 20px;
         width: 100%;
         padding-top: 5%;
         padding-left: 15px;
+        .product-name {
+            font-size: 22px;
+        }
     }
 }
 `

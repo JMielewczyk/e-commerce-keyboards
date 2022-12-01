@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import {useParams} from 'react-router-dom'
+import {useParams, Link} from 'react-router-dom'
 
 import {StyledProductsList} from '../../styles/ProductsList.styled'
 
@@ -28,7 +28,7 @@ const ProductList = () => {
         else if (loading === false) {
             const productsList = data[category].map(item => {
                 return (
-                    <div key={item.name} className="product-wrapper">
+                    <Link key={item.name} to={`/home/${category.toLowerCase()}/${item.name}`} className="product-wrapper">
                         <div className='product-wrapper__image-wrapper'>
                             <img className='image' src={item.imageTemplate} alt=''/>
                         </div>
@@ -36,7 +36,7 @@ const ProductList = () => {
                             <p className='product-name'>{item.name}</p>
                             <p className='product-price'>Price: {item.price}{item.currency}</p>
                         </div>
-                    </div>
+                    </Link>
                 )
             })
             return productsList
