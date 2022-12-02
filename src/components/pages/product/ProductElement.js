@@ -3,11 +3,11 @@ import { useParams } from 'react-router-dom'
 
 import ProductHeader from './ProductHeader'
 
-import minus from '../../../../images/icons/icon-minus.svg'
-import plus from '../../../../images/icons/icon-plus.svg'
-import cart from '../../../../images/icons/icon-cart.svg'
+import minus from '../../../images/icons/icon-minus.svg'
+import plus from '../../../images/icons/icon-plus.svg'
+import cart from '../../../images/icons/icon-cart.svg'
 
-import { StyledProductElement } from '../../../styles/ProductElement.styled'
+import { StyledProductElement } from '../../styles/ProductElement.styled'
 
 
 const ProductElement = ({ cartOpen }) => {

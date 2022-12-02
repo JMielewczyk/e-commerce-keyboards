@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate} from 'react-router-do
 import Nav from './components/Nav'
 import HomePage from './components/pages/home/Home'
 import ProductList from './components/pages/productList/ProductList'
-import ProductElement from './components/pages/product/keyboards/ProductElement';
+import ProductElement from './components/pages/product/ProductElement';
 
 import GlobalStyles from './components/styles/Global.styled';
 
