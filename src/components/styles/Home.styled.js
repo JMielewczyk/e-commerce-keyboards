@@ -7,7 +7,4 @@ gap: 20px;
 width: 100vw;
 padding: 20px;
 padding-top: 0;
-section {
-    padding: 0;
-}
 `
