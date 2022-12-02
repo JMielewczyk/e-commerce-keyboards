@@ -32,12 +32,9 @@ const featuredAnimation = keyframes`
 export const StyledHomeHeader = styled.header`
 display: flex;
 flex-direction: column;
-gap: 5%;
 align-items: center;
-width: 100vw;
-height: 45vh;
-padding: 25px;
-background-color: #E0E0D1;
+gap: 20px;
+width: 100%;
 .featured-text-container {
     width: 100%;
 }
@@ -45,7 +42,7 @@ background-color: #E0E0D1;
     visibility: hidden;
     text-decoration: none;
     width: 100%;
-    height: 70%;
+    height: 30vh;
     animation: ${featuredAnimation} 3s;
     border-radius: 20px;
 }

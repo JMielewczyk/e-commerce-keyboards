@@ -1,7 +1,13 @@
 import styled from 'styled-components'
 
 export const StyledHome = styled.section`
-width: 100%;
-height: calc(100vh - 60px); // 60px - Navigation height
-border: 1px solid black;
+display: flex;
+flex-direction: column;
+gap: 20px;
+width: 100vw;
+padding: 20px;
+padding-top: 0;
+section {
+    padding: 0;
+}
 `
