@@ -30,11 +30,14 @@ const featuredAnimation = keyframes`
 `
 
 export const StyledHomeHeader = styled.header`
-display: flex;
-flex-direction: column;
-align-items: center;
-gap: 20px;
 width: 100%;
+.featured-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
 .featured-text-container {
     width: 100%;
 }
