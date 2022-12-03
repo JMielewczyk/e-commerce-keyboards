@@ -2,13 +2,13 @@ import React , { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 
 import ProductHeader from './ProductHeader'
+import Loading from '../../Loading'
 
 import minus from '../../../images/icons/icon-minus.svg'
 import plus from '../../../images/icons/icon-plus.svg'
 import cart from '../../../images/icons/icon-cart.svg'
 
 import { StyledProductElement } from '../../styles/ProductElement.styled'
-
 
 const ProductElement = ({ cartOpen }) => {
 
@@ -35,11 +35,10 @@ const ProductElement = ({ cartOpen }) => {
         getData()
     }, [])
 
+    
     const loadContent = (category) => {
-        if(loading === true)
-        return (
-            <div>Content loading</div>
-        )
+        if(loading === true) 
+        return <Loading/>;
         const allElements = data[category].map(item =>
             {
                 if(item.name === product) {

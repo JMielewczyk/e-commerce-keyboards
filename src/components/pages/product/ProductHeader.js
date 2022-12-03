@@ -1,6 +1,8 @@
 import React, {useState, useEffect}  from 'react'
 import { useParams } from 'react-router-dom'
 
+import Loading from '../../Loading'
+
 import next from '../../../images/icons/icon-next.svg'
 import previous from '../../../images/icons/icon-previous.svg'
 
@@ -33,7 +35,8 @@ const Header = () => {
     let images = [];
 
     const getContentLoaded = () => {
-        if(loading === true || data.length === 0) return
+        if(loading === true || data.length === 0) 
+        return <Loading/>
         else {
             const thisProduct = data.filter(item => item.name === product)
             images = thisProduct[0].images;

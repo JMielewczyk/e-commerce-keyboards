@@ -2,7 +2,8 @@ import styled from 'styled-components'
 
 export const StyledProductHeader = styled.header`
 width: 100%;
-height: 30vh;
+min-height: 150px;
+height: 35%;
 overflow: hidden;
 position: relative;
 .image-wrapper {

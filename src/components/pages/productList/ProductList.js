@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from 'react'
 import {useParams, Link} from 'react-router-dom'
 
+import Loading from '../../Loading'
+
 import {StyledProductsList} from '../../styles/ProductsList.styled'
 
 const ProductList = () => {
@@ -23,7 +25,7 @@ const ProductList = () => {
 
     const getContentLoaded = (category) => {
         if(loading === true || data[category] === undefined) {
-            return <div>Loading...</div>
+            return <Loading/>
         }
         else if (loading === false) {
             const productsList = data[category].map(item => {

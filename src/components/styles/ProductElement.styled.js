@@ -5,7 +5,7 @@ export const StyledProductElement = styled.main`
 display: flex;
 flex-direction: column;
 width: 100vw;
-min-height: calc(100vh - 60px); // 60px is the Nav height
+height: calc(100vh - 60px); // 60px is the Nav height
 padding: 10px 20px 40px 10px;
 .product-wrapper {
     display: flex;
