@@ -1,4 +1,4 @@
-import React , { useEffect, useState } from 'react'
+import React , { useEffect, useState, useReducer } from 'react'
 import { useParams } from 'react-router-dom'
 
 import ProductHeader from './ProductHeader'
@@ -10,13 +10,32 @@ import cart from '../../../images/icons/icon-cart.svg'
 
 import { StyledProductElement } from '../../styles/ProductElement.styled'
 
-const ProductElement = ({ cartOpen }) => {
-
+const ProductElement = ({ cartOpen, dispatch, basket }) => {
     const [data, setData] = useState(null)
     const [loading, setLoading] = useState(true)
     const [orderAmount, setOrderAmount] = useState(0)
-
     const { category, product } = useParams()
+
+    const addToCart = () => {
+        if(orderAmount === 0) return
+        let alreadyInBasket = false;
+        basket.forEach(element => {
+            if(element.name === product) {
+                alreadyInBasket = true
+                dispatch({type: 'change', payload: {
+                    name: product,
+                    quantity: orderAmount,
+                }})
+            }
+        })
+        if(alreadyInBasket === false) {
+            dispatch({type: 'add', payload: {
+            name: product,
+            quantity: orderAmount,
+        }})
+        }
+        
+    }
 
     function getData() {
         fetch('/data.json')
@@ -65,7 +84,7 @@ const ProductElement = ({ cartOpen }) => {
                                 <p className='amount'>{orderAmount}</p>
                                 <img onClick={() => handleAmount('plus')} src={plus} alt="" />
                             </div>
-                            <button className="addToCartBtn"><img src={cart} alt="" />Add to cart</button>
+                            <button onClick={addToCart} className="addToCartBtn"><img src={cart} alt="" />Add to cart</button>
                         </div>
                         )
                     }   
@@ -81,7 +100,7 @@ const ProductElement = ({ cartOpen }) => {
                                 <p className='amount'>{orderAmount}</p>
                                 <img onClick={() => handleAmount('plus')} src={plus} alt="" />
                             </div>
-                            <button className="addToCartBtn"><img src={cart} alt="" />Add to cart</button>
+                            <button onClick={addToCart} className="addToCartBtn"><img src={cart} alt="" />Add to cart</button>
                         </div>
                         )
                     }

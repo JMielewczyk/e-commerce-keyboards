@@ -8,14 +8,14 @@ import Cart from '../images/icons/icon-cart.svg'
 import Avatar from '../images/avatars/image-avatar.png'
 import Cross from '../images/icons/icon-close.svg'
 
-interface Props {
-    openCart: () => void
-    cartOpen: boolean
-}
+// interface Props {
+//     openCart: () => void
+//     cartOpen: boolean
+//     basket: any
+// }
 
-const Nav = ({ openCart, cartOpen }: Props) => {
+const Nav = ({ openCart, cartOpen, basket }) => {
     const [menuIsActive, setMenuIsActive] = useState(false)
-
     const handleMenuOpen = () => {
         setMenuIsActive(true)
     }
@@ -23,15 +23,13 @@ const Nav = ({ openCart, cartOpen }: Props) => {
         setMenuIsActive(false)
     }
     const handleCartOrder = () => {
-        const order = false;
-        if(order) {
+        if(Object.keys(basket).length === 0) {
             return (
-                <p>Some product</p>
+                <p>Empty</p>
             )
         } else {
-            return (
-                <p>Your cart is empty</p> 
-            )
+            const renderBasket = basket.map(item => <p>{item.name} : Quantity: {item.quantity}</p>)
+            return renderBasket;
         }
     }
     return (
