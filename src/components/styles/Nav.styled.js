@@ -101,6 +101,8 @@ padding: 0 20px;
     .cart-order {
         display: flex;
         flex-direction: column;
+        gap: 5px;
+        padding: 10px;
         width: 100%;
         max-height: 90%;
         justify-content: start;
@@ -108,9 +110,44 @@ padding: 0 20px;
         font-weight: 700;
         color: hsl(219, 9%, 45%);
         overflow: scroll;
-        p {
-            min-height: 20px;
+        .cart-product-wrapper {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100px;
+            min-height: 100px;
+            width: 100%;
+            padding: 5px;
+            border: 1px solid black;
+            border-radius: 8px;
+            background-color: hsl(25,100%,94%);
+            .image-wrapper {
+                position: relative;
+                width: 150px;
+                height: 100%;
+                overflow: hidden;
+                .background {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    filter: blur(10px);
+                }
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
         }
+        
     } 
 
 }

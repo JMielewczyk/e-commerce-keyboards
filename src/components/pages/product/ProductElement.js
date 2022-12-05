@@ -18,13 +18,22 @@ const ProductElement = ({ cartOpen, dispatch, basket }) => {
 
     const addToCart = () => {
         if(orderAmount === 0) return
+
         let alreadyInBasket = false;
+
+        const thisProduct = data[category].filter(item => {
+                if(item.name === product) {
+                    return item.price
+                }
+            })
+
         basket.forEach(element => {
             if(element.name === product) {
                 alreadyInBasket = true
                 dispatch({type: 'change', payload: {
                     name: product,
                     quantity: orderAmount,
+                    price: thisProduct[0].price,
                 }})
             }
         })
@@ -32,6 +41,8 @@ const ProductElement = ({ cartOpen, dispatch, basket }) => {
             dispatch({type: 'add', payload: {
             name: product,
             quantity: orderAmount,
+            price: thisProduct[0].price,
+            image: thisProduct[0].imageTemplate,
         }})
         }
         

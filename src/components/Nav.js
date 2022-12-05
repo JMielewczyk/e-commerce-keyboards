@@ -28,8 +28,23 @@ const Nav = ({ openCart, cartOpen, basket }) => {
                 <p>Empty</p>
             )
         } else {
-            const renderBasket = basket.map(item => <p>{item.name} : Quantity: {item.quantity}</p>)
-            return renderBasket;
+            const renderBasket = basket.map((item, index) => {
+                if(index === 0) return 
+                return (
+                    <div className='cart-product-wrapper'>
+                        <div className='text-wrapper'>
+                            <p>{item.name}</p>
+                            <p>Quantity: {item.quantity}</p>
+                            <p>Total price: {item.price}</p>
+                        </div>
+                        <div className='image-wrapper'>
+                            <div className='background' style={{backgroundImage: `url(${item.image})`}} ></div>
+                            <img src={item.image} alt={`${item.name} in cart image`}/>
+                        </div>
+                    </div>
+                )  
+            })
+            return renderBasket 
         }
     }
     return (
