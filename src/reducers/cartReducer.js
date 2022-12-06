@@ -19,6 +19,11 @@ export function manageBasket(state, action) {
                 }
             })
         }
+        case 'delete': {
+            console.log(action.payload.name)
+            const filteredState = state.filter(element => element.name !== action.payload.name)
+            return [...filteredState]
+        }
         default:
             return state
     }

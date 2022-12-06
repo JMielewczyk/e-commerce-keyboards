@@ -2,19 +2,15 @@ import React, { useState } from 'react';
 import {NavLink, Link} from 'react-router-dom'
 
 import { StyledNav } from './styles/Nav.styled'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrash } from '@fortawesome/free-solid-svg-icons'
 
 import Menu from '../images/icons/icon-menu.svg'
 import Cart from '../images/icons/icon-cart.svg'
 import Avatar from '../images/avatars/image-avatar.png'
 import Cross from '../images/icons/icon-close.svg'
 
-// interface Props {
-//     openCart: () => void
-//     cartOpen: boolean
-//     basket: any
-// }
-
-const Nav = ({ openCart, cartOpen, basket }) => {
+const Nav = ({ openCart, cartOpen, basket, dispatch }) => {
     const [menuIsActive, setMenuIsActive] = useState(false)
     const handleMenuOpen = () => {
         setMenuIsActive(true)
@@ -31,7 +27,7 @@ const Nav = ({ openCart, cartOpen, basket }) => {
             const renderBasket = basket.map((item, index) => {
                 if(index === 0) return 
                 return (
-                    <div className='cart-product-wrapper'>
+                    <div key={item.name} className='cart-product-wrapper'>
                         <div className='text-wrapper'>
                             <p>{item.name}</p>
                             <p>Quantity: {item.quantity}</p>
@@ -39,7 +35,10 @@ const Nav = ({ openCart, cartOpen, basket }) => {
                         </div>
                         <div className='image-wrapper'>
                             <div className='background' style={{backgroundImage: `url(${item.image})`}} ></div>
-                            <img src={item.image} alt={`${item.name} in cart image`}/>
+                            <img src={item.image} alt={`${item.name} in cart`}/>
+                        </div>
+                        <div onClick={() => dispatch({type: 'delete', payload: {name: item.name}})} className='trash'>
+                            <FontAwesomeIcon icon={faTrash}/>
                         </div>
                     </div>
                 )  

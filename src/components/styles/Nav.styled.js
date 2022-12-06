@@ -126,6 +126,9 @@ padding: 0 20px;
                 width: 150px;
                 height: 100%;
                 overflow: hidden;
+                margin: 0 20px 0 20px; 
+                border-radius: 8px;
+                flex-grow: 1;
                 .background {
                     position: absolute;
                     top: 0;
@@ -146,6 +149,12 @@ padding: 0 20px;
                     object-fit: contain;
                 }
             }
+        .trash {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 2;
+        }
         }
         
     } 
