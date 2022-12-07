@@ -1,4 +1,4 @@
-import React, {useState, useReducer} from 'react';
+import React, {useState, useReducer, createContext} from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate} from 'react-router-dom'
 
 import Nav from './components/Nav'
@@ -14,12 +14,16 @@ const initialBasket = [
   { name: 'Your basket is empty'}
 ]
 
-function App() {
+export const BackgroundContext = createContext(null)
 
+function App() {
+  const [startingLayout, setStartingLayout] = useState(true)
   const [cartOpen, setCartOpen] = useState(false)
   const [basket, dispatch] = useReducer(manageBasket, initialBasket)
 
-
+  const handleStartingLayout = () => {
+    setStartingLayout(false)
+  }
 
   const openCart= () => {
     setCartOpen(prevValue => !prevValue)
@@ -27,15 +31,17 @@ function App() {
 
   return (
     <Router>
+      <BackgroundContext.Provider value={{startingLayout, handleStartingLayout}}>
         <GlobalStyles />
         <Nav dispatch={dispatch} basket={basket} cartOpen={cartOpen} openCart={openCart}/>
-        <Routes>
-         <Route index element={<HomePage/>} />
-         <Route path='/home' element={<HomePage/>}/>
-         <Route path='/home/:category/' element={<ProductList/>}/>
-         <Route path='/home/:category/:product' element={<ProductElement basket={basket} dispatch={dispatch} cartOpen={cartOpen}/>}/>
-         <Route path='*' element={<Navigate to="/home" replace/>}></Route>
+        <Routes>  
+        <Route index element={<HomePage/>} />
+        <Route path='/home' element={<HomePage />}/>
+        <Route path='/home/:category/' element={<ProductList/>}/>
+        <Route path='/home/:category/:product' element={<ProductElement basket={basket} dispatch={dispatch} cartOpen={cartOpen}/>}/>
+        <Route path='*' element={<Navigate to="/home" replace/>}></Route>
       </Routes>
+      </BackgroundContext.Provider>
     </Router>
   );
 }

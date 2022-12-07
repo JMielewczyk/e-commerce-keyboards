@@ -48,7 +48,7 @@ const Nav = ({ openCart, cartOpen, basket, dispatch }) => {
             return renderBasket 
         }
     }
-    
+
     const getAmountOnBasket = () => {
         let amount = 0;
         basket.forEach(element => amount++)
@@ -73,7 +73,7 @@ const Nav = ({ openCart, cartOpen, basket, dispatch }) => {
             </div>
             <div className='container'>
                 <img onClick={handleMenuOpen} className='hamburger-image' src={Menu} alt="" />
-                <Link className="logo-text" to="/home">keyboards</Link>
+                <Link className="logo-text" to="home">keyboards</Link>
             </div>
             <div className='container'>
                 <div className='cart-image-container'>
