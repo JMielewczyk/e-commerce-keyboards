@@ -35,6 +35,7 @@ padding: 0 20px;
     .menu-cross {
         height: 20px;
         width: 20px;
+        filter: brightness(0);
     }
     a:nth-of-type(1) {
         margin-top: 30px;
@@ -51,12 +52,14 @@ padding: 0 20px;
     justify-content: center;
     align-items: center;
     gap: 20px;
+    overflow: visible;
     .hamburger-image{
         width: 25px;
         height: 20px;
         cursor: pointer;
+        filter: brightness(0);
     }
-     .cart-image, .avatar-image {
+     .cart-image-container, .avatar-image {
         width: 30px;
         height: 30px;
         cursor: pointer;
@@ -67,6 +70,33 @@ padding: 0 20px;
         text-decoration: none;
         color: black;
         cursor: pointer;
+    }
+    .cart-image-container {
+        position: relative;
+        overflow-x: visible;
+        .cart-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            filter: brightness(0);
+        }
+        .products-number {
+            width: 20px;
+            height: 20px;
+            border: 1px solid black;
+            border-radius: 100%;
+            background-color: red;
+            z-index: 2;
+            position: absolute;
+            top: -10%;
+            right: -30%;
+            text-align: center;
+            font-weight: 700;
+            font-size: 14px;
+            overflow: hidden;
+        }
     }
 }
 

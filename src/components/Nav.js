@@ -11,7 +11,9 @@ import Avatar from '../images/avatars/image-avatar.png'
 import Cross from '../images/icons/icon-close.svg'
 
 const Nav = ({ openCart, cartOpen, basket, dispatch }) => {
+
     const [menuIsActive, setMenuIsActive] = useState(false)
+
     const handleMenuOpen = () => {
         setMenuIsActive(true)
     }
@@ -46,6 +48,17 @@ const Nav = ({ openCart, cartOpen, basket, dispatch }) => {
             return renderBasket 
         }
     }
+    
+    const getAmountOnBasket = () => {
+        let amount = 0;
+        basket.forEach(element => amount++)
+        if(amount > 1) {
+            return <div className='products-number'>{amount - 1}</div>
+        } else {
+            return null
+        }
+    }
+
     return (
         <StyledNav>
              <div className={menuIsActive ? 'menu-background active' : 'menu-background'}> 
@@ -63,7 +76,10 @@ const Nav = ({ openCart, cartOpen, basket, dispatch }) => {
                 <Link className="logo-text" to="/home">keyboards</Link>
             </div>
             <div className='container'>
-                <img onClick={openCart} className='cart-image' src={Cart} alt="" />
+                <div className='cart-image-container'>
+                    {getAmountOnBasket()}
+                    <img onClick={openCart} className='cart-image' src={Cart} alt="" />
+                </div>
                 <img className='avatar-image' src={Avatar} alt="" />
             </div>
             <div className={cartOpen ? "cart-container active" : "cart-container"}>
