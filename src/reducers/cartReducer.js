@@ -1,4 +1,5 @@
 export function manageBasket(state, action) {
+    
     switch(action.type) {
         case 'add': {
             return [...state, {
@@ -20,7 +21,6 @@ export function manageBasket(state, action) {
             })
         }
         case 'delete': {
-            console.log(action.payload.name)
             const filteredState = state.filter(element => element.name !== action.payload.name)
             return [...filteredState]
         }
