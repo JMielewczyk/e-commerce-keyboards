@@ -76,9 +76,9 @@ const Nav = ({ openCart, cartOpen, basket, dispatch }) => {
                 <Link className="logo-text" to="home">keyboards</Link>
             </div>
             <div className='container'>
-                <div className='cart-image-container'>
+                <div onClick={openCart} className='cart-image-container'>
                     {getAmountOnBasket()}
-                    <img onClick={openCart} className='cart-image' src={Cart} alt="" />
+                    <img className='cart-image' src={Cart} alt="" />
                 </div>
                 <img className='avatar-image' src={Avatar} alt="" />
             </div>
