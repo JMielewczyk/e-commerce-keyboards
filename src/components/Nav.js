@@ -59,6 +59,22 @@ const Nav = ({ openCart, cartOpen, basket, dispatch }) => {
         }
     }
 
+    const getSummary = () => {
+        let totalPrice = 0;
+        basket.forEach(element => {
+            if(element.price === undefined) return 0
+            totalPrice += element.price
+        })
+        if(totalPrice === 0) return null
+        else {
+            return (
+                <div className='cart-summary'>
+                    <p className='total'>Total: {totalPrice}$</p>
+                    <Link className='checkout' to="home">Checkout</Link>
+                </div>
+            )
+        }
+    }
     return (
         <StyledNav>
              <div className={menuIsActive ? 'menu-background active' : 'menu-background'}> 
@@ -89,6 +105,7 @@ const Nav = ({ openCart, cartOpen, basket, dispatch }) => {
                 <div className='cart-order'>
                     {handleCartOrder()}
                 </div>
+                {getSummary()}
             </div>
         </StyledNav>
     )

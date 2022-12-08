@@ -188,7 +188,28 @@ padding: 0 20px;
         }
         
     } 
-
+    .cart-summary {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 10%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        border-top: 1px solid hsl(220, 14%, 75%);
+        .total , .checkout {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+            font-weight: 700;
+        }
+        .checkout {
+            border-left: 1px solid hsl(220, 14%, 75%);
+            text-decoration: none;
+            color: black;
+        }
+    }
 }
 .cart-container.active {
     transform: translateY(0);
