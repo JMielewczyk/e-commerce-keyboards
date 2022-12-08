@@ -15,6 +15,7 @@ const Header = () => {
     const [imageIndex, setImageIndex] = useState(0)
 
     const getData = () => {
+        setData([])
         fetch('/data.json')
         .then(response => {
             if(response.ok) {
@@ -39,6 +40,7 @@ const Header = () => {
         return <Loading/>
         else {
             const thisProduct = data.filter(item => item.name === product)
+            if(thisProduct.length === 0) return getData() 
             images = thisProduct[0].images;
             return (
             <>

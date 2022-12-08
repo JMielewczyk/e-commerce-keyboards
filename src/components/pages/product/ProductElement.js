@@ -1,5 +1,5 @@
 import React , { useEffect, useState, useReducer } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useLocation } from 'react-router-dom'
 
 import ProductHeader from './ProductHeader'
 import Loading from '../../Loading'
@@ -15,6 +15,7 @@ const ProductElement = ({ cartOpen, dispatch, basket }) => {
     const [loading, setLoading] = useState(true)
     const [orderAmount, setOrderAmount] = useState(0)
     const { category, product } = useParams()
+    const location = useLocation();
 
     const addToCart = () => {
         if(orderAmount === 0) return
@@ -23,7 +24,7 @@ const ProductElement = ({ cartOpen, dispatch, basket }) => {
 
         const thisProduct = data[category].filter(item => {
                 if(item.name === product) {
-                    return item.price
+                    return item
                 }
             })
 
@@ -43,6 +44,7 @@ const ProductElement = ({ cartOpen, dispatch, basket }) => {
             quantity: orderAmount,
             price: thisProduct[0].price,
             image: thisProduct[0].imageTemplate,
+            pathToProduct: location.pathname,
         }})
         }
         

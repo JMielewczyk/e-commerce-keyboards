@@ -1,5 +1,5 @@
 export function manageBasket(state, action) {
-    
+    console.log(state)
     switch(action.type) {
         case 'add': {
             return [...state, {
@@ -7,6 +7,7 @@ export function manageBasket(state, action) {
                 quantity: action.payload.quantity,
                 price: action.payload.price,
                 image: action.payload.image,
+                path: action.payload.pathToProduct,
             }]  
         }
         case 'change': {

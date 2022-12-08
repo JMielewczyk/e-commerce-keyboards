@@ -35,10 +35,10 @@ const Nav = ({ openCart, cartOpen, basket, dispatch }) => {
                             <p>Quantity: {item.quantity}</p>
                             <p>Total price: {item.price}</p>
                         </div>
-                        <div className='image-wrapper'>
+                        <Link to={item.path} className='image-wrapper'>
                             <div className='background' style={{backgroundImage: `url(${item.image})`}} ></div>
                             <img src={item.image} alt={`${item.name} in cart`}/>
-                        </div>
+                        </Link>
                         <div onClick={() => dispatch({type: 'delete', payload: {name: item.name}})} className='trash'>
                             <FontAwesomeIcon icon={faTrash}/>
                         </div>
