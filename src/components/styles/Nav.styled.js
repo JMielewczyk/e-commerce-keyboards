@@ -122,7 +122,7 @@ padding: 0 20px;
     transform: translateY(-100vh);
     border: 1px solid black;
     .cart-header {
-        height: 10%;
+        height: 50px;
         padding: 20px;
         border-bottom: 1px solid hsl(220, 14%, 75%);
         font-weight: 700;
@@ -134,7 +134,7 @@ padding: 0 20px;
         gap: 5px;
         padding: 10px;
         width: 100%;
-        max-height: 90%;
+        max-height: calc(100% - 100px);  // 100px is the summary height of cart header and cart summary elements
         justify-content: start;
         align-items: center;
         font-weight: 700;
@@ -192,7 +192,7 @@ padding: 0 20px;
         display: flex;
         justify-content: space-between;
         width: 100%;
-        height: 10%;
+        height: 50px;
         position: absolute;
         bottom: 0;
         left: 0;
