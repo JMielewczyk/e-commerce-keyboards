@@ -26,7 +26,6 @@ const HomePage = () => {
             </StyledMain>
                 <About/>
         </StyledHome>
-        <Footer/>
         </>
     )
 }
