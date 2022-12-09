@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import {NavLink, Link} from 'react-router-dom'
+
+import { BackgroundContext } from '../App';
 
 import { StyledNav } from './styles/Nav.styled'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -13,6 +15,7 @@ import Cross from '../images/icons/icon-close.svg'
 const Nav = ({ openCart, cartOpen, basket, dispatch }) => {
 
     const [menuIsActive, setMenuIsActive] = useState(false)
+    const { isLogged } = useContext(BackgroundContext)
 
     const handleMenuOpen = () => {
         setMenuIsActive(true)
@@ -67,10 +70,11 @@ const Nav = ({ openCart, cartOpen, basket, dispatch }) => {
         })
         if(totalPrice === 0) return null
         else {
+            const checkoutPath = isLogged === true ? 'shipping' : 'account';
             return (
                 <div className='cart-summary'>
                     <p className='total'>Total: {totalPrice}$</p>
-                    <Link className='checkout' to="home">Checkout</Link>
+                    <Link className='checkout' to={checkoutPath} >Checkout</Link>
                 </div>
             )
         }

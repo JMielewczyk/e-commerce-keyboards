@@ -5,6 +5,7 @@ import Nav from './components/Nav'
 import HomePage from './components/pages/home/Home'
 import AccountLogin from './components/pages/account/AccountLogin'
 import LoggedIn from './components/pages/account/LoggedIn';
+import Shipping from './components/pages/shipping/Shipping';
 import ProductList from './components/pages/productList/ProductList'
 import ProductElement from './components/pages/product/ProductElement';
 import Footer from './components/pages/home/Footer';
@@ -45,13 +46,14 @@ function App() {
   return (
   <StyledWrapper>
     <Router>
-      <BackgroundContext.Provider value={{startingLayout, handleStartingLayout, setIsLogged}}>
+      <BackgroundContext.Provider value={{startingLayout, handleStartingLayout, isLogged, setIsLogged}}>
         <GlobalStyles />
         <Nav dispatch={dispatch} basket={basket} cartOpen={cartOpen} openCart={openCart}/>
         <Routes>  
         <Route index element={<HomePage/>} />
         <Route path='/home' element={<HomePage />}/>
         <Route path='/account' element={renderAccount()}/>
+        <Route path='/shipping' element={<Shipping/>}/>
         <Route path='/home/:category/' element={<ProductList/>}/>
         <Route path='/home/:category/:product' element={<ProductElement basket={basket} dispatch={dispatch} cartOpen={cartOpen}/>}/>
         <Route path='*' element={<Navigate to="/home" replace/>}></Route>
