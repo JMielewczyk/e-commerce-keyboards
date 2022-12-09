@@ -3,12 +3,14 @@ import { BrowserRouter as Router, Routes, Route, Navigate} from 'react-router-do
 
 import Nav from './components/Nav'
 import HomePage from './components/pages/home/Home'
+import AccountLogin from './components/pages/account/AccountLogin'
 import ProductList from './components/pages/productList/ProductList'
 import ProductElement from './components/pages/product/ProductElement';
 
 import { manageBasket } from './reducers/cartReducer';
 
 import GlobalStyles from './components/styles/Global.styled';
+import { StyledWrapper } from './components/styles/Wrapper.styled';
 
 const initialBasket = [
   { name: 'Your basket is empty'}
@@ -30,6 +32,7 @@ function App() {
   }
 
   return (
+  <StyledWrapper>
     <Router>
       <BackgroundContext.Provider value={{startingLayout, handleStartingLayout}}>
         <GlobalStyles />
@@ -37,12 +40,14 @@ function App() {
         <Routes>  
         <Route index element={<HomePage/>} />
         <Route path='/home' element={<HomePage />}/>
+        <Route path='/account' element={<AccountLogin/>}/>
         <Route path='/home/:category/' element={<ProductList/>}/>
         <Route path='/home/:category/:product' element={<ProductElement basket={basket} dispatch={dispatch} cartOpen={cartOpen}/>}/>
         <Route path='*' element={<Navigate to="/home" replace/>}></Route>
       </Routes>
       </BackgroundContext.Provider>
     </Router>
+  </StyledWrapper>
   );
 }
 

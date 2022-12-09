@@ -96,7 +96,9 @@ const Nav = ({ openCart, cartOpen, basket, dispatch }) => {
                     {getAmountOnBasket()}
                     <img className='cart-image' src={Cart} alt="" />
                 </div>
-                <img className='avatar-image' src={Avatar} alt="" />
+                <Link to='account'>
+                    <img className='avatar-image' src={Avatar} alt="" />
+                </Link>
             </div>
             <div className={cartOpen ? "cart-container active" : "cart-container"}>
                 <div className="cart-header">
