@@ -13,6 +13,7 @@ import { StyledMain } from '../../styles/Main.styled'
 
 const HomePage = () => {
     return (
+        <>
         <StyledHome>
             <StyledStartBackground>
                 <StartBackground/>
@@ -24,8 +25,9 @@ const HomePage = () => {
                 <Main/>
             </StyledMain>
                 <About/>
-                <Footer/>
         </StyledHome>
+        <Footer/>
+        </>
     )
 }
 
