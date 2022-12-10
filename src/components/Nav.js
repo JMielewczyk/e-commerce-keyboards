@@ -20,6 +20,7 @@ const Nav = ({ toggleCart, isCartOpen, setIsCartOpen, basket, dispatch }) => {
     
     useEffect(() => {
         setIsCartOpen(false)
+        setMenuIsActive(false)
     }, [location])
 
     const handleMenuOpen = () => {
@@ -89,10 +90,10 @@ const Nav = ({ toggleCart, isCartOpen, setIsCartOpen, basket, dispatch }) => {
              <div className={menuIsActive ? 'menu-background active' : 'menu-background'}> 
                 <div className='menu'>
                     <img onClick={handleMenuClose} className='menu-cross' src={Cross} alt="" />
-                    <NavLink to="collections">All</NavLink>
-                    <NavLink to="men">Men</NavLink>
-                    <NavLink to="women">Women</NavLink>
-                    <NavLink to="about">About</NavLink>
+                    <NavLink to="/home/keyboards">Keyboards</NavLink>
+                    <NavLink to="/home/keycaps">Keycaps</NavLink>
+                    <NavLink to="/home/barebonekits">Barebone kits</NavLink>
+                    <NavLink to="/home/switches">Switches</NavLink>
                     <NavLink to="contact">Contact</NavLink>
                 </div>
             </div>
