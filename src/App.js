@@ -24,15 +24,15 @@ export const BackgroundContext = createContext(null)
 function App() {
   const [isLogged, setIsLogged] = useState(false)
   const [startingLayout, setStartingLayout] = useState(true)
-  const [cartOpen, setCartOpen] = useState(false)
+  const [isCartOpen, setIsCartOpen] = useState(false)
   const [basket, dispatch] = useReducer(manageBasket, initialBasket)
 
   const handleStartingLayout = () => {
     setStartingLayout(false)
   }
 
-  const openCart= () => {
-    setCartOpen(prevValue => !prevValue)
+  const toggleCart= () => {
+    setIsCartOpen(prevValue => !prevValue)
   }
 
   const renderAccount = () => {
@@ -48,14 +48,14 @@ function App() {
     <Router>
       <BackgroundContext.Provider value={{startingLayout, handleStartingLayout, isLogged, setIsLogged}}>
         <GlobalStyles />
-        <Nav dispatch={dispatch} basket={basket} cartOpen={cartOpen} openCart={openCart}/>
+        <Nav dispatch={dispatch} basket={basket} isCartOpen={isCartOpen} setIsCartOpen={setIsCartOpen} toggleCart={toggleCart}/>
         <Routes>  
         <Route index element={<HomePage/>} />
         <Route path='/home' element={<HomePage />}/>
         <Route path='/account' element={renderAccount()}/>
         <Route path='/shipping' element={<Shipping/>}/>
         <Route path='/home/:category/' element={<ProductList/>}/>
-        <Route path='/home/:category/:product' element={<ProductElement basket={basket} dispatch={dispatch} cartOpen={cartOpen}/>}/>
+        <Route path='/home/:category/:product' element={<ProductElement basket={basket} dispatch={dispatch} isCartOpen={isCartOpen}/>}/>
         <Route path='*' element={<Navigate to="/home" replace/>}></Route>
       </Routes>
       <Footer/>

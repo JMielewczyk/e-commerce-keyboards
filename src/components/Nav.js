@@ -1,5 +1,5 @@
-import React, { useState, useContext } from 'react';
-import {NavLink, Link} from 'react-router-dom'
+import React, { useState, useContext, useEffect } from 'react';
+import {NavLink, Link, useLocation} from 'react-router-dom'
 
 import { BackgroundContext } from '../App';
 
@@ -12,10 +12,15 @@ import Cart from '../images/icons/icon-cart.svg'
 import Avatar from '../images/avatars/image-avatar.png'
 import Cross from '../images/icons/icon-close.svg'
 
-const Nav = ({ openCart, cartOpen, basket, dispatch }) => {
+const Nav = ({ toggleCart, isCartOpen, setIsCartOpen, basket, dispatch }) => {
 
     const [menuIsActive, setMenuIsActive] = useState(false)
     const { isLogged } = useContext(BackgroundContext)
+    const location = useLocation();
+    
+    useEffect(() => {
+        setIsCartOpen(false)
+    }, [location])
 
     const handleMenuOpen = () => {
         setMenuIsActive(true)
@@ -96,7 +101,7 @@ const Nav = ({ openCart, cartOpen, basket, dispatch }) => {
                 <Link className="logo-text" to="home">keyboards</Link>
             </div>
             <div className='container'>
-                <div onClick={openCart} className='cart-image-container'>
+                <div onClick={toggleCart} className='cart-image-container'>
                     {getAmountOnBasket()}
                     <img className='cart-image' src={Cart} alt="" />
                 </div>
@@ -104,7 +109,7 @@ const Nav = ({ openCart, cartOpen, basket, dispatch }) => {
                     <img className='avatar-image' src={Avatar} alt="" />
                 </Link>
             </div>
-            <div className={cartOpen ? "cart-container active" : "cart-container"}>
+            <div className={isCartOpen ? "cart-container active" : "cart-container"}>
                 <div className="cart-header">
                     <p className='cart-name'>Cart</p>
                 </div>
