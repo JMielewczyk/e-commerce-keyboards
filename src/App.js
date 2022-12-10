@@ -6,6 +6,7 @@ import HomePage from './components/pages/home/Home'
 import AccountLogin from './components/pages/account/AccountLogin'
 import LoggedIn from './components/pages/account/LoggedIn';
 import Shipping from './components/pages/shipping/Shipping';
+import Payment from './components/pages/payment/Payment'
 import ProductList from './components/pages/productList/ProductList'
 import ProductElement from './components/pages/product/ProductElement';
 import Footer from './components/pages/home/Footer';
@@ -54,6 +55,7 @@ function App() {
         <Route path='/home' element={<HomePage />}/>
         <Route path='/account' element={renderAccount()}/>
         <Route path='/shipping' element={<Shipping/>}/>
+        <Route path='/payment' element={<Payment/>}/>
         <Route path='/home/:category/' element={<ProductList/>}/>
         <Route path='/home/:category/:product' element={<ProductElement basket={basket} dispatch={dispatch} isCartOpen={isCartOpen}/>}/>
         <Route path='*' element={<Navigate to="/home" replace/>}></Route>

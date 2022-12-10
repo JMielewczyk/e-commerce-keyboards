@@ -1,26 +1,61 @@
-import React from 'react'
-import {Link} from 'react-router-dom'
+import React, {useState} from 'react'
+import {Link, useNavigate} from 'react-router-dom'
 
 import { StyledShipping } from '../../styles/Shipping.styled'
 
+const inputNames = {
+        cityInput: 'cityInput',
+        streetInput: 'streetInput',
+        postCodeInput: 'postCodeInput'
+    }
+
 const Shipping = () => {
+    const [cityInput, setCityInput] = useState(localStorage.getItem(inputNames.cityInput));
+    const [streetInput, setStreetInput] = useState(localStorage.getItem(inputNames.cityInput));
+    const [postCodeInput, setPostCodeInput] = useState(localStorage.getItem(inputNames.cityInput));
+    const navigate = useNavigate();
+    
+    const handleInputs = (e, inputName) => {
+        const value = e.target.value;
+        switch(inputName){
+            case inputNames.cityInput: 
+            setCityInput(value)
+            localStorage.setItem(inputNames.cityInput, e.target.value)
+            break;
+            case inputNames.streetInput: 
+            setStreetInput(value)
+            localStorage.setItem(inputNames.streetInput, e.target.value)
+            break;
+            case inputNames.postCodeInput:
+            setPostCodeInput(value)
+            localStorage.setItem(inputNames.postCodeInput, e.target.value)
+            break;
+            default: console.log(`Unknown input name: ${inputName}`);
+        }
+    }
+
+    const submitShipping = (e) => {
+        e.preventDefault();
+        if(cityInput + streetInput + postCodeInput === '') return
+        navigate('/payment')
+    }
     return (
         <StyledShipping>
             <div className='shipping-wrapper'>
                 <p className='shipping-details-txt'>Shipping details</p>
-                <form className='form'>
+                <form onSubmit={submitShipping} className='form'>
                     <label htmlFor='inputCity'>
                         City
-                        <input id='inputCity' type='txt'></input>
+                        <input onChange={(e) => handleInputs(e, inputNames.cityInput)} value={cityInput}  autoComplete='off' id='inputCity' type='txt'></input>
                     </label>
                     <label htmlFor='inputStreet'>
                         Street name
-                        <input id='inputStreet'></input>
+                        <input onChange={(e) => handleInputs(e, inputNames.streetInput)} value={streetInput} autoComplete='off' id='inputStreet'></input>
                     </label>
                     <div className='container'>
                         <label htmlFor='inputPostCode'>
                             Post Code
-                            <input id='inputPostCode'></input>
+                            <input onChange={(e) => handleInputs(e, inputNames.postCodeInput)} value={postCodeInput} autoComplete='off' id='inputPostCode'></input>
                         </label>
                         <label htmlFor='delivery'>
                             Select shipping
