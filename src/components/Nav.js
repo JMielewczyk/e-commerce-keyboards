@@ -21,7 +21,15 @@ const Nav = ({ toggleCart, isCartOpen, setIsCartOpen, basket, dispatch }) => {
     useEffect(() => {
         setIsCartOpen(false)
         setMenuIsActive(false)
+        scrollToTop()
     }, [location])
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        })
+    }
 
     const handleMenuOpen = () => {
         setMenuIsActive(true)
