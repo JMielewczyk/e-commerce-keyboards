@@ -3,20 +3,22 @@ import styled from 'styled-components'
 import backgroundImage from '../../images/startBackground/start-background-light.jpg'
 
 export const StyledStartBackground = styled.div`
-.startBackground {
-    position: fixed;
+.startBackground, .loadingBackground {
+    position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-image: url(${backgroundImage});
-    background-repeat: no-repeat; 
-    background-size: 100vh;
+    object-fit: cover;
     z-index: 2;
     transition: .3s;
     &.active {
         transform: translateX(100vw);
     }
+}
+.loadingBackground {
+    background-image: url(${backgroundImage});
+    z-index: 3;
 }
 .startLayout {
     position: fixed;
@@ -24,7 +26,7 @@ export const StyledStartBackground = styled.div`
     left: 0;
     width: 100vw;
     height: 100vh;
-    z-index: 3;
+    z-index: 4;
     transition: .3s;
     &.active {
         transform: translateX(100vw);
