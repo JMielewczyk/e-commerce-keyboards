@@ -15,7 +15,7 @@ padding: 20px;
     gap: 20px;
     background-color: #EDF2F7;
     .payment-details-txt {
-        font-size: 24px;
+        font-size: 1.5rem;
     }
     .form {
         display: flex;
@@ -29,6 +29,7 @@ padding: 20px;
         label {
             display: flex;
             flex-direction: column;
+            font-size: 0.9rem;
             input{
                 height: 50px;
                 border: none;
@@ -42,12 +43,11 @@ padding: 20px;
             gap: 5px;
             .slash {
                 color: grey;
-                font-size: 32px;
-                width: 20px;
+                font-size: 2rem;
+                width: 2rem;
             }
         }
         .cancel-button, .submit-button {
-            font-size: 16px;
             width: 100%;
             height: 50px;
             border-radius: 8px;

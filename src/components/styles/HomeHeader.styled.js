@@ -62,7 +62,7 @@ width: 100%;
         top: 20px;
         left: 20px;
         z-index: 1;
-        font-size: 22px;
+        font-size: 1.5rem;
         color: white;
     } .price {
         top: 55px;

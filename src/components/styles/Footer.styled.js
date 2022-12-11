@@ -13,7 +13,7 @@ padding-bottom: 20px;
     gap: 20px;
     text-align: center;
     .company-name {
-        font-size: 32px;
+        font-size: 2rem;
     }
     .annotation, .information {
         color: grey;

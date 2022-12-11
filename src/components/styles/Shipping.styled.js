@@ -17,7 +17,7 @@ padding: 20px;
     background-color: #EDF2F7;
     width: 100%;
     .shipping-details-txt {
-        font-size: 24px;
+        font-size: 1.5rem;
     }
     .form {
         display: flex;
@@ -27,6 +27,7 @@ padding: 20px;
             display: flex;
             flex-direction: column;
             gap: 10px;
+            font-size: 0.9rem;
             input, select {
                 border: none;
                 border-radius: 8px;
@@ -39,7 +40,6 @@ padding: 20px;
             gap: 10px;
         }
         .cancel-button, .submit-button {
-            font-size: 16px;
             width: 100%;
             height: 50px;
             border-radius: 8px;

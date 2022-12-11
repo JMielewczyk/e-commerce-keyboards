@@ -7,7 +7,7 @@ width: 100%;
     flex-direction: column;
     gap: 20px;
     & .title {
-        font-size: 40px;
+        font-size: 2rem;
         font-weight: 700;
     }
 }

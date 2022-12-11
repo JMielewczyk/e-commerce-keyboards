@@ -13,7 +13,7 @@ border-radius: 8px;
 background-color: #EDF2F7;
 .loggedIn-txt {
     text-align: center;
-    font-size: 24px;
+    font-size: 1.5rem;
 } 
 .logOut-button {
     width: 150px;

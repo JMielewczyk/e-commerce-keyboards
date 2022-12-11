@@ -33,6 +33,7 @@ export const StyledStartBackground = styled.div`
         position: absolute;
         top: 15px;
         left: 15px;
+        font-size: 2rem;
     }
     .startText {
         position: absolute;
@@ -41,7 +42,7 @@ export const StyledStartBackground = styled.div`
         transform: translateX(-50%);
         width: 100%;
         text-align: center;
-        font-size: 24px;
+        font-size: 1.5rem;
         font-weight:700;
         
     }
@@ -60,7 +61,6 @@ export const StyledStartBackground = styled.div`
         color: grey;
         border: none;
         border-radius: 10px;
-        font-size: 16px;
         font-weight: 700;
         border-right: 5px solid #BDBDAF;
         border-bottom: 5px solid #CCCCBE;
@@ -69,7 +69,7 @@ export const StyledStartBackground = styled.div`
         box-shadow: 0 0 7px black;
         transition: .1s;
         .enter-symbol {
-            font-size: 22px;
+            font-size: 1.4rem;
             position: absolute;
             top: 56%;
             left: 65%;

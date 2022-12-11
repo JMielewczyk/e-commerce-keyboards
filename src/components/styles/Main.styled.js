@@ -23,7 +23,7 @@ gap: 20px;
     text-decoration: none;
        .text {
         color: white;
-        font-size: 32px;
+        font-size: 2rem;
     }
 }
 

@@ -19,7 +19,7 @@ padding: 20px;
     height: 100%;
     max-height: 400px;
     .account-details-txt {
-       font-size: 24px;
+       font-size: 1.5rem;
        font-weight: 400;
     }
     .form {
@@ -30,6 +30,7 @@ padding: 20px;
             display: flex;
             flex-direction: column;
             gap: 10px;
+            font-size: 0.9rem;
             input {
                 border: none;
                 border-radius: 8px;
@@ -41,6 +42,7 @@ padding: 20px;
             border: none;
             border-radius: 8px;
             background-color: #4299E1;
+            color: white;
         }
     }
 }

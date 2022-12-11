@@ -38,7 +38,7 @@ gap: 20px;
         padding-top: 5%;
         padding-left: 15px;
         .product-name {
-            font-size: 22px;
+            font-size: 1.5rem;
         }
     }
 }

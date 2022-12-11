@@ -10,7 +10,7 @@ padding: 10px 20px 40px 10px;
 .product-wrapper {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-grow: 1;
 }
 .product-category {
@@ -20,7 +20,7 @@ padding: 10px 20px 40px 10px;
     text-transform: uppercase;
 }
 .product-title {
-    font-size: 32px;
+    font-size: 2rem;
 }
 .product-description {
     color: hsl(219, 9%, 45%);
@@ -48,7 +48,7 @@ padding: 10px 20px 40px 10px;
     }
 }
 .actual-price {
-    font-size: 28px;
+    font-size: 1.8rem;
     font-weight: 700;
 }
 .amount-container {
@@ -75,7 +75,6 @@ padding: 10px 20px 40px 10px;
     background-color: hsl(26, 100%, 55%);
     color: white;
     font-weight: 700;
-    font-size: 16px;
     img {
         filter: brightness(100)
     }

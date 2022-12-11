@@ -23,15 +23,16 @@ padding: 0 20px;
 .menu {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 2;
     background-color: white;
-    height: 100vh;
+    height: 60vh;
     width: 280px;
     padding: 20px;
+    border-radius: 0 0 200px 0;
     .menu-cross {
         height: 20px;
         width: 20px;
@@ -43,7 +44,7 @@ padding: 0 20px;
     a {
         color: black;
         text-decoration: none;
-        font-size: 20px;
+        font-size: 1.4rem;
         font-weight: 700;
     }
 }
@@ -65,7 +66,7 @@ padding: 0 20px;
         cursor: pointer;
     }
     .logo-text {
-        font-size: 24px;
+        font-size: 1.5rem;
         font-weight: 700;
         text-decoration: none;
         color: black;
@@ -94,7 +95,8 @@ padding: 0 20px;
             right: -30%;
             text-align: center;
             font-weight: 700;
-            font-size: 14px;
+            font-size: 0.85rem;
+            color: white;
             overflow: hidden;
         }
     }
@@ -104,6 +106,7 @@ padding: 0 20px;
     line-height: 25px;
 }
 .menu-background.active {
+    scale: 1;
     transform: translateX(0);
 }
 
@@ -111,9 +114,9 @@ padding: 0 20px;
     display: flex;
     flex-direction: column;
     width: calc(100% - 20px);
-    height: 500px;
+    max-height: 80%;
     position: absolute;
-    top: 80px;
+    top: 7%;
     left: 10px;
     z-index: 2;
     background-color: white;
@@ -122,7 +125,7 @@ padding: 0 20px;
     transform: translateY(-100vh);
     border: 1px solid black;
     .cart-header {
-        height: 50px;
+        min-height: 50px;
         padding: 20px;
         border-bottom: 1px solid hsl(220, 14%, 75%);
         font-weight: 700;
@@ -151,6 +154,8 @@ padding: 0 20px;
             border: 1px solid black;
             border-radius: 8px;
             background-color: hsl(25,100%,94%);
+            overflow: hidden;
+            font-size: 0.9rem;
             .image-wrapper {
                 position: relative;
                 width: 150px;
@@ -192,8 +197,7 @@ padding: 0 20px;
         display: flex;
         justify-content: space-between;
         width: 100%;
-        height: 50px;
-        position: absolute;
+        min-height: 50px;
         bottom: 0;
         left: 0;
         border-top: 1px solid hsl(220, 14%, 75%);
