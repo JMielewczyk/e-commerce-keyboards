@@ -10,6 +10,7 @@ import { StyledStartBackground } from '../../styles/StartBackground.styled'
 import { StyledHome } from '../../styles/Home.styled'
 import { StyledHomeHeader } from '../../styles/HomeHeader.styled'
 import { StyledMain } from '../../styles/Main.styled'
+import AdditionalInfo from './AdditionalInfo'
 
 const HomePage = () => {
     return (
@@ -25,6 +26,7 @@ const HomePage = () => {
                 <Main/>
             </StyledMain>
                 <NewProducts/>
+                <AdditionalInfo/>
                 <About/>
         </StyledHome>
         </>

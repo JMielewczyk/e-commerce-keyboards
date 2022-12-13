@@ -4,11 +4,9 @@ export const StyledNewProducts = styled.section`
 display: flex;
 flex-direction: column;
 gap: 20px;
-max-height: 75vh;
 .newArrivals-txt {
     font-size: 2rem;
-    min-height: 2rem;
-    text-align: center;
+    font-weight: 700;
     overflow: hidden;
 }
 .newProducts-container {
@@ -16,7 +14,7 @@ max-height: 75vh;
     flex-direction: column;
     gap: 20px;
     width: 100%;
-    height: 100%;
+    max-height: 75vh;
     overflow-y: scroll;
     &::-webkit-scrollbar {
     width: 1rem;
