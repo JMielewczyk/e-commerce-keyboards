@@ -14,7 +14,8 @@
           "/image/product/keyboards/k2/k2-2.jpg",
           "/image/product/keyboards/k2/k2-3.jpg",
           "/image/product/keyboards/k2/k2-4.jpg"
-        ]
+        ],
+        "newProduct": true
       },
       {
         "name": "Outer65",
@@ -29,7 +30,8 @@
           "/image/product/keyboards/Outer65/outer2.jpg",
           "/image/product/keyboards/Outer65/outer3.jpg",
           "/image/product/keyboards/Outer65/outer4.jpg"
-        ]
+        ],
+        "newProduct": false
       },
       {
         "name": "Krox80",
@@ -44,7 +46,8 @@
           "/image/product/keyboards/Krox80/krox2.jpg",
           "/image/product/keyboards/Krox80/krox3.jpg",
           "/image/product/keyboards/Krox80/krox4.jpg"
-        ]
+        ],
+        "newProduct": false
       },
       {
         "name": "LogiteC",
@@ -58,7 +61,8 @@
           "/image/product/keyboards/LogiteC/logi1.jpg",
           "/image/product/keyboards/LogiteC/logi2.jpg",
           "/image/product/keyboards/LogiteC/logi3.jpg"
-        ]
+        ],
+        "newProduct": false
       },
       {
         "name": "CrossX",
@@ -72,7 +76,8 @@
           "/image/product/keyboards/CrossX/cross1.jpg",
           "/image/product/keyboards/CrossX/cross2.jpg",
           "/image/product/keyboards/CrossX/cross3.jpg"
-        ]
+        ],
+        "newProduct": false
       }
     ],
     "keycaps": [
@@ -88,7 +93,8 @@
           "/image/product/keycaps/black/black1.jpg",
           "/image/product/keycaps/black/black2.jpg",
           "/image/product/keycaps/black/black3.jpg"
-        ]
+        ],
+        "newProduct": false
       },
       {
         "name": "BlackGold",
@@ -102,10 +108,11 @@
           "/image/product/keycaps/blackgold/blackgold1.jpg",
           "/image/product/keycaps/blackgold/blackgold2.jpg",
           "/image/product/keycaps/blackgold/blackgold3.jpg"
-        ]
+        ],
+        "newProduct": false
       },
       {
-        "name": "Creamkeycapset",
+        "name": "Cream",
         "description": "Compatible with major-sizes keyboard including but not limited to 60%, 64-key, 65%, TKL, 75%, 96%, 1800 compact, Alice, and full-size keyboards.",
         "discount": false,
         "discountValue": 5,
@@ -116,7 +123,8 @@
           "/image/product/keycaps/creamkeycapset/cream1.jpg",
           "/image/product/keycaps/creamkeycapset/cream2.jpg",
           "/image/product/keycaps/creamkeycapset/cream3.jpg"
-        ]
+        ],
+        "newProduct": true
       }
     ],
     "barebonekits": [
@@ -132,7 +140,8 @@
           "/image/product/barebonekits/acrpro/acrpro1.jpg",
           "/image/product/barebonekits/acrpro/acrpro2.jpg",
           "/image/product/barebonekits/acrpro/acrpro3.jpg"
-        ]
+        ],
+        "newProduct": false
       },
       {
         "name": "ACR v2",
@@ -146,7 +155,8 @@
           "/image/product/barebonekits/acrv2/acr1.jpg",
           "/image/product/barebonekits/acrv2/acr2.jpg",
           "/image/product/barebonekits/acrv2/acr3.jpg"
-        ]
+        ],
+        "newProduct": false
       },
       {
         "name": "MOD002",
@@ -160,7 +170,8 @@
           "/image/product/barebonekits/mod002/mod002-1.jpg",
           "/image/product/barebonekits/mod002/mod002-2.jpg",
           "/image/product/barebonekits/mod002/mod002-3.jpg"
-        ]
+        ],
+        "newProduct": false
       },
       {
         "name": "MOD004",
@@ -172,7 +183,8 @@
         "imageTemplate": "/image/product/barebonekits/mod004/mod004.jpg",
         "images": [
           "/image/product/barebonekits/mod004/mod004.jpg"
-        ]
+        ],
+        "newProduct": false
       },
       {
         "name": "MOD007s",
@@ -184,7 +196,8 @@
         "imageTemplate": "/image/product/barebonekits/mod007s/mod007s.jpg",
         "images": [
           "/image/product/barebonekits/mod007s/mod007s.jpg"
-        ]
+        ],
+        "newProduct": false
       }
     ],
     "switches": [
@@ -199,7 +212,8 @@
         "images": [
           "/image/product/switches/white/white1.jpg",
           "/image/product/switches/white/white2.jpg"
-        ]
+        ],
+        "newProduct": false
       },
       {
         "name": "Blue switch",
@@ -212,7 +226,8 @@
         "images": [
           "/image/product/switches/blue/blue1.jpg",
           "/image/product/switches/blue/blue2.jpg"
-        ]
+        ],
+        "newProduct": false
       },
       {
         "name": "Purple switch",
@@ -225,7 +240,8 @@
         "images": [
           "/image/product/switches/purple/purple1.jpg",
           "/image/product/switches/purple/purple2.jpg"
-        ]
+        ],
+        "newProduct": true
       }
     ]
   }

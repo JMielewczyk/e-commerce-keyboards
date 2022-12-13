@@ -4,7 +4,7 @@ import StartBackground from './StartBackground'
 import HeaderMain from './HeaderHome'
 import Main from './Main'
 import About from './About'
-import Footer from './Footer'
+import NewProducts from './NewProducts'
 
 import { StyledStartBackground } from '../../styles/StartBackground.styled'
 import { StyledHome } from '../../styles/Home.styled'
@@ -24,6 +24,7 @@ const HomePage = () => {
             <StyledMain>
                 <Main/>
             </StyledMain>
+                <NewProducts/>
                 <About/>
         </StyledHome>
         </>

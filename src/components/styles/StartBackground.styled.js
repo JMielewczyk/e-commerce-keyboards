@@ -4,7 +4,7 @@ import backgroundImage from '../../images/startBackground/start-background-light
 
 export const StyledStartBackground = styled.div`
 .startBackground, .loadingBackground {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
