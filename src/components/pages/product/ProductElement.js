@@ -50,8 +50,15 @@ const ProductElement = ({ cartOpen, dispatch, basket }) => {
         
     }
 
-    function getData() {
-        fetch('/data.json')
+    async function getData() {
+            const response = await fetch('/data.json')
+            const parsedResponse = await response.json();
+            setData(parsedResponse.data)
+
+
+
+
+/*        fetch('/data.json')
         .then(response => {
             if(response.ok) {
               return response.json();
@@ -60,13 +67,12 @@ const ProductElement = ({ cartOpen, dispatch, basket }) => {
         })
         .then(data => setData(data.products))
         .then(() => setLoading(false))
-        .catch(error => console.log(error))
+        .catch(error => console.log(error))*/
     }
 
     useEffect(() => {
         getData()
     }, [])
-
     
     const loadContent = (category) => {
         if(loading === true) 
@@ -129,6 +135,8 @@ const ProductElement = ({ cartOpen, dispatch, basket }) => {
             setOrderAmount(prevValue => prevValue - 1)
          }
      }
+
+     if(loading) return <div>Loader</div>
 
     return (
     <StyledProductElement>
