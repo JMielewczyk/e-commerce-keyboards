@@ -7,10 +7,10 @@ import { StyledNav } from './styles/Nav.styled'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
 
-import Menu from '../images/icons/icon-menu.svg'
-import Cart from '../images/icons/icon-cart.svg'
-import Avatar from '../images/avatars/image-avatar.png'
-import Cross from '../images/icons/icon-close.svg'
+import Menu from '../assets/icons/icon-menu.svg'
+import Cart from '../assets/icons/icon-cart.svg'
+import Avatar from '../assets/images/image-avatar.png'
+import Cross from '../assets/icons/icon-close.svg'
 
 const Nav = ({ toggleCart, isCartOpen, setIsCartOpen, basket, dispatch }) => {
 

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import backgroundImage from '../../images/startBackground/start-background-light.jpg'
+import backgroundImage from '../../assets/images/start-background-light.jpg'
 
 export const StyledStartBackground = styled.div`
 .startBackground, .loadingBackground {

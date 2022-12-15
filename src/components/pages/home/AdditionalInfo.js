@@ -4,8 +4,8 @@ import Loading from '../../Loading'
 
 import { StyledAdditionalInfo } from '../../styles/AdditionalInfo.styled'
 
-import backlightMobile from '../../../images/startBackground/backlight-mobile.mp4'
-import backlightDesktop from '../../../images/startBackground/backlight-desktop.mp4'
+import backlightMobile from '../../../assets/videos/backlight-mobile.mp4'
+import backlightDesktop from '../../../assets/videos/backlight-desktop.mp4'
 
 const AdditionalInfo = () => {
     const videoRef = useRef(null);

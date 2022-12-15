@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
-import keycapsImage from '../../images/products/keycaps.jpg'
-import bareboneImage from '../../images/products/barebone.jpg'
-import switchesImage from '../../images/products/switches.jpg'
-import prebuiltImage from '../../images/products/prebuilt.jpg'
+import keycapsImage from '../../assets/images/keycaps.jpg'
+import bareboneImage from '../../assets/images/barebone.jpg'
+import switchesImage from '../../assets/images/switches.jpg'
+import prebuiltImage from '../../assets/images/prebuilt.jpg'
 
 export const StyledMain = styled.main`
 display: flex;

@@ -3,8 +3,8 @@ import { useParams } from 'react-router-dom'
 
 import Loading from '../../Loading'
 
-import next from '../../../images/icons/icon-next.svg'
-import previous from '../../../images/icons/icon-previous.svg'
+import next from '../../../assets/icons/icon-next.svg'
+import previous from '../../../assets/icons/icon-previous.svg'
 
 import { StyledProductHeader } from '../../styles/ProductHeader.styled.js'
 

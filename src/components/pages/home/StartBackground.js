@@ -4,8 +4,8 @@ import Loading from '../../Loading'
 
 import { BackgroundContext } from '../../../App'
 
-import backgroundVideoMobile from '../../../images/startBackground/bg-video-mobile.mp4'
-import backgroundVideoDesktop  from '../../../images/startBackground/bg-video-desktop.mp4'
+import backgroundVideoMobile from '../../../assets/videos/bg-video-mobile.mp4'
+import backgroundVideoDesktop  from '../../../assets/videos/bg-video-desktop.mp4'
 
 const StartBackground = () => {
     const videoRef = useRef(null)
