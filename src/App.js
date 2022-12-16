@@ -1,3 +1,4 @@
+//Hooks
 import React, { useState, useReducer, createContext } from "react";
 import {
   BrowserRouter as Router,
@@ -6,20 +7,23 @@ import {
   Navigate,
 } from "react-router-dom";
 
+//Pages
 import Nav from "./components/Nav";
-import HomePage from "./components/pages/home/Home";
-import AccountLogin from "./components/pages/account/AccountLogin";
-import LoggedIn from "./components/pages/account/LoggedIn";
-import Shipping from "./components/pages/shipping/Shipping";
-import Payment from "./components/pages/payment/Payment";
-import ProductList from "./components/pages/productList/ProductList";
-import ProductElement from "./components/pages/product/ProductElement";
-import Footer from "./components/pages/home/Footer";
+import HomePage from "./pages/home/Home";
+import AccountLogin from "./pages/account/AccountLogin";
+import LoggedIn from "./pages/account/LoggedIn";
+import Shipping from "./pages/shipping/Shipping";
+import Payment from "./pages/payment/Payment";
+import ProductList from "./pages/productList/ProductList";
+import ProductElement from "./pages/product/ProductElement";
+import Footer from "./components/Footer";
 
+//Reducers
 import { manageBasket } from "./reducers/cartReducer";
 
-import GlobalStyles from "./components/styles/Global.styled";
-import { StyledWrapper } from "./components/styles/Wrapper.styled";
+//Styles
+import GlobalStyles from "./styles/Global.styled";
+import { StyledWrapper } from "./styles/Wrapper.styled";
 
 const initialBasket = [{ name: "Your basket is empty" }];
 
