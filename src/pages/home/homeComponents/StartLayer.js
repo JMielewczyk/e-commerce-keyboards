@@ -23,7 +23,7 @@ const StartLayer = () => {
   useEffect(() => {
     const handleVideoLoading = () => {
       if (element.readyState === 4) {
-        setIsLoading(true);
+        setIsLoading(false);
         return () => {
           element.removeEventListener("loadeddata", handleVideoLoading);
         };

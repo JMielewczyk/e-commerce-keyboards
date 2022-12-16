@@ -1,17 +1,17 @@
 //Hooks
-import React, { useEffect, useState } from "react";
-import { useParams, useLocation } from "react-router-dom";
+import React, { useEffect, useState } from 'react';
+import { useParams, useLocation } from 'react-router-dom';
 
 //Components
-import ProductHeader from "./ProductHeader";
-import Loading from "../../components/Loading";
+import ProductHeader from './ProductHeader';
+import Loading from '../../components/Loading';
 
 //Styles
-import { StyledProductElement } from "../../styles/ProductElement.styled";
+import { StyledProductElement } from '../../styles/ProductElement.styled';
 
 //Functions
-import { fetchData } from "./functions/fetchData";
-import LoadContent from "./functions/LoadContent";
+import { fetchData } from '../../utils/fetchData';
+import LoadContent from './functions/LoadContent';
 
 const ProductElement = ({ basket }) => {
   const [data, setData] = useState(null);
