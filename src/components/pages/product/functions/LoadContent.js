@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 
 //Context
-import { ProductElementContext } from "../ProductElement";
 import { BackgroundContext } from "../../../../App";
 
 //Images
@@ -13,17 +12,15 @@ import cart from "../../../../assets/icons/icon-cart.svg";
 import { handleAmount } from "./handleAmount";
 import { addToCart } from "./addToCart";
 
-const LoadContent = () => {
-  const {
-    basket,
-    location,
-    data,
-    category,
-    product,
-    orderAmount,
-    setOrderAmount,
-  } = useContext(ProductElementContext);
-
+const LoadContent = ({
+  basket,
+  location,
+  data,
+  category,
+  product,
+  orderAmount,
+  setOrderAmount,
+}) => {
   const { dispatch } = useContext(BackgroundContext);
 
   const allElements = data[category].map((item) => {

@@ -1,12 +1,11 @@
-export const fetchData = (setData, setLoading) => {
-  fetch("/data.json")
-    .then((response) => {
-      if (response.ok) {
-        return response.json();
-      }
-      throw response;
-    })
-    .then((data) => setData(data.products))
-    .then(() => setLoading(false))
-    .catch((error) => console.log(error));
-};
+export async function fetchData(setData, setLoading) {
+  try {
+    setData(null);
+    const response = await fetch("/data.json");
+    const parsedResponse = await response.json();
+    setData(parsedResponse.products);
+    setLoading(false);
+  } catch (error) {
+    console.error(error);
+  }
+}

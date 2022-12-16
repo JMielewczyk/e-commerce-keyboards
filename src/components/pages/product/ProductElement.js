@@ -1,5 +1,5 @@
 //Hooks
-import React, { useEffect, useState, createContext } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams, useLocation } from "react-router-dom";
 
 //Components
@@ -12,9 +12,6 @@ import { StyledProductElement } from "../../styles/ProductElement.styled";
 //Functions
 import { fetchData } from "./functions/fetchData";
 import LoadContent from "./functions/LoadContent";
-
-//Context
-export const ProductElementContext = createContext(null);
 
 const ProductElement = ({ basket }) => {
   const [data, setData] = useState(null);
@@ -32,22 +29,18 @@ const ProductElement = ({ basket }) => {
       {loading || data === null ? (
         <Loading />
       ) : (
-        <ProductElementContext.Provider
-          value={{
-            basket,
-            location,
-            data,
-            category,
-            product,
-            orderAmount,
-            setOrderAmount,
-          }}
-        >
-          <StyledProductElement>
-            <ProductHeader />
-            <LoadContent />
-          </StyledProductElement>
-        </ProductElementContext.Provider>
+        <StyledProductElement>
+          <ProductHeader />
+          <LoadContent
+            basket={basket}
+            location={location}
+            data={data}
+            category={category}
+            product={product}
+            orderAmount={orderAmount}
+            setOrderAmount={setOrderAmount}
+          />
+        </StyledProductElement>
       )}
     </>
   );

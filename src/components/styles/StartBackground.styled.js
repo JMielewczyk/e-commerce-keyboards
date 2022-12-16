@@ -1,9 +1,10 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
-import backgroundImage from '../../assets/images/start-background-light.jpg'
+import backgroundImage from "../../assets/images/start-background-light.jpg";
 
 export const StyledStartBackground = styled.div`
-.startBackground, .loadingBackground {
+  .startBackground,
+  .loadingBackground {
     position: fixed;
     top: 0;
     left: 0;
@@ -11,79 +12,78 @@ export const StyledStartBackground = styled.div`
     height: 100vh;
     object-fit: cover;
     z-index: 2;
-    transition: .3s;
+    transition: 0.3s;
     &.active {
-        transform: translateX(100vw);
+      transform: translateX(100vw);
     }
-}
-.loadingBackground {
+  }
+  .loadingBackground {
     background-image: url(${backgroundImage});
     z-index: 3;
-}
-.startLayout {
+  }
+  .startLayout {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
     z-index: 4;
-    transition: .3s;
+    transition: 0.3s;
     &.active {
-        transform: translateX(100vw);
+      transform: translateX(100vw);
     }
     .company-name {
-        position: absolute;
-        top: 15px;
-        left: 15px;
-        font-size: 2rem;
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      font-size: 2rem;
     }
     .startText {
-        position: absolute;
-        bottom: 30vh;
-        left: 50vw;
-        transform: translateX(-50%);
-        width: 100%;
-        text-align: center;
-        font-size: 1.5rem;
-        font-weight:700;
-        
+      position: absolute;
+      bottom: 30vh;
+      left: 50vw;
+      transform: translateX(-50%);
+      width: 100%;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 700;
     }
     .btnGetStarted {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      bottom: 15vh;
+      left: 50vw;
+      transform: translateX(-50%);
+      width: 150px;
+      height: 60px;
+      min-width: 120px;
+      background-color: #e0e0d1;
+      color: grey;
+      border: none;
+      border-radius: 10px;
+      font-weight: 700;
+      border-right: 5px solid #bdbdaf;
+      border-bottom: 5px solid #ccccbe;
+      border-left: 5px solid #adada1;
+      border-top: 5px solid #adada1;
+      box-shadow: 0 0 7px black;
+      transition: 0.1s;
+      .enter-symbol {
+        font-size: 1.4rem;
         position: absolute;
-        bottom: 15vh;
-        left: 50vw;
-        transform: translateX(-50%);
-        width: 150px;
-        height: 60px;
-        min-width: 120px;
-        background-color: #E0E0D1;
-        color: grey;
-        border: none;
-        border-radius: 10px;
-        font-weight: 700;
-        border-right: 5px solid #BDBDAF;
-        border-bottom: 5px solid #CCCCBE;
-        border-left: 5px solid #ADADA1;
-        border-top: 5px solid #ADADA1;
-        box-shadow: 0 0 7px black;
-        transition: .1s;
-        .enter-symbol {
-            font-size: 1.4rem;
-            position: absolute;
-            top: 56%;
-            left: 65%;
-            transform: translateY(-50%);
-        }
+        top: 56%;
+        left: 65%;
+        transform: translateY(-50%);
+      }
     }
     .btnGetStarted:active {
-        transform: translateX(-50%) scale(0.95);
-        box-shadow: 0 0 7px 1px black;
-        .enter-symbol {
-            transform: translateY(-49.6%);
-        }
-        }
-}
-`
+      transform: translateX(-50%) scale(0.95);
+      box-shadow: 0 0 7px 1px black;
+      .enter-symbol {
+        transform: translateY(-49.6%);
+      }
+    }
+  }
+`;

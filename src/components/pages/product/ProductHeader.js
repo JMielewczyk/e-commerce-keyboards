@@ -1,82 +1,46 @@
-import React, {useState, useEffect}  from 'react'
-import { useParams } from 'react-router-dom'
+//Hooks
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
-import Loading from '../../Loading'
+//Components
+import Loading from "../../Loading";
 
-import next from '../../../assets/icons/icon-next.svg'
-import previous from '../../../assets/icons/icon-previous.svg'
+//Styles
+import { StyledProductHeader } from "../../styles/ProductHeader.styled.js";
 
-import { StyledProductHeader } from '../../styles/ProductHeader.styled.js'
+//Functions
+import LoadHeader from "./functions/LoadHeader";
+import { fetchData } from "./functions/fetchData";
 
 const Header = () => {
-    const [data, setData] = useState([])
-    const [loading, setLoading] = useState(true)
-    const {product, category} = useParams()
-    const [imageIndex, setImageIndex] = useState(0)
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const { product, category } = useParams();
+  const [imageIndex, setImageIndex] = useState(0);
 
-    const getData = () => {
-        setData([])
-        fetch('/data.json')
-        .then(response => {
-            if(response.ok) {
-              return response.json()
-            } else {
-                throw response
-            }
-        })
-        .then(data => setData(data.products[category]))
-        .then(setLoading(false))
-        .catch(error => console.log(error)) 
-    }
+  useEffect(() => {
+    fetchData(setData, setLoading);
+  }, []);
 
-    useEffect(() => {
-        getData()
-    }, [])
-
-    let images = [];
-
-    const getContentLoaded = () => {
-        if(loading === true || data.length === 0) 
-        return <Loading/>
-        else {
-            const thisProduct = data.filter(item => item.name === product)
-            if(thisProduct.length === 0) return getData() 
-            images = thisProduct[0].images;
-            return (
-            <>
-                <div className='image-wrapper'>
-                    <img className="product-image" src={process.env.PUBLIC_URL + images[imageIndex]} alt="" />
-                </div>
-                <div onClick={handleSliderNext} className='button-container-next' >
-                    <img className='button-next' src={next} alt="" />
-                </div>
-                <div onClick={handleSliderPrevious} className='button-container-previous' >
-                    <img className='button-previous' src={previous} alt="" />
-                </div>
-            </>        
-            )
-        }
-    }
-
-    const handleSliderNext = () => {
-        if(imageIndex === images.length - 1) {
-            return setImageIndex(0)
-        }
-        setImageIndex(prevValue => prevValue + 1)
-    }
-
-    const handleSliderPrevious = () => {
-       if(imageIndex === 0) {
-        return setImageIndex(images.length - 1)
-       } 
-       setImageIndex(prevValue => prevValue -1)
-    }
-
-    return (
+  return (
+    <>
+      {loading || data === null ? (
+        <Loading />
+      ) : (
         <StyledProductHeader>
-            {getContentLoaded()}
+          <LoadHeader
+            loading={loading}
+            data={data}
+            product={product}
+            imageIndex={imageIndex}
+            fetchData={fetchData}
+            category={category}
+            setImageIndex={setImageIndex}
+          />
         </StyledProductHeader>
-    )
-}
+      )}
+    </>
+  );
+};
 
 export default Header;
