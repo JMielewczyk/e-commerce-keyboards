@@ -19,7 +19,12 @@ const Header = () => {
   const [imageIndex, setImageIndex] = useState(0);
 
   useEffect(() => {
-    fetchData(setData, setLoading);
+    async function loadContent() {
+      const data = await fetchData();
+      setData(data);
+      setLoading(false);
+    }
+    loadContent();
   }, []);
 
   return (

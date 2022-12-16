@@ -21,7 +21,12 @@ const ProductElement = ({ basket }) => {
   const location = useLocation();
 
   useEffect(() => {
-    fetchData(setData, setLoading);
+    async function loadContent() {
+      const data = await fetchData();
+      setData(data);
+      setLoading(false);
+    }
+    loadContent();
   }, []);
 
   return (

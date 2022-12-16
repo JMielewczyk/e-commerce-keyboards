@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 //Components
 import Loading from '../../../components/Loading';
-import LoadHeader from '../functions/LoadHeaderContent';
+import LoadHeader from '../functions/LoadHeader';
 
 //Functions
 import { slideProduct } from '../functions/slideProduct';
