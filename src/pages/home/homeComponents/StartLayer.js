@@ -1,9 +1,16 @@
+//Hooks
 import React, { useContext, useRef, useEffect, useState } from "react";
 
+//Components
 import Loading from "../../../components/Loading";
 
+//Styles
+import { StyledStartLayer } from "../../../styles/StartLayer.styled";
+
+//Context
 import { BackgroundContext } from "../../../App";
 
+//Video
 import backgroundVideoMobile from "../../../assets/videos/bg-video-mobile.mp4";
 // import backgroundVideoDesktop from "../../../assets/videos/bg-video-desktop.mp4";
 
@@ -16,7 +23,7 @@ const StartLayer = () => {
   useEffect(() => {
     const handleVideoLoading = () => {
       if (element.readyState === 4) {
-        setIsLoading(false);
+        setIsLoading(true);
         return () => {
           element.removeEventListener("loadeddata", handleVideoLoading);
         };
@@ -29,7 +36,7 @@ const StartLayer = () => {
   }, [isLoading]);
 
   return (
-    <>
+    <StyledStartLayer>
       {isLoading && (
         <div
           className={started ? "loadingBackground" : "loadingBackground active"}
@@ -53,7 +60,7 @@ const StartLayer = () => {
           Enter<p className="enter-symbol">⮐</p>
         </button>
       </div>
-    </>
+    </StyledStartLayer>
   );
 };
 
