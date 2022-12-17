@@ -10,7 +10,7 @@ import { handleInputPassword } from './functions/formHandlers';
 import { handleSubmit } from './functions/formHandlers';
 
 //Styles
-import { P2 } from '../../styles/elements/P2.js';
+import { P20 } from '../../styles/elements/P20.js';
 import { Form } from '../../styles/elements/Form';
 import { Label } from '../../styles/elements/Label';
 import { Input } from '../../styles/elements/Input';
@@ -25,7 +25,7 @@ const AccountLogin = () => {
   return (
     <>
       <Wrapper>
-        <P2>Account Details</P2>
+        <P20>Account Details</P20>
         <Form onSubmit={(e) => handleSubmit(e, loginValue, passwordValue, setIsLogged)}>
           <Label htmlFor="login">
             Email address
