@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { Button } from "./Button";
+import { button } from './button';
 
-export const OrangeButton = styled(Button)`
+export const OrangeButton = styled(button)`
   background-color: hsl(26, 100%, 55%);
 `;
