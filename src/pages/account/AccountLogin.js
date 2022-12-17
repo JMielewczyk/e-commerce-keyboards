@@ -1,61 +1,52 @@
-import React, { useState, useContext } from "react";
+//Hooks
+import React, { useState, useContext } from 'react';
 
-import Footer from "../../components/Footer";
+//Components
+import Footer from '../../components/Footer';
 
-import { StyledAccountLogin } from "../../styles/AccountLogin.styled";
-import { BackgroundContext } from "../../App";
+//Styles
+import { StyledAccountLogin } from '../../styles/AccountLogin.styled';
+
+//Context
+import { BackgroundContext } from '../../App';
+
+//Functions
+import { handleInputLogin } from './functions/formHandlers';
+import { handleInputPassword } from './functions/formHandlers';
+import { handleSubmit } from './functions/formHandlers';
 
 const AccountLogin = () => {
-  const [loginValue, setLoginValue] = useState("");
-  const [passwordValue, setPasswordValue] = useState("");
+  const [loginValue, setLoginValue] = useState('');
+  const [passwordValue, setPasswordValue] = useState('');
   const { setIsLogged } = useContext(BackgroundContext);
 
-  const handleInputLogin = (e) => {
-    const value = e.target.value;
-    setLoginValue(value);
-  };
-  const handleInputPassword = (e) => {
-    const value = e.target.value;
-    setPasswordValue(value);
-  };
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (loginValue === "" || passwordValue === "") return;
-    setIsLogged(true);
-    console.log([loginValue, passwordValue, setIsLogged]);
-  };
   return (
     <>
       <StyledAccountLogin>
         <div className="account-wrapper">
           <p className="account-details-txt">Account details</p>
-          <form onSubmit={handleSubmit} className="form">
+          <form
+            onSubmit={(e) => handleSubmit(e, loginValue, passwordValue, setIsLogged)}
+            className="form">
             <label htmlFor="login">
               Email address
               <input
                 autoComplete="off"
-                onChange={handleInputLogin}
+                onChange={(e) => handleInputLogin(e, setLoginValue)}
                 value={loginValue}
                 type="email"
                 id="login"
-                placeholder="ex. Email@myemail.com"
-              ></input>
+                placeholder="ex. Email@myemail.com"></input>
             </label>
             <label htmlFor="password">
               Password
               <input
-                onChange={handleInputPassword}
+                onChange={(e) => handleInputPassword(e, setPasswordValue)}
                 value={passwordValue}
                 type="password"
-                id="password"
-              ></input>
+                id="password"></input>
             </label>
-            <input
-              autoComplete="off"
-              className="submit-button"
-              type="submit"
-              value="Login"
-            ></input>
+            <input autoComplete="off" className="submit-button" type="submit" value="Login"></input>
           </form>
         </div>
       </StyledAccountLogin>
