@@ -6,7 +6,9 @@ import Loading from '../../../components/Loading';
 import LoadNewProducts from '../functions/LoadNewProducts';
 
 //Styles
-import { StyledNewProducts } from '../../../styles/NewProducts.styled';
+import { Wrapper } from '../../../styles/elements/Wrapper';
+import { ScrollContainer } from '../../../styles/elements/ScrollContainer';
+import { P20 } from '../../../styles/elements/P20';
 
 //Functions
 import { fetchData } from '../../../utils/fetchData';
@@ -29,12 +31,12 @@ const NewProducts = () => {
       {loading === true || data === null ? (
         <Loading />
       ) : (
-        <StyledNewProducts>
-          <p className="newArrivals-txt">New Arrivals</p>
-          <div className="newProducts-container">
+        <Wrapper>
+          <P20 className="newArrivals-txt">New Arrivals</P20>
+          <ScrollContainer>
             <LoadNewProducts data={data} />
-          </div>
-        </StyledNewProducts>
+          </ScrollContainer>
+        </Wrapper>
       )}
     </>
   );

@@ -1,5 +1,12 @@
+//Hooks
 import React from 'react';
 import { Link } from 'react-router-dom';
+
+//Styles
+import { PAbsoluteBottom } from '../../../styles/elements/HomeNewProducts/PAbsoluteBottom';
+import { ContAbsolute30H } from '../../../styles/elements/HomeNewProducts/ContAbsolute30H';
+import { P20 } from '../../../styles/elements/P20';
+import { LinkRelMin30Vh } from '../../../styles/elements/HomeNewProducts/LinkRelMin30Vh';
 
 const LoadNewProducts = ({ data }) => {
   let newProducts = [];
@@ -16,18 +23,16 @@ const LoadNewProducts = ({ data }) => {
   });
   const mapNewProducts = newProducts.map((element) => {
     return (
-      <Link
+      <LinkRelMin30Vh
         style={{ backgroundImage: `url(${element.imageTemplate})` }}
-        className="newProduct-container"
-        key={element.name}
-        to={`/home/${element.category}/${element.name}`}>
-        <div className="container">
-          <div className="background-blur"></div>
-          <div className="product-container">
-            <p className="product-name">{element.name}</p>
-          </div>
-        </div>
-      </Link>
+        key={element.name}>
+        <Link to={`/home/${element.category}/${element.name}`}>
+          <PAbsoluteBottom>
+            <P20>{element.name}</P20>
+          </PAbsoluteBottom>
+          <ContAbsolute30H></ContAbsolute30H>
+        </Link>
+      </LinkRelMin30Vh>
     );
   });
   return <>{mapNewProducts}</>;

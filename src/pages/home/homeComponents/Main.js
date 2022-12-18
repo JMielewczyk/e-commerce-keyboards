@@ -3,9 +3,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 //Styles
-import { LinkContainerImage } from '../../../styles/HomeMain/LinkContainerImage';
+import { LinkContainerImage } from '../../../styles/elements/LinkContainerImage';
 import { HomeMainWrapper } from '../../../styles/HomeMain/HomeMainWrapper';
 import { P10CenterBold } from '../../../styles/HomeMain/P10CenterBold';
+import { LinkWhite } from '../../../styles/elements/LinkWhite';
 
 //Images
 import keyboards from '../../../assets/images/prebuilt.jpg';
@@ -19,7 +20,9 @@ const Main = () => {
 
   const categoriesMap = categories.map((item, index) => (
     <LinkContainerImage style={{ backgroundImage: `url(${categoryImages[index]})` }} key={item}>
-      <Link to={`/home/${item.toLowerCase()}`}>{item}</Link>
+      <LinkWhite>
+        <Link to={`/home/${item.toLowerCase()}`}>{item}</Link>
+      </LinkWhite>
     </LinkContainerImage>
   ));
 
