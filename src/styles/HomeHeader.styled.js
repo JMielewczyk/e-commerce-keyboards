@@ -1,33 +1,4 @@
-import styled, { keyframes } from "styled-components";
-
-const featuredAnimation = keyframes`
-        0% {
-            transform: translateX(-100vw);
-            opacity: 0;
-            visibility: hidden;
-        }
-        5% {
-            opacity: 0;
-        }
-        15% {
-            transform: translate(0);
-            visibility: visible;
-            opacity: 1;
-        }
-        85% {
-            transform: translateX(0);
-            visibility: visible;
-            opacity: 1;
-        }
-        95% {
-            opacity: 0;
-        }
-        100% {
-            transform: translateX(100vw);
-            visibility: hidden;
-            opacity: 0;
-        }
-`;
+import styled, { keyframes } from 'styled-components';
 
 export const StyledHomeHeader = styled.header`
   width: 100%;

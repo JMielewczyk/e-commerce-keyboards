@@ -1,24 +1,33 @@
-import React from "react";
-import { Link } from "react-router-dom";
+//Hooks
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-const categories = ["Keycaps", "BareboneKits", "Switches", "Keyboards"];
+//Styles
+import { LinkContainerImage } from '../../../styles/HomeMain/LinkContainerImage';
+import { HomeMainWrapper } from '../../../styles/HomeMain/HomeMainWrapper';
+import { P10CenterBold } from '../../../styles/HomeMain/P10CenterBold';
+
+//Images
+import keyboards from '../../../assets/images/prebuilt.jpg';
+import keycaps from '../../../assets/images/keycaps.jpg';
+import switches from '../../../assets/images/switches.jpg';
+import barebone from '../../../assets/images/barebone.jpg';
 
 const Main = () => {
-  const categoriesMap = categories.map((item) => (
-    <Link
-      key={item}
-      className={`${item.toLowerCase()}-container`}
-      to={`/home/${item.toLowerCase()}`}
-    >
-      <p className="text">{item}</p>
-    </Link>
+  const categories = ['Keycaps', 'BareboneKits', 'Switches', 'Keyboards'];
+  const categoryImages = [keycaps, barebone, switches, keyboards];
+
+  const categoriesMap = categories.map((item, index) => (
+    <LinkContainerImage style={{ backgroundImage: `url(${categoryImages[index]})` }} key={item}>
+      <Link to={`/home/${item.toLowerCase()}`}>{item}</Link>
+    </LinkContainerImage>
   ));
 
   return (
-    <>
-      <h1>Building Your First Mechanical Keyboard is Easier Than Ever</h1>
+    <HomeMainWrapper>
+      <P10CenterBold>Building Your First Mechanical Keyboard is Easier Than Ever</P10CenterBold>
       {categoriesMap}
-    </>
+    </HomeMainWrapper>
   );
 };
 

@@ -6,4 +6,5 @@ export const RowContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   gap: 10px;
+  border-radius: 8px;
 `;
