@@ -7,7 +7,7 @@ import LoadNewProducts from '../functions/LoadNewProducts';
 
 //Styles
 import { Wrapper } from '../../../styles/elements/Wrapper';
-import { ScrollContainer } from '../../../styles/elements/ScrollContainer';
+import { ScrollContainer } from '../../../styles/elements/HomeNewProducts/ScrollContainer';
 import { P20 } from '../../../styles/elements/P20';
 
 //Functions

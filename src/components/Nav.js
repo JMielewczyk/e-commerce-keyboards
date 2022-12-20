@@ -1,16 +1,35 @@
-import React, { useState, useContext, useEffect } from "react";
-import { NavLink, Link, useLocation } from "react-router-dom";
+//Hooks
+import React, { useState, useContext, useEffect } from 'react';
+import { NavLink, Link, useLocation } from 'react-router-dom';
 
-import { BackgroundContext } from "../App";
+//Context
+import { BackgroundContext } from '../App';
 
-import { StyledNav } from "../styles/Nav.styled";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrash } from "@fortawesome/free-solid-svg-icons";
+//Images
+import Menu from '../assets/icons/icon-menu.svg';
+import Cart from '../assets/icons/icon-cart.svg';
+import Avatar from '../assets/images/image-avatar.png';
+import Cross from '../assets/icons/icon-close.svg';
 
-import Menu from "../assets/icons/icon-menu.svg";
-import Cart from "../assets/icons/icon-cart.svg";
-import Avatar from "../assets/images/image-avatar.png";
-import Cross from "../assets/icons/icon-close.svg";
+//Functions
+import CartContent from './functions/CartContent';
+import { handleMenuClose, handleMenuOpen } from './functions/menuHandlers';
+import AmountOnBasket from './functions/AmountOnBasket';
+import Summary from './functions/Summary';
+
+//Styles
+import { DivBackFixed } from '../styles/elements/Nav/DivBackFixed';
+import { ColContainerFixed } from '../styles/elements/Nav/ColContainerFixed';
+import { A20StylesCol } from '../styles/elements/Nav/A20StylesCol';
+import { A20StylesRow } from '../styles/elements/Nav/A20StylesRow';
+import { ImgSmall } from '../styles/elements/Nav/ImgSmall';
+import { RowContainerBR0 } from '../styles/elements/Nav/RowContainerBR0';
+import { CartContainer } from '../styles/elements/Nav/CartContainer';
+import { CartHeader } from '../styles/elements/Nav/CartHeader';
+import { P10 } from '../styles/elements/P10';
+import { CartOrder } from '../styles/elements/Nav/CartOrder';
+import { RowContainerBR0Rel } from '../styles/elements/Nav/RowContainerBR0Rel';
+import { NavWrap } from '../styles/elements/Nav/NavWrap';
 
 const Nav = ({ toggleCart, isCartOpen, setIsCartOpen, basket, dispatch }) => {
   const [menuIsActive, setMenuIsActive] = useState(false);
@@ -26,127 +45,52 @@ const Nav = ({ toggleCart, isCartOpen, setIsCartOpen, basket, dispatch }) => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: 'smooth'
     });
   };
 
-  const handleMenuOpen = () => {
-    setMenuIsActive(true);
-  };
-  const handleMenuClose = () => {
-    setMenuIsActive(false);
-  };
-  const handleCartOrder = () => {
-    if (Object.keys(basket).length === 0) {
-      return <p>Empty</p>;
-    } else {
-      const renderBasket = basket.map((item, index) => {
-        if (index === 0) return;
-        return (
-          <div key={item.name} className="cart-product-wrapper">
-            <div className="text-wrapper">
-              <p>{item.name}</p>
-              <p>Quantity: {item.quantity}</p>
-              <p>Total price: {item.price}</p>
-            </div>
-            <Link to={item.path} className="image-wrapper">
-              <div
-                className="background"
-                style={{ backgroundImage: `url(${item.image})` }}
-              ></div>
-              <img src={item.image} alt={`${item.name} in cart`} />
-            </Link>
-            <div
-              onClick={() =>
-                dispatch({ type: "delete", payload: { name: item.name } })
-              }
-              className="trash"
-            >
-              <FontAwesomeIcon icon={faTrash} />
-            </div>
-          </div>
-        );
-      });
-      return renderBasket;
-    }
-  };
-
-  const getAmountOnBasket = () => {
-    let amount = 0;
-    basket.forEach((element) => amount++);
-    if (amount > 1) {
-      return <div className="products-number">{amount - 1}</div>;
-    } else {
-      return null;
-    }
-  };
-
-  const getSummary = () => {
-    let totalPrice = 0;
-    basket.forEach((element) => {
-      if (element.price === undefined) return 0;
-      totalPrice += element.price;
-    });
-    if (totalPrice === 0) return null;
-    else {
-      const checkoutPath = isLogged === true ? "shipping" : "account";
-      return (
-        <div className="cart-summary">
-          <p className="total">Total: {totalPrice}$</p>
-          <Link className="checkout" to={checkoutPath}>
-            Checkout
-          </Link>
-        </div>
-      );
-    }
-  };
   return (
-    <StyledNav>
-      <div
-        className={menuIsActive ? "menu-background active" : "menu-background"}
-      >
-        <div className="menu">
-          <img
-            onClick={handleMenuClose}
-            className="menu-cross"
-            src={Cross}
-            alt=""
-          />
+    <NavWrap>
+      <ColContainerFixed className={menuIsActive === true ? 'active' : null}>
+        <ImgSmall onClick={() => handleMenuClose(setMenuIsActive)} src={Cross} alt="" />
+        <A20StylesCol>
           <NavLink to="/home/keyboards">Keyboards</NavLink>
           <NavLink to="/home/keycaps">Keycaps</NavLink>
           <NavLink to="/home/barebonekits">Barebone kits</NavLink>
           <NavLink to="/home/switches">Switches</NavLink>
           <NavLink to="contact">Contact</NavLink>
-        </div>
-      </div>
-      <div className="container">
-        <img
-          onClick={handleMenuOpen}
-          className="hamburger-image"
-          src={Menu}
-          alt=""
-        />
-        <Link className="logo-text" to="home">
-          keyboards
-        </Link>
-      </div>
-      <div className="container">
-        <div onClick={toggleCart} className="cart-image-container">
-          {getAmountOnBasket()}
-          <img className="cart-image" src={Cart} alt="" />
-        </div>
+        </A20StylesCol>
+      </ColContainerFixed>
+      <DivBackFixed
+        onClick={() => handleMenuClose(setMenuIsActive)}
+        className={menuIsActive === true ? 'active' : null}></DivBackFixed>
+      <RowContainerBR0>
+        <ImgSmall onClick={() => handleMenuOpen(setMenuIsActive)} src={Menu} alt="" />
+        <A20StylesRow>
+          <Link to="home">keyboards</Link>
+        </A20StylesRow>
+      </RowContainerBR0>
+      <RowContainerBR0>
+        <RowContainerBR0Rel onClick={toggleCart}>
+          <ImgSmall src={Cart} alt="" />
+          <AmountOnBasket basket={basket} />
+        </RowContainerBR0Rel>
         <Link to="account">
-          <img className="avatar-image" src={Avatar} alt="" />
+          <ImgSmall src={Avatar} alt="" />
         </Link>
-      </div>
-      <div className={isCartOpen ? "cart-container active" : "cart-container"}>
-        <div className="cart-header">
-          <p className="cart-name">Cart</p>
-        </div>
-        <div className="cart-order">{handleCartOrder()}</div>
-        {getSummary()}
-      </div>
-    </StyledNav>
+      </RowContainerBR0>
+      <DivBackFixed onClick={() => setIsCartOpen(false)} className={isCartOpen ? 'active' : null}>
+        <CartContainer className={isCartOpen ? 'active' : null}>
+          <CartHeader>
+            <P10>Cart</P10>
+          </CartHeader>
+          <CartOrder>
+            <CartContent basket={basket} dispatch={dispatch} />
+          </CartOrder>
+          <Summary basket={basket} isLogged={isLogged} />
+        </CartContainer>
+      </DivBackFixed>
+    </NavWrap>
   );
 };
 export default Nav;

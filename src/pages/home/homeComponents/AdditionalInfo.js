@@ -1,10 +1,16 @@
-import React, { useEffect, useState, useRef } from "react";
+//Hooks
+import React, { useEffect, useState, useRef } from 'react';
 
-import Loading from "../../../components/Loading";
+//Components
+import Loading from '../../../components/Loading';
 
-import { StyledAdditionalInfo } from "../../../styles/AdditionalInfo.styled";
+//Styles
+import { ContRel30Vh } from '../../../styles/elements/AdditionalInfo/ContRel30Vh';
+import { P20AbsoluteCenter } from '../../../styles/elements/AdditionalInfo/P20AbsoluteCenter';
+import { VideoAbsolute } from '../../../styles/elements/AdditionalInfo/VideoAbsolute';
 
-import backlightMobile from "../../../assets/videos/backlight-mobile.mp4";
+//Videos
+import backlightMobile from '../../../assets/videos/backlight-mobile.mp4';
 // import backlightDesktop from "../../../assets/videos/backlight-desktop.mp4";
 
 const AdditionalInfo = () => {
@@ -16,26 +22,26 @@ const AdditionalInfo = () => {
       if (element.readyState === 4) {
         setIsLoading(false);
         return () => {
-          element.removeEventListener("loadeddata", handleVideoLoading);
+          element.removeEventListener('loadeddata', handleVideoLoading);
         };
       } else {
         setIsLoading(true);
       }
     };
     const element = videoRef.current;
-    element.addEventListener("loadeddata", handleVideoLoading);
+    element.addEventListener('loadeddata', handleVideoLoading);
   }, [isLoading]);
 
   return (
-    <StyledAdditionalInfo>
+    <>
       {isLoading && <Loading />}
-      <div className="video-container">
-        <p className="info-txt">All our keyboards comes with rgb backlight</p>
-        <video ref={videoRef} autoPlay loop muted className="video">
+      <ContRel30Vh>
+        <P20AbsoluteCenter>All our keyboards comes with rgb backlight</P20AbsoluteCenter>
+        <VideoAbsolute ref={videoRef} autoPlay loop muted>
           <source src={backlightMobile} type="video/mp4" />
-        </video>
-      </div>
-    </StyledAdditionalInfo>
+        </VideoAbsolute>
+      </ContRel30Vh>
+    </>
   );
 };
 

@@ -1,12 +1,13 @@
-import React from "react";
+import React from 'react';
 
-import { StyledLoading } from "../styles/Loading.styled";
+//Styles
+import { Loading } from '../styles/elements/Loading/Loading';
 
 const loadingAnimation = () => {
   return (
-    <StyledLoading>
-      <div className="loading">Loading...</div>
-    </StyledLoading>
+    <>
+      <Loading>...Loading</Loading>
+    </>
   );
 };
 

@@ -16,7 +16,6 @@ export function manageBasket(state, action) {
       return state.map((element) => {
         if (element.name === action.payload.name) {
           const newQuantity = element.quantity + action.payload.quantity;
-          console.log(state);
           return {
             ...element,
             quantity: newQuantity,
