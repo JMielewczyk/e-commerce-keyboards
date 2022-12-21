@@ -5,9 +5,6 @@ import { useParams } from 'react-router-dom';
 //Components
 import Loading from '../../components/Loading';
 
-//Styles
-import { StyledProductHeader } from '../../styles/ProductHeader.styled.js';
-
 //Functions
 import LoadHeader from './functions/LoadHeader';
 import { fetchData } from '../../utils/fetchData';
@@ -32,17 +29,15 @@ const Header = () => {
       {loading || data === null ? (
         <Loading />
       ) : (
-        <StyledProductHeader>
-          <LoadHeader
-            loading={loading}
-            data={data}
-            product={product}
-            imageIndex={imageIndex}
-            fetchData={fetchData}
-            category={category}
-            setImageIndex={setImageIndex}
-          />
-        </StyledProductHeader>
+        <LoadHeader
+          loading={loading}
+          data={data}
+          product={product}
+          imageIndex={imageIndex}
+          fetchData={fetchData}
+          category={category}
+          setImageIndex={setImageIndex}
+        />
       )}
     </>
   );

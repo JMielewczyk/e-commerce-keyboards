@@ -6,11 +6,9 @@ import { useParams } from 'react-router-dom';
 import Loading from '../../components/Loading';
 import LoadContent from './functions/LoadContent';
 
-//Styles
-import { StyledProductsList } from '../../styles/ProductsList.styled';
-
 //Functions
 import { fetchData } from '../../utils/fetchData';
+import { Wrapper } from '../../styles/elements/Wrapper';
 
 const ProductList = () => {
   const [data, setData] = useState(null);
@@ -31,9 +29,9 @@ const ProductList = () => {
       {loading === true || data === null ? (
         <Loading />
       ) : (
-        <StyledProductsList>
+        <Wrapper>
           <LoadContent data={data} category={category} />
-        </StyledProductsList>
+        </Wrapper>
       )}
     </>
   );

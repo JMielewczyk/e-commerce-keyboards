@@ -1,5 +1,5 @@
 import styled, { keyframes } from 'styled-components';
-import { RowContainer } from '../elements/RowContainer';
+import { RowContainer } from '../../RowContainer';
 
 const featuredAnimation = keyframes`
         0% {

@@ -1,17 +1,24 @@
 //Hooks
-import React, { useContext, useRef, useEffect, useState } from "react";
+import React, { useContext, useRef, useEffect, useState } from 'react';
 
 //Components
-import Loading from "../../../components/Loading";
-
-//Styles
-import { StyledStartLayer } from "../../../styles/StartLayer.styled";
+import Loading from '../../../components/Loading';
 
 //Context
-import { BackgroundContext } from "../../../App";
+import { BackgroundContext } from '../../../App';
 
 //Video
-import backgroundVideoMobile from "../../../assets/videos/bg-video-mobile.mp4";
+import backgroundVideoMobile from '../../../assets/videos/bg-video-mobile.mp4';
+
+//Styles
+import { LoadingBackground } from '../../../styles/elements/Home/StartLayer/LoadingBackground';
+import { VideoFixed } from '../../../styles/elements/Home/StartLayer/VideoFixed';
+import { StartLayoutFix } from '../../../styles/elements/Home/StartLayer/StartLayoutFix';
+import { H120Abs } from '../../../styles/elements/Home/StartLayer/H120Abs';
+import { P15Abs } from '../../../styles/elements/Home/StartLayer/P15Abs';
+import { EnterSymbolAbs } from '../../../styles/elements/Home/StartLayer/EnterSymbolAbs';
+import { KeyboardButton } from '../../../styles/elements/Buttons/KeyboardButton';
+import { StartWrapp } from '../../../styles/elements/Home/StartLayer/StartWrapp';
 // import backgroundVideoDesktop from "../../../assets/videos/bg-video-desktop.mp4";
 
 const StartLayer = () => {
@@ -25,42 +32,34 @@ const StartLayer = () => {
       if (element.readyState === 4) {
         setIsLoading(false);
         return () => {
-          element.removeEventListener("loadeddata", handleVideoLoading);
+          element.removeEventListener('loadeddata', handleVideoLoading);
         };
       } else {
         setIsLoading(true);
       }
     };
     const element = videoRef.current;
-    element.addEventListener("loadeddata", handleVideoLoading);
+    element.addEventListener('loadeddata', handleVideoLoading);
   }, [isLoading]);
 
   return (
-    <StyledStartLayer>
+    <StartWrapp className={started === true ? null : 'active'}>
       {isLoading && (
-        <div
-          className={started ? "loadingBackground" : "loadingBackground active"}
-        >
-          {<Loading />}
-        </div>
+        <LoadingBackground>
+          <Loading />
+        </LoadingBackground>
       )}
-      <video
-        ref={videoRef}
-        muted
-        autoPlay
-        loop
-        className={started ? "startBackground" : "startBackground active"}
-      >
+      <VideoFixed ref={videoRef} muted autoPlay loop>
         <source src={backgroundVideoMobile} type="video/mp4" />
-      </video>
-      <div className={started ? "startLayout" : "startLayout active"}>
-        <h1 className="company-name">keyboards</h1>
-        <p className="startText">Find your best clickers</p>
-        <button onClick={() => handleBackground()} className="btnGetStarted">
-          Enter<p className="enter-symbol">⮐</p>
-        </button>
-      </div>
-    </StyledStartLayer>
+      </VideoFixed>
+      <StartLayoutFix>
+        <H120Abs>keyboards</H120Abs>
+        {isLoading !== true && <P15Abs>Find your best clickers</P15Abs>}
+        <KeyboardButton onClick={() => handleBackground()}>
+          Enter<EnterSymbolAbs>⮐</EnterSymbolAbs>
+        </KeyboardButton>
+      </StartLayoutFix>
+    </StartWrapp>
   );
 };
 

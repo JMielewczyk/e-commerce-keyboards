@@ -4,12 +4,17 @@ export const KeyboardButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  position: absolute;
+  bottom: 15vh;
+  left: 50vw;
+  transform: translateX(-50%);
+  width: 150px;
   height: 60px;
+  min-width: 120px;
   background-color: #e0e0d1;
   color: grey;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   font-weight: 700;
   border-right: 5px solid #bdbdaf;
   border-bottom: 5px solid #ccccbe;
@@ -18,7 +23,7 @@ export const KeyboardButton = styled.button`
   box-shadow: 0 0 7px black;
   transition: 0.1s;
   &:active {
-    transform: translateX(-1%) scale(0.95);
+    transform: translateX(-50%) scale(0.95);
     box-shadow: 0 0 7px 1px black;
   }
 `;

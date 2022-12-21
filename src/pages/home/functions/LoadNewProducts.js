@@ -3,10 +3,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 //Styles
-import { PAbsoluteBottom } from '../../../styles/elements/HomeNewProducts/PAbsoluteBottom';
-import { ContAbsolute30H } from '../../../styles/elements/HomeNewProducts/ContAbsolute30H';
+import { PAbsoluteBottom } from '../../../styles/elements/Home/HomeNewProducts/PAbsoluteBottom';
+import { ContAbsolute30H } from '../../../styles/elements/Home/HomeNewProducts/ContAbsolute30H';
 import { P20 } from '../../../styles/elements/P20';
-import { LinkRelMin30Vh } from '../../../styles/elements/HomeNewProducts/LinkRelMin30Vh';
+import { LinkRelMin30Vh } from '../../../styles/elements/Home/HomeNewProducts/LinkRelMin30Vh';
 
 const LoadNewProducts = ({ data }) => {
   let newProducts = [];

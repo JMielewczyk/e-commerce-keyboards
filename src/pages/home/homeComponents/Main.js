@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 
 //Styles
 import { LinkContainerImage } from '../../../styles/elements/LinkContainerImage';
-import { HomeMainWrapper } from '../../../styles/HomeMain/HomeMainWrapper';
-import { P10CenterBold } from '../../../styles/HomeMain/P10CenterBold';
+import { HomeMainWrapper } from '../../../styles/elements/Home/HomeMain/HomeMainWrapper';
+import { P10CenterBold } from '../../../styles/elements/Home/HomeMain/P10CenterBold';
 import { LinkWhite } from '../../../styles/elements/LinkWhite';
 
 //Images

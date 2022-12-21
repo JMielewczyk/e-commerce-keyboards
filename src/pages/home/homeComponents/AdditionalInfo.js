@@ -5,9 +5,9 @@ import React, { useEffect, useState, useRef } from 'react';
 import Loading from '../../../components/Loading';
 
 //Styles
-import { ContRel30Vh } from '../../../styles/elements/AdditionalInfo/ContRel30Vh';
-import { P20AbsoluteCenter } from '../../../styles/elements/AdditionalInfo/P20AbsoluteCenter';
-import { VideoAbsolute } from '../../../styles/elements/AdditionalInfo/VideoAbsolute';
+import { ContRel30Vh } from '../../../styles/elements/Home/AdditionalInfo/ContRel30Vh';
+import { P20AbsoluteCenter } from '../../../styles/elements/Home/AdditionalInfo/P20AbsoluteCenter';
+import { VideoAbsolute } from '../../../styles/elements/Home/AdditionalInfo/VideoAbsolute';
 
 //Videos
 import backlightMobile from '../../../assets/videos/backlight-mobile.mp4';

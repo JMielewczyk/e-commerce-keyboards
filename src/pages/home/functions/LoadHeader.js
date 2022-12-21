@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 
 //Styles
 import { Wrapper } from '../../../styles/elements/Wrapper';
-import { PKeyboard } from '../../../styles/HomeHeader/PKeyboard';
-import { PPrice } from '../../../styles/HomeHeader/PPrice';
+import { PKeyboard } from '../../../styles/elements/Home/HomeHeader/PKeyboard';
+import { PPrice } from '../../../styles/elements/Home/HomeHeader/PPrice';
 import { P20 } from '../../../styles/elements/P20';
-import { RowContainerRelative } from '../../../styles/HomeHeader/RowContainerRelative';
+import { RowContainerRelative } from '../../../styles/elements/Home/HomeHeader/RowContainerRelative';
 import { ImgAbsolute } from '../../../styles/elements/ImgAbsolute';
 import { DivBack } from '../../../styles/elements/DivBack';
 import { RowContainer } from '../../../styles/elements/RowContainer';

@@ -1,16 +1,28 @@
-import React, { useContext } from "react";
+import React, { useContext } from 'react';
 
 //Context
-import { BackgroundContext } from "../../../App";
+import { BackgroundContext } from '../../../App';
 
 //Images
-import minus from "../../../assets/icons/icon-minus.svg";
-import plus from "../../../assets/icons/icon-plus.svg";
-import cart from "../../../assets/icons/icon-cart.svg";
+import minus from '../../../assets/icons/icon-minus.svg';
+import plus from '../../../assets/icons/icon-plus.svg';
+import cart from '../../../assets/icons/icon-cart.svg';
 
 //Functions
-import { handleAmount } from "./handleAmount";
-import { addToCart } from "./addToCart";
+import { handleAmount } from './handleAmount';
+import { addToCart } from './addToCart';
+
+//Styles
+import { ContentContainer } from '../../../styles/elements/Product/Main/ContentContainer';
+import { CategoryText } from '../../../styles/elements/Product/Main/CategoryText';
+import { P10 } from '../../../styles/elements/P10';
+import { Discount } from '../../../styles/elements/Product/Main/Discount';
+import { RowContainer } from '../../../styles/elements/RowContainer';
+import { P20 } from '../../../styles/elements/P20';
+import { OldPrice } from '../../../styles/elements/Product/Main/OldPrice';
+import { ButtonAddToCart } from '../../../styles/elements/Product/Main/ButtonAddToCart';
+import { P10CenterBold } from '../../../styles/elements/Home/HomeMain/P10CenterBold';
+import { AmountContainer } from '../../../styles/elements/Product/Main/AmountContainer';
 
 const LoadContent = ({
   basket,
@@ -19,7 +31,7 @@ const LoadContent = ({
   category,
   product,
   orderAmount,
-  setOrderAmount,
+  setOrderAmount
 }) => {
   const { dispatch } = useContext(BackgroundContext);
 
@@ -30,103 +42,45 @@ const LoadContent = ({
         price.toFixed(2);
         return price;
       };
-      if (item.discount) {
-        return (
-          <div className="product-wrapper" key={item.name}>
-            <p className="product-category">{category}</p>
-            <h2 className="product-title">{item.name}</h2>
-            <p className="product-description">{item.description}</p>
-            <div key={item.name} className="price-container">
-              <div className="discounted-price-container">
-                <p className="actual-price">{item.currency + actualPrice()}</p>
-                <p className="discount">{item.discountValue + "%"}</p>
-              </div>
-              <p className="old-price">
-                {item.currency + item.price.toFixed(2)}
-              </p>
-            </div>
-            <div className="amount-container">
-              <img
-                onClick={() =>
-                  handleAmount(orderAmount, setOrderAmount, "minus")
-                }
-                src={minus}
-                alt=""
-              />
-              <p className="amount">{orderAmount}</p>
-              <img
-                onClick={() =>
-                  handleAmount(orderAmount, setOrderAmount, "plus")
-                }
-                src={plus}
-                alt=""
-              />
-            </div>
-            <button
-              className="addToCartBtn"
-              onClick={() =>
-                addToCart(
-                  basket,
-                  location,
-                  data,
-                  category,
-                  orderAmount,
-                  product,
-                  dispatch
-                )
-              }
-            >
-              <img src={cart} alt="" />
-              Add to cart
-            </button>
-          </div>
-        );
-      } else {
-        return (
-          <div className="product-wrapper" key={item.name}>
-            <p className="product-category">{category}</p>
-            <h2 className="product-title">{item.name}</h2>
-            <p className="product-description">{item.description}</p>
-            <p className="actual-price">
-              {item.currency + item.price.toFixed(2)}
-            </p>
-            <div className="amount-container">
-              <img
-                onClick={() =>
-                  handleAmount(orderAmount, setOrderAmount, "minus")
-                }
-                src={minus}
-                alt=""
-              />
-              <p className="amount">{orderAmount}</p>
-              <img
-                onClick={() =>
-                  handleAmount(orderAmount, setOrderAmount, "plus")
-                }
-                src={plus}
-                alt=""
-              />
-            </div>
-            <button
-              className="addToCartBtn"
-              onClick={() =>
-                addToCart(
-                  basket,
-                  location,
-                  data,
-                  category,
-                  orderAmount,
-                  product,
-                  dispatch
-                )
-              }
-            >
-              <img src={cart} alt="" />
-              Add to cart
-            </button>
-          </div>
-        );
-      }
+      return (
+        <ContentContainer key={item.name}>
+          <CategoryText>Category: {category}</CategoryText>
+          <P10>Product name : {item.name}</P10>
+          <P10>Description :</P10>
+          <P10>{item.description}</P10>
+          <RowContainer key={item.name}>
+            <RowContainer>
+              {item.discount !== true ? <P20>{item.currency + item.price.toFixed(2)}</P20> : null}
+              {item.discount && <P20>{item.currency + actualPrice()}</P20>}
+              {item.discount && <Discount>{item.discountValue + '%'}</Discount>}
+            </RowContainer>
+            {item.discount && (
+              <OldPrice className="old-price">{item.currency + item.price.toFixed(2)}</OldPrice>
+            )}
+          </RowContainer>
+          <AmountContainer>
+            <img
+              onClick={() => handleAmount(orderAmount, setOrderAmount, 'minus')}
+              src={minus}
+              alt="Subtract amount"
+            />
+            <P10CenterBold className="amount">{orderAmount}</P10CenterBold>
+            <img
+              onClick={() => handleAmount(orderAmount, setOrderAmount, 'plus')}
+              src={plus}
+              alt="Add amount"
+            />
+          </AmountContainer>
+          <ButtonAddToCart
+            className="addToCartBtn"
+            onClick={() =>
+              addToCart(basket, location, data, category, orderAmount, product, dispatch)
+            }>
+            <img src={cart} alt="cart" />
+            Add to cart
+          </ButtonAddToCart>
+        </ContentContainer>
+      );
     }
   });
   return allElements;
