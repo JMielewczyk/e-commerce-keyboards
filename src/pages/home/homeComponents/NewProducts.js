@@ -6,7 +6,7 @@ import Loading from '../../../components/Loading';
 import LoadNewProducts from '../functions/LoadNewProducts';
 
 //Styles
-import { Wrapper } from '../../../styles/elements/Wrapper';
+import { NewProductsWrapp } from '../../../styles/elements/Home/HomeNewProducts/NewProductsWrapp';
 import { ScrollContainer } from '../../../styles/elements/Home/HomeNewProducts/ScrollContainer';
 import { P20 } from '../../../styles/elements/P20';
 
@@ -31,12 +31,12 @@ const NewProducts = () => {
       {loading === true || data === null ? (
         <Loading />
       ) : (
-        <Wrapper>
-          <P20 className="newArrivals-txt">New Arrivals</P20>
+        <NewProductsWrapp>
+          <P20>New Arrivals</P20>
           <ScrollContainer>
             <LoadNewProducts data={data} />
           </ScrollContainer>
-        </Wrapper>
+        </NewProductsWrapp>
       )}
     </>
   );

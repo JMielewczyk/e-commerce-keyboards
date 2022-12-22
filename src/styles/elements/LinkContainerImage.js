@@ -6,6 +6,7 @@ export const LinkContainerImage = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  border-radius: 8px;
   & a {
     display: flex;
     justify-content: center;

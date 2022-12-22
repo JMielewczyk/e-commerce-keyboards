@@ -8,15 +8,20 @@ import About from './homeComponents/About';
 import NewProducts from './homeComponents/NewProducts';
 import AdditionalInfo from './homeComponents/AdditionalInfo';
 
+//Styles
+import { GridWrapp } from '../../styles/elements/Home/GridWrapp';
+
 const HomePage = () => {
   return (
     <>
       <StartLayer />
-      <Header />
-      <Main />
-      <NewProducts />
-      <AdditionalInfo />
-      <About />
+      <GridWrapp>
+        <Header />
+        <Main />
+        <NewProducts />
+        <AdditionalInfo />
+        <About />
+      </GridWrapp>
     </>
   );
 };

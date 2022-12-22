@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 //Styles
-import { Wrapper } from '../../../styles/elements/Wrapper';
+import { MainHeadWrapp } from '../../../styles/elements/Home/HomeHeader/MainHeadWrapp';
 import { PKeyboard } from '../../../styles/elements/Home/HomeHeader/PKeyboard';
 import { PPrice } from '../../../styles/elements/Home/HomeHeader/PPrice';
 import { P20 } from '../../../styles/elements/P20';
@@ -14,7 +14,7 @@ import { RowContainer } from '../../../styles/elements/RowContainer';
 
 const LoadHeader = ({ data, productIndex }) => {
   return (
-    <Wrapper key={Math.floor(Math.random() * 1000000)}>
+    <MainHeadWrapp key={Math.floor(Math.random() * 1000000)}>
       <P20>Featured product:</P20>
       <RowContainer>
         <Link
@@ -34,7 +34,7 @@ const LoadHeader = ({ data, productIndex }) => {
           </RowContainerRelative>
         </Link>
       </RowContainer>
-    </Wrapper>
+    </MainHeadWrapp>
   );
 };
 

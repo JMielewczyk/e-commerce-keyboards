@@ -11,4 +11,6 @@ export const MainWrapper = styled.div`
   padding: 20px;
   padding-top: 0;
   padding-bottom: 0;
+  background-color: black;
+  background: linear-gradient(to right bottom, #d7ede1, #014872);
 `;

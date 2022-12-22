@@ -31,7 +31,7 @@
           "/image/product/keyboards/Outer65/outer3.jpg",
           "/image/product/keyboards/Outer65/outer4.jpg"
         ],
-        "newProduct": false
+        "newProduct": true
       },
       {
         "name": "Krox80",
@@ -47,7 +47,7 @@
           "/image/product/keyboards/Krox80/krox3.jpg",
           "/image/product/keyboards/Krox80/krox4.jpg"
         ],
-        "newProduct": false
+        "newProduct": true
       },
       {
         "name": "LogiteC",

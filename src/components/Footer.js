@@ -4,8 +4,8 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { WrapperFooter } from '../styles/elements/Footer/WrapperFooter';
+import { LinksContainer } from '../styles/elements/Footer/LinksContainer';
 import { P20White } from '../styles/elements/Footer/P20White';
-import { RowContainer } from '../styles/elements/RowContainer';
 import { P10WhiteCenter } from '../styles/elements/Footer/P10WhiteCenter';
 import { A10White } from '../styles/elements/Footer/A10White';
 
@@ -22,14 +22,14 @@ const Footer = () => {
       <A10White className="creator" href="https://github.com/JMielewczyk">
         Jakub Mielewczyk
       </A10White>
-      <RowContainer className="socials-wrapper">
+      <LinksContainer className="socials-wrapper">
         <A10White href="https://www.linkedin.com/in/jakub-mielewczyk-b411a6221/">
           <FontAwesomeIcon icon={faLinkedin} />
         </A10White>
         <A10White href="https://github.com/JMielewczyk">
           <FontAwesomeIcon icon={faGithub} />
         </A10White>
-      </RowContainer>
+      </LinksContainer>
     </WrapperFooter>
   );
 };
