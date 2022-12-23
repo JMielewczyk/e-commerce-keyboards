@@ -8,7 +8,7 @@ import LoadContent from './functions/LoadContent';
 
 //Functions
 import { fetchData } from '../../utils/fetchData';
-import { Wrapper } from '../../styles/elements/Wrapper';
+import { ProductsListWrapp } from '../../styles/elements/ProductsList/ProductsListWrapp';
 
 const ProductList = () => {
   const [data, setData] = useState(null);
@@ -29,9 +29,9 @@ const ProductList = () => {
       {loading === true || data === null ? (
         <Loading />
       ) : (
-        <Wrapper>
+        <ProductsListWrapp>
           <LoadContent data={data} category={category} />
-        </Wrapper>
+        </ProductsListWrapp>
       )}
     </>
   );

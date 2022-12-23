@@ -15,7 +15,8 @@ import { Form } from '../../styles/elements/Form';
 import { Label } from '../../styles/elements/Label';
 import { Input } from '../../styles/elements/Input';
 import { SubmitFormInput } from '../../styles/elements/SubmitFormInput';
-import { Wrapper } from '../../styles/elements/Wrapper';
+import { WrappFlexGrow } from '../../styles/elements/WrappFlexGrow';
+import { CartWrapp } from '../../styles/elements/CartWrapp';
 
 const AccountLogin = () => {
   const [loginValue, setLoginValue] = useState('');
@@ -24,34 +25,36 @@ const AccountLogin = () => {
 
   return (
     <>
-      <Wrapper>
-        <P20>Account Details</P20>
-        <Form onSubmit={(e) => handleSubmit(e, loginValue, passwordValue, setIsLogged)}>
-          <Label htmlFor="login">
-            Email address
-            <Input
+      <WrappFlexGrow>
+        <CartWrapp>
+          <P20>Account Details</P20>
+          <Form onSubmit={(e) => handleSubmit(e, loginValue, passwordValue, setIsLogged)}>
+            <Label htmlFor="login">
+              Email address
+              <Input
+                autoComplete="off"
+                onChange={(e) => handleInputLogin(e, setLoginValue)}
+                value={loginValue}
+                type="email"
+                id="login"
+                placeholder="ex. Email@myemail.com"></Input>
+            </Label>
+            <Label htmlFor="password">
+              Password
+              <Input
+                onChange={(e) => handleInputPassword(e, setPasswordValue)}
+                value={passwordValue}
+                type="password"
+                id="password"></Input>
+            </Label>
+            <SubmitFormInput
               autoComplete="off"
-              onChange={(e) => handleInputLogin(e, setLoginValue)}
-              value={loginValue}
-              type="email"
-              id="login"
-              placeholder="ex. Email@myemail.com"></Input>
-          </Label>
-          <Label htmlFor="password">
-            Password
-            <Input
-              onChange={(e) => handleInputPassword(e, setPasswordValue)}
-              value={passwordValue}
-              type="password"
-              id="password"></Input>
-          </Label>
-          <SubmitFormInput
-            autoComplete="off"
-            className="submit-button"
-            type="submit"
-            value="Login"></SubmitFormInput>
-        </Form>
-      </Wrapper>
+              className="submit-button"
+              type="submit"
+              value="Login"></SubmitFormInput>
+          </Form>
+        </CartWrapp>
+      </WrappFlexGrow>
     </>
   );
 };

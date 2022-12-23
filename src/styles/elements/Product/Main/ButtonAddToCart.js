@@ -5,6 +5,8 @@ export const ButtonAddToCart = styled.button`
   justify-content: center;
   align-items: center;
   gap: 20px;
+  width: 100%;
+  max-width: 350px;
   height: 50px;
   border-radius: 8px;
   border: none;

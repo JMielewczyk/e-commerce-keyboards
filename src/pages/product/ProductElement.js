@@ -7,7 +7,7 @@ import ProductHeader from './ProductHeader';
 import Loading from '../../components/Loading';
 
 //Styles
-import { Wrapper } from '../../styles/elements/Wrapper';
+import { ProductPageWrapp } from '../../styles/elements/Product/Main/ProductPageWrapp';
 
 //Functions
 import { fetchData } from '../../utils/fetchData';
@@ -34,7 +34,7 @@ const ProductElement = ({ basket }) => {
       {loading || data === null ? (
         <Loading />
       ) : (
-        <Wrapper>
+        <ProductPageWrapp>
           <ProductHeader />
           <LoadContent
             basket={basket}
@@ -45,7 +45,7 @@ const ProductElement = ({ basket }) => {
             orderAmount={orderAmount}
             setOrderAmount={setOrderAmount}
           />
-        </Wrapper>
+        </ProductPageWrapp>
       )}
     </>
   );

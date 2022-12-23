@@ -7,6 +7,8 @@ export const AmountContainer = styled.div`
   border-radius: 8px;
   background-color: hsl(223, 64%, 96%);
   height: 50px;
+  width: 100%;
+  max-width: 350px;
   padding: 25px;
   overflow-y: hidden;
 `;
