@@ -26,13 +26,9 @@ export const BackgroundContext = createContext(null);
 
 function App() {
   const [isLogged, setIsLogged] = useState(false);
-  const [startingLayout, setStartingLayout] = useState(true);
+  const [startLayout, setStartingLayout] = useState(true);
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [basket, dispatch] = useReducer(manageBasket, initialBasket);
-
-  const handleStartingLayout = () => {
-    setStartingLayout(false);
-  };
 
   const toggleCart = () => {
     setIsCartOpen((prevValue) => !prevValue);
@@ -51,8 +47,8 @@ function App() {
       <Router>
         <BackgroundContext.Provider
           value={{
-            startingLayout,
-            handleStartingLayout,
+            startLayout,
+            setStartingLayout,
             isLogged,
             setIsLogged,
             dispatch

@@ -18,18 +18,24 @@ import AmountOnBasket from './functions/AmountOnBasket';
 import Summary from './functions/Summary';
 
 //Styles
-import { DivBackFixed } from '../styles/elements/Nav/DivBackFixed';
+
 import { ColContainerFixed } from '../styles/elements/Nav/ColContainerFixed';
 import { A20StylesCol } from '../styles/elements/Nav/A20StylesCol';
 import { A20StylesRow } from '../styles/elements/Nav/A20StylesRow';
 import { ImgSmall } from '../styles/elements/Nav/ImgSmall';
 import { RowContainerBR0 } from '../styles/elements/Nav/RowContainerBR0';
+import { DivBackFixed } from '../styles/elements/Nav/DivBackFixed';
+import { GreyBackground } from '../styles/elements/Nav/GreyBackground';
+import { CartWrapp } from '../styles/elements/Nav/CartWrapp';
 import { CartContainer } from '../styles/elements/Nav/CartContainer';
 import { CartHeader } from '../styles/elements/Nav/CartHeader';
 import { P10 } from '../styles/elements/P10';
 import { CartOrder } from '../styles/elements/Nav/CartOrder';
 import { RowContainerBR0Rel } from '../styles/elements/Nav/RowContainerBR0Rel';
 import { NavWrap } from '../styles/elements/Nav/NavWrap';
+import { Container } from '../styles/elements/Nav/Container';
+import { HamburgerMenu } from '../styles/elements/Nav/HamburgerMenu';
+import { NavLinksMinLaptop } from '../styles/elements/Nav/NavLinksMinLaptop';
 
 const Nav = ({ toggleCart, isCartOpen, setIsCartOpen, basket, dispatch }) => {
   const [menuIsActive, setMenuIsActive] = useState(false);
@@ -48,6 +54,7 @@ const Nav = ({ toggleCart, isCartOpen, setIsCartOpen, basket, dispatch }) => {
       behavior: 'smooth'
     });
   };
+  console.log(window.innerWidth);
 
   return (
     <NavWrap>
@@ -65,10 +72,17 @@ const Nav = ({ toggleCart, isCartOpen, setIsCartOpen, basket, dispatch }) => {
         onClick={() => handleMenuClose(setMenuIsActive)}
         className={menuIsActive === true ? 'active' : null}></DivBackFixed>
       <RowContainerBR0>
-        <ImgSmall onClick={() => handleMenuOpen(setMenuIsActive)} src={Menu} alt="" />
+        <HamburgerMenu onClick={() => handleMenuOpen(setMenuIsActive)} src={Menu} alt="" />
         <A20StylesRow>
           <Link to="home">keyboards</Link>
         </A20StylesRow>
+        <NavLinksMinLaptop>
+          <NavLink to="/home/keyboards">Keyboards</NavLink>
+          <NavLink to="/home/keycaps">Keycaps</NavLink>
+          <NavLink to="/home/barebonekits">Barebone kits</NavLink>
+          <NavLink to="/home/switches">Switches</NavLink>
+          <NavLink to="contact">Contact</NavLink>
+        </NavLinksMinLaptop>
       </RowContainerBR0>
       <RowContainerBR0>
         <RowContainerBR0Rel onClick={toggleCart}>
@@ -79,17 +93,22 @@ const Nav = ({ toggleCart, isCartOpen, setIsCartOpen, basket, dispatch }) => {
           <ImgSmall src={Avatar} alt="" />
         </Link>
       </RowContainerBR0>
-      <DivBackFixed onClick={() => setIsCartOpen(false)} className={isCartOpen ? 'active' : null}>
-        <CartContainer className={isCartOpen ? 'active' : null}>
-          <CartHeader>
-            <P10>Cart</P10>
-          </CartHeader>
-          <CartOrder>
-            <CartContent basket={basket} dispatch={dispatch} />
-          </CartOrder>
-          <Summary basket={basket} isLogged={isLogged} />
-        </CartContainer>
-      </DivBackFixed>
+      <Container className={isCartOpen ? 'active' : null}>
+        <CartWrapp>
+          <CartContainer className={isCartOpen ? 'active' : null}>
+            <CartHeader>
+              <P10>Cart</P10>
+            </CartHeader>
+            <CartOrder>
+              <CartContent basket={basket} dispatch={dispatch} />
+            </CartOrder>
+            <Summary basket={basket} isLogged={isLogged} />
+          </CartContainer>
+        </CartWrapp>
+      </Container>
+      <GreyBackground
+        onClick={() => setIsCartOpen(false)}
+        className={isCartOpen ? 'active' : null}></GreyBackground>
     </NavWrap>
   );
 };

@@ -10,6 +10,7 @@ export const ColContainerFixed = styled.div`
   background-color: white;
   height: 60vh;
   width: 75%;
+  max-width: 300px;
   padding: 20px;
   border-radius: 0 0 200px 0;
   transform: translateX(-101vw);

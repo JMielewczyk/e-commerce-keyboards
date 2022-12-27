@@ -5,6 +5,7 @@ export const ProductWrapp = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
+  max-width: 400px;
   height: 30vh;
   max-height: 350px;
   overflow: hidden;

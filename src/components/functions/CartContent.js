@@ -12,6 +12,12 @@ import { RowContainerBR0 } from '../../styles/elements/Nav/RowContainerBR0';
 import { P10 } from '../../styles/elements/P10';
 
 const CartContent = ({ basket, dispatch }) => {
+  if (basket.length === 1)
+    return (
+      <>
+        <P10>Your basket is empty</P10>
+      </>
+    );
   const renderBasket = basket.map((item, index) => {
     if (index === 0) return;
     return (
