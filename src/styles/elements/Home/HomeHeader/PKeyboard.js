@@ -1,9 +1,16 @@
 import styled from 'styled-components';
+import { device } from '../../../mediaQueries/breakpoints';
 import { P20 } from '../../P20';
 
 export const PKeyboard = styled(P20)`
-  position: absolute;
-  top: 10%;
-  left: 10%;
-  color: black;
+  color: white;
+  @media ${device.mobileS} {
+    font-size: 1rem;
+  }
+  @media ${device.mobileM} {
+    font-size: 1.5rem;
+  }
+  @media ${device.tablet} {
+    font-size: 2rem;
+  }
 `;

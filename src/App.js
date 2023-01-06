@@ -9,8 +9,9 @@ import AccountLogin from './pages/account/AccountLogin';
 import LoggedIn from './pages/account/LoggedIn';
 import Shipping from './pages/shipping/Shipping';
 import Payment from './pages/payment/Payment';
+import OrderCompleted from './pages/orderCompleted/OrderCompleted';
 import ProductList from './pages/productList/ProductList';
-import ProductElement from './pages/product/ProductElement';
+import ProductElement from './pages/product/Product';
 import Footer from './components/Footer';
 
 //Reducers
@@ -65,8 +66,9 @@ function App() {
             <Route index element={<HomePage />} />
             <Route path="/home" element={<HomePage />} />
             <Route path="/account" element={renderAccount()} />
-            <Route path="/shipping" element={<Shipping />} />
+            <Route path="/shipping" element={isLogged ? <Shipping /> : renderAccount()} />
             <Route path="/payment" element={<Payment />} />
+            <Route path="/orderCompleted" element={<OrderCompleted />} />
             <Route path="/home/:category/" element={<ProductList />} />
             <Route path="/home/:category/:product" element={<ProductElement basket={basket} />} />
             <Route path="*" element={<Navigate to="/home" replace />}></Route>

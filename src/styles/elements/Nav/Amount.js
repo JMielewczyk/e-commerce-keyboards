@@ -3,7 +3,7 @@ import { RowContainerBR0 } from './RowContainerBR0';
 
 export const Amount = styled(RowContainerBR0)`
   position: absolute;
-  top: -5%;
+  top: 0;
   right: -30%;
   display: flex;
   justify-content: center;

@@ -6,9 +6,10 @@ import { NavLink, Link, useLocation } from 'react-router-dom';
 import { BackgroundContext } from '../App';
 
 //Images
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser } from '@fortawesome/free-regular-svg-icons';
 import Menu from '../assets/icons/icon-menu.svg';
 import Cart from '../assets/icons/icon-cart.svg';
-import Avatar from '../assets/images/image-avatar.png';
 import Cross from '../assets/icons/icon-close.svg';
 
 //Functions
@@ -36,6 +37,7 @@ import { NavWrap } from '../styles/elements/Nav/NavWrap';
 import { Container } from '../styles/elements/Nav/Container';
 import { HamburgerMenu } from '../styles/elements/Nav/HamburgerMenu';
 import { NavLinksMinLaptop } from '../styles/elements/Nav/NavLinksMinLaptop';
+import { UserContainer } from '../styles/elements/Nav/UserContainer';
 
 const Nav = ({ toggleCart, isCartOpen, setIsCartOpen, basket, dispatch }) => {
   const [menuIsActive, setMenuIsActive] = useState(false);
@@ -54,7 +56,6 @@ const Nav = ({ toggleCart, isCartOpen, setIsCartOpen, basket, dispatch }) => {
       behavior: 'smooth'
     });
   };
-  console.log(window.innerWidth);
 
   return (
     <NavWrap>
@@ -89,9 +90,11 @@ const Nav = ({ toggleCart, isCartOpen, setIsCartOpen, basket, dispatch }) => {
           <ImgSmall src={Cart} alt="" />
           <AmountOnBasket basket={basket} />
         </RowContainerBR0Rel>
-        <Link to="account">
-          <ImgSmall src={Avatar} alt="" />
-        </Link>
+        <UserContainer>
+          <Link to="account">
+            <FontAwesomeIcon icon={faUser} />
+          </Link>
+        </UserContainer>
       </RowContainerBR0>
       <Container className={isCartOpen ? 'active' : null}>
         <CartWrapp>

@@ -10,8 +10,7 @@ import { P20AbsoluteCenter } from '../../../styles/elements/Home/AdditionalInfo/
 import { VideoAbsolute } from '../../../styles/elements/Home/AdditionalInfo/VideoAbsolute';
 
 //Videos
-import backlightMobile from '../../../assets/videos/backlight-mobile.mp4';
-// import backlightDesktop from "../../../assets/videos/backlight-desktop.mp4";
+import backlight from '../../../assets/videos/backlight.mp4';
 
 const AdditionalInfo = () => {
   const videoRef = useRef(null);
@@ -36,9 +35,9 @@ const AdditionalInfo = () => {
     <>
       {isLoading && <Loading />}
       <ContRel30Vh>
-        <P20AbsoluteCenter>All our keyboards comes with rgb backlight</P20AbsoluteCenter>
+        <P20AbsoluteCenter>All our keyboards are coming with rgb backlight</P20AbsoluteCenter>
         <VideoAbsolute ref={videoRef} autoPlay loop muted>
-          <source src={backlightMobile} type="video/mp4" />
+          <source src={backlight} type="video/mp4" />
         </VideoAbsolute>
       </ContRel30Vh>
     </>

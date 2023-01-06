@@ -13,17 +13,23 @@ import { Select } from '../../styles/elements/Select';
 import { Input } from '../../styles/elements/Input';
 import { LinkStyles } from '../../styles/elements/LinkStyles';
 import { SubmitFormInput } from '../../styles/elements/SubmitFormInput';
+import { P10 } from '../../styles/elements/P10';
 
 const inputNames = {
   cityInput: 'cityInput',
   streetInput: 'streetInput',
-  postCodeInput: 'postCodeInput'
+  postCodeInput: 'postCodeInput',
+  selectInput: 'selectInput'
 };
 
 const Shipping = () => {
   const [cityInput, setCityInput] = useState(localStorage.getItem(inputNames.cityInput));
-  const [streetInput, setStreetInput] = useState(localStorage.getItem(inputNames.cityInput));
-  const [postCodeInput, setPostCodeInput] = useState(localStorage.getItem(inputNames.cityInput));
+  const [streetInput, setStreetInput] = useState(localStorage.getItem(inputNames.streetInput));
+  const [postCodeInput, setPostCodeInput] = useState(
+    localStorage.getItem(inputNames.postCodeInput)
+  );
+  const [selectInput, setSelectInput] = useState(localStorage.getItem(inputNames.selectInput));
+  const [formIsNotCompleted, setFormIsNotCompleted] = useState(false);
   const navigate = useNavigate();
 
   const handleInputs = (e, inputName) => {
@@ -31,15 +37,19 @@ const Shipping = () => {
     switch (inputName) {
       case inputNames.cityInput:
         setCityInput(value);
-        localStorage.setItem(inputNames.cityInput, e.target.value);
+        localStorage.setItem(inputNames.cityInput, value);
         break;
       case inputNames.streetInput:
         setStreetInput(value);
-        localStorage.setItem(inputNames.streetInput, e.target.value);
+        localStorage.setItem(inputNames.streetInput, value);
         break;
       case inputNames.postCodeInput:
         setPostCodeInput(value);
-        localStorage.setItem(inputNames.postCodeInput, e.target.value);
+        localStorage.setItem(inputNames.postCodeInput, value);
+        break;
+      case inputNames.selectInput:
+        setSelectInput(value);
+        localStorage.setItem(inputNames.selectInput, value);
         break;
       default:
         console.log(`Unknown input name: ${inputName}`);
@@ -48,7 +58,13 @@ const Shipping = () => {
 
   const submitShipping = (e) => {
     e.preventDefault();
-    if (cityInput + streetInput + postCodeInput === '') return;
+    if (cityInput === '' || streetInput === '' || postCodeInput === '' || selectInput === '') {
+      setFormIsNotCompleted(true);
+      return;
+    } else {
+      setFormIsNotCompleted(false);
+    }
+    console.log(cityInput + streetInput + postCodeInput + selectInput);
     navigate('/payment');
   };
   return (
@@ -84,12 +100,13 @@ const Shipping = () => {
             </Label>
             <Label htmlFor="delivery">
               Select shipping
-              <Select id="delivery">
+              <Select value={selectInput} onChange={(e) => handleInputs(e, inputNames.selectInput)}>
                 <option value="">Please choose an delivery</option>
                 <option value="free-delivery">Free delivery</option>
               </Select>
             </Label>
           </RowContainer>
+          {formIsNotCompleted ? <P10>Please complete all fields</P10> : null}
           <RowContainer>
             <LinkStyles>
               <Link to="home">Cancel order</Link>

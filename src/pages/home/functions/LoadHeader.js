@@ -11,6 +11,7 @@ import { RowContainerRelative } from '../../../styles/elements/Home/HomeHeader/R
 import { ImgAbsolute } from '../../../styles/elements/ImgAbsolute';
 import { DivBack } from '../../../styles/elements/DivBack';
 import { RowContainer } from '../../../styles/elements/RowContainer';
+import { DivTextContainer } from '../../../styles/elements/Home/HomeHeader/DivTextContainer';
 
 const LoadHeader = ({ data, productIndex }) => {
   return (
@@ -25,8 +26,10 @@ const LoadHeader = ({ data, productIndex }) => {
               src={process.env.PUBLIC_URL + data[productIndex].imageTemplate}
               alt={`${data[productIndex].name}`}
             />
-            <PKeyboard>{data[productIndex].name}</PKeyboard>
-            <PPrice>{data[productIndex].currency + data[productIndex].price}</PPrice>
+            <DivTextContainer>
+              <PKeyboard>{data[productIndex].name}</PKeyboard>
+              <PPrice>{data[productIndex].currency + data[productIndex].price}</PPrice>
+            </DivTextContainer>
             <DivBack
               style={{
                 backgroundImage: `url(${process.env.PUBLIC_URL + data[productIndex].imageTemplate})`

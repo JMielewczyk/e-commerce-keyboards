@@ -23,6 +23,9 @@ export const NavLinksMinLaptop = styled.div`
       rgba(255, 255, 255, 0.3)
     );
   }
+  a.active {
+    background: rgba(52, 211, 153, 1);
+  }
   @media ${device.tablet} {
     display: flex;
     gap: 10px;

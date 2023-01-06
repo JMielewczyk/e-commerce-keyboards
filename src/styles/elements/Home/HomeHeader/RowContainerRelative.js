@@ -38,6 +38,9 @@ export const RowContainerRelative = styled(RowContainer)`
   animation: ${featuredAnimation} 3s;
   overflow: hidden;
   visibility: hidden;
+  @media ${device.mobileS} {
+    width: 80vw;
+  }
   @media ${device.tablet} {
     width: 45vw;
   }

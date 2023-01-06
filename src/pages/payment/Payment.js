@@ -1,6 +1,6 @@
 //Hooks
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 //Styles
 import { WrappFlexGrow } from '../../styles/elements/WrappFlexGrow';
@@ -15,11 +15,17 @@ import { LinkStyles } from '../../styles/elements/LinkStyles';
 import { CartWrapp } from '../../styles/elements/CartWrapp';
 
 const Payment = () => {
+  const navigate = useNavigate();
+  const submitPayment = (e) => {
+    e.preventDefault();
+    navigate('/orderCompleted');
+  };
+
   return (
     <WrappFlexGrow>
       <CartWrapp>
         <P20>Payment Details</P20>
-        <Form>
+        <Form onSubmit={submitPayment}>
           <Label htmlFor="name-on-card">
             Name on card
             <Input
@@ -52,12 +58,9 @@ const Payment = () => {
           </RowContainer>
           <RowContainer>
             <LinkStyles>
-              <Link to="home">Cancel order</Link>
+              <Link to="/shipping">Return to shipping</Link>
             </LinkStyles>
-            <SubmitFormInput
-              className="submit-button"
-              type="submit"
-              value="Complete order"></SubmitFormInput>
+            <SubmitFormInput type="submit" value="Complete order"></SubmitFormInput>
           </RowContainer>
         </Form>
       </CartWrapp>

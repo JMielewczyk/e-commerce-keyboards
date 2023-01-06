@@ -16,6 +16,7 @@ export const AboutWrapp = styled.div`
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-left: 1px solid rgba(255, 255, 255, 0.5);
   height: 30vh;
+  min-height: 250px;
   p {
     text-align: center;
   }

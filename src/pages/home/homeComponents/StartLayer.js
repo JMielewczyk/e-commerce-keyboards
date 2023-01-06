@@ -8,7 +8,7 @@ import Loading from '../../../components/Loading';
 import { BackgroundContext } from '../../../App';
 
 //Video
-import backgroundVideoMobile from '../../../assets/videos/bg-video-mobile.mp4';
+import backgroundVideo from '../../../assets/videos/bg-video.mp4';
 
 //Styles
 import { LoadingBackground } from '../../../styles/elements/Home/StartLayer/LoadingBackground';
@@ -19,7 +19,6 @@ import { P15Abs } from '../../../styles/elements/Home/StartLayer/P15Abs';
 import { EnterSymbolAbs } from '../../../styles/elements/Home/StartLayer/EnterSymbolAbs';
 import { KeyboardButton } from '../../../styles/elements/Buttons/KeyboardButton';
 import { StartWrapp } from '../../../styles/elements/Home/StartLayer/StartWrapp';
-// import backgroundVideoDesktop from "../../../assets/videos/bg-video-desktop.mp4";
 
 const StartLayer = () => {
   const videoRef = useRef(null);
@@ -61,7 +60,7 @@ const StartLayer = () => {
         </LoadingBackground>
       )}
       <VideoFixed ref={videoRef} muted autoPlay loop>
-        <source src={backgroundVideoMobile} type="video/mp4" />
+        <source src={backgroundVideo} type="video/mp4" />
       </VideoFixed>
       <StartLayoutFix>
         <H120Abs>keyboards</H120Abs>

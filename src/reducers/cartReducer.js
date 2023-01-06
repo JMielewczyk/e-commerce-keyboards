@@ -6,7 +6,7 @@ export function manageBasket(state, action) {
         {
           name: action.payload.name,
           quantity: action.payload.quantity,
-          price: action.payload.price,
+          price: action.payload.price * action.payload.quantity,
           image: action.payload.image,
           path: action.payload.pathToProduct
         }

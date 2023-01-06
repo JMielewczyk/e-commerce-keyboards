@@ -11,4 +11,6 @@ export const A20StylesCol = styled.div`
     font-size: 2rem;
     text-decoration: none;
   }
+  & a.active {
+  }
 `;
