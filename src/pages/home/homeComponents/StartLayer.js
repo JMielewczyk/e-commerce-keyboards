@@ -59,7 +59,7 @@ const StartLayer = () => {
           <Loading />
         </LoadingBackground>
       )}
-      <VideoFixed ref={videoRef} muted autoPlay loop>
+      <VideoFixed ref={videoRef} muted autoPlay loop playsInline>
         <source src={backgroundVideo} type="video/mp4" />
       </VideoFixed>
       <StartLayoutFix>

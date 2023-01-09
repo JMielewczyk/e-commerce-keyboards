@@ -36,7 +36,7 @@ const AdditionalInfo = () => {
       {isLoading && <Loading />}
       <ContRel30Vh>
         <P20AbsoluteCenter>All our keyboards are coming with rgb backlight</P20AbsoluteCenter>
-        <VideoAbsolute ref={videoRef} autoPlay loop muted>
+        <VideoAbsolute ref={videoRef} autoPlay loop muted playsInline>
           <source src={backlight} type="video/mp4" />
         </VideoAbsolute>
       </ContRel30Vh>
