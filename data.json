@@ -1,0 +1,248 @@
+{
+  "products": {
+    "keyboards": [
+      {
+        "name": "Quionix75",
+        "description": "These low-profile keyboard are your perfect fast clickers. Featuring a durable rubber outer, they'll withstand bilions of clicks & drops from table (not tested).",
+        "discount": true,
+        "discountValue": 20,
+        "price": 110.00,
+        "currency": "$",
+        "imageTemplate": "/image/product/keyboards/k2/k2-template.jpg",
+        "images": [
+          "/image/product/keyboards/k2/k2.jpg",
+          "/image/product/keyboards/k2/k2-2.jpg",
+          "/image/product/keyboards/k2/k2-3.jpg",
+          "/image/product/keyboards/k2/k2-4.jpg"
+        ],
+        "newProduct": true
+      },
+      {
+        "name": "Outer65",
+        "description": "These low-profile keyboard are your perfect fast clickers. Featuring a durable rubber outer, they'll withstand bilions of clicks & drops from table (not tested).",
+        "discount": true,
+        "discountValue": 10,
+        "price": 80.00,
+        "currency": "$",
+        "imageTemplate": "/image/product/keyboards/Outer65/outer1.jpg",
+        "images": [
+          "/image/product/keyboards/Outer65/outer1.jpg",
+          "/image/product/keyboards/Outer65/outer2.jpg",
+          "/image/product/keyboards/Outer65/outer3.jpg",
+          "/image/product/keyboards/Outer65/outer4.jpg"
+        ],
+        "newProduct": true
+      },
+      {
+        "name": "Krox80",
+        "description": "These low-profile keyboard are your perfect fast clickers. Featuring a durable rubber outer, they'll withstand bilions of clicks & drops from table (not tested).",
+        "discount": true,
+        "discountValue": 15,
+        "price": 60.00,
+        "currency": "$",
+        "imageTemplate": "/image/product/keyboards/Krox80/krox1.jpg",
+        "images": [
+          "/image/product/keyboards/Krox80/krox1.jpg",
+          "/image/product/keyboards/Krox80/krox2.jpg",
+          "/image/product/keyboards/Krox80/krox3.jpg",
+          "/image/product/keyboards/Krox80/krox4.jpg"
+        ],
+        "newProduct": true
+      },
+      {
+        "name": "LogiteC",
+        "description": "These low-profile keyboard are your perfect fast clickers. Featuring a durable rubber outer, they'll withstand bilions of clicks & drops from table (not tested).",
+        "discount": true,
+        "discountValue": 30,
+        "price": 100.00,
+        "currency": "$",
+        "imageTemplate": "/image/product/keyboards/LogiteC/logi1.jpg",
+        "images": [
+          "/image/product/keyboards/LogiteC/logi1.jpg",
+          "/image/product/keyboards/LogiteC/logi2.jpg",
+          "/image/product/keyboards/LogiteC/logi3.jpg"
+        ],
+        "newProduct": false
+      },
+      {
+        "name": "CrossX",
+        "description": "These low-profile keyboard are your perfect fast clickers. Featuring a durable rubber outer, they'll withstand bilions of clicks & drops from table (not tested).",
+        "discount": true,
+        "discountValue": 25,
+        "price": 150.00,
+        "currency": "$",
+        "imageTemplate": "/image/product/keyboards/CrossX/cross1.jpg",
+        "images": [
+          "/image/product/keyboards/CrossX/cross1.jpg",
+          "/image/product/keyboards/CrossX/cross2.jpg",
+          "/image/product/keyboards/CrossX/cross3.jpg"
+        ],
+        "newProduct": false
+      }
+    ],
+    "keycaps": [
+      {
+        "name": "Black",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque veniam labore repellat error quis excepturi alias! Sapiente sit vitae nobis nisi, earum, fugiat molestiae nostrum fuga tempore, numquam eveniet! Dolorum.",
+        "discount": false,
+        "discountValue": 10,
+        "price": 15.00,
+        "currency": "$",
+        "imageTemplate": "/image/product/keycaps/black/black1.jpg",
+        "images": [
+          "/image/product/keycaps/black/black1.jpg",
+          "/image/product/keycaps/black/black2.jpg",
+          "/image/product/keycaps/black/black3.jpg"
+        ],
+        "newProduct": false
+      },
+      {
+        "name": "BlackGold",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque veniam labore repellat error quis excepturi alias! Sapiente sit vitae nobis nisi, earum, fugiat molestiae nostrum fuga tempore, numquam eveniet! Dolorum.",
+        "discount": true,
+        "discountValue": 15,
+        "price": 24.00,
+        "currency": "$",
+        "imageTemplate": "/image/product/keycaps/blackgold/blackgold1.jpg",
+        "images": [
+          "/image/product/keycaps/blackgold/blackgold1.jpg",
+          "/image/product/keycaps/blackgold/blackgold2.jpg",
+          "/image/product/keycaps/blackgold/blackgold3.jpg"
+        ],
+        "newProduct": false
+      },
+      {
+        "name": "Cream",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque veniam labore repellat error quis excepturi alias! Sapiente sit vitae nobis nisi, earum, fugiat molestiae nostrum fuga tempore, numquam eveniet! Dolorum.",
+        "discount": false,
+        "discountValue": 5,
+        "price": 25.00,
+        "currency": "$",
+        "imageTemplate": "/image/product/keycaps/creamkeycapset/cream1.jpg",
+        "images": [
+          "/image/product/keycaps/creamkeycapset/cream1.jpg",
+          "/image/product/keycaps/creamkeycapset/cream2.jpg",
+          "/image/product/keycaps/creamkeycapset/cream3.jpg"
+        ],
+        "newProduct": true
+      }
+    ],
+    "barebonekits": [
+      {
+        "name": "Basic kit",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque veniam labore repellat error quis excepturi alias! Sapiente sit vitae nobis nisi, earum, fugiat molestiae nostrum fuga tempore, numquam eveniet! Dolorum.",
+        "discount": false,
+        "discountValue": 10,
+        "price": 130.00,
+        "currency": "$",
+        "imageTemplate": "/image/product/barebonekits/acrpro/acrpro1.jpg",
+        "images": [
+          "/image/product/barebonekits/acrpro/acrpro1.jpg",
+          "/image/product/barebonekits/acrpro/acrpro2.jpg",
+          "/image/product/barebonekits/acrpro/acrpro3.jpg"
+        ],
+        "newProduct": false
+      },
+      {
+        "name": "Excellent kit",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque veniam labore repellat error quis excepturi alias! Sapiente sit vitae nobis nisi, earum, fugiat molestiae nostrum fuga tempore, numquam eveniet! Dolorum.",
+        "discount": false,
+        "discountValue": 10,
+        "price": 70.00,
+        "currency": "$",
+        "imageTemplate": "/image/product/barebonekits/acrv2/acr1.jpg",
+        "images": [
+          "/image/product/barebonekits/acrv2/acr1.jpg",
+          "/image/product/barebonekits/acrv2/acr2.jpg",
+          "/image/product/barebonekits/acrv2/acr3.jpg"
+        ],
+        "newProduct": false
+      },
+      {
+        "name": "MOD setup",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque veniam labore repellat error quis excepturi alias! Sapiente sit vitae nobis nisi, earum, fugiat molestiae nostrum fuga tempore, numquam eveniet! Dolorum.",
+        "discount": false,
+        "discountValue": 10,
+        "price": 169.99,
+        "currency": "$",
+        "imageTemplate": "/image/product/barebonekits/mod002/mod002-1.jpg",
+        "images": [
+          "/image/product/barebonekits/mod002/mod002-1.jpg",
+          "/image/product/barebonekits/mod002/mod002-2.jpg",
+          "/image/product/barebonekits/mod002/mod002-3.jpg"
+        ],
+        "newProduct": false
+      },
+      {
+        "name": "MOD02 setup",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque veniam labore repellat error quis excepturi alias! Sapiente sit vitae nobis nisi, earum, fugiat molestiae nostrum fuga tempore, numquam eveniet! Dolorum.",
+        "discount": false,
+        "discountValue": 10,
+        "price": 149.99,
+        "currency": "$",
+        "imageTemplate": "/image/product/barebonekits/mod004/mod004.jpg",
+        "images": [
+          "/image/product/barebonekits/mod004/mod004.jpg"
+        ],
+        "newProduct": false
+      },
+      {
+        "name": "Avarage kit",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque veniam labore repellat error quis excepturi alias! Sapiente sit vitae nobis nisi, earum, fugiat molestiae nostrum fuga tempore, numquam eveniet! Dolorum.",
+        "discount": false,
+        "discountValue": 10,
+        "price": 59.99,
+        "currency": "$",
+        "imageTemplate": "/image/product/barebonekits/mod007s/mod007s.jpg",
+        "images": [
+          "/image/product/barebonekits/mod007s/mod007s.jpg"
+        ],
+        "newProduct": false
+      }
+    ],
+    "switches": [
+      {
+        "name": "White switch",
+        "description": "Lubricants used during hand-lube process:",
+        "discount": false,
+        "discountValue": 10,
+        "price": 16.99,
+        "currency": "$",
+        "imageTemplate": "/image/product/switches/white/white1.jpg",
+        "images": [
+          "/image/product/switches/white/white1.jpg",
+          "/image/product/switches/white/white2.jpg"
+        ],
+        "newProduct": false
+      },
+      {
+        "name": "Blue switch",
+        "description": "Lubricants used during hand-lube process:",
+        "discount": false,
+        "discountValue": 10,
+        "price": 16.99,
+        "currency": "$",
+        "imageTemplate": "/image/product/switches/blue/blue1.jpg",
+        "images": [
+          "/image/product/switches/blue/blue1.jpg",
+          "/image/product/switches/blue/blue2.jpg"
+        ],
+        "newProduct": false
+      },
+      {
+        "name": "Purple switch",
+        "description": "Lubricants used during hand-lube process:",
+        "discount": false,
+        "discountValue": 10,
+        "price": 16.99,
+        "currency": "$",
+        "imageTemplate": "/image/product/switches/purple/purple1.jpg",
+        "images": [
+          "/image/product/switches/purple/purple1.jpg",
+          "/image/product/switches/purple/purple2.jpg"
+        ],
+        "newProduct": true
+      }
+    ]
+  }
+}

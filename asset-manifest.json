@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.js": "/e-commerce-keyboards/static/js/main.450995f0.js",
+    "static/media/bg-video.mp4": "/e-commerce-keyboards/static/media/bg-video.c09150f913f40e61c1ff.mp4",
+    "static/media/backlight.mp4": "/e-commerce-keyboards/static/media/backlight.0824858ae1cdf2030e6c.mp4",
+    "static/media/start-background-light.jpg": "/e-commerce-keyboards/static/media/start-background-light.a49db17f352d8dbfed72.jpg",
+    "static/media/prebuilt.jpg": "/e-commerce-keyboards/static/media/prebuilt.cf7b17fdc42243e52726.jpg",
+    "static/media/keycaps.jpg": "/e-commerce-keyboards/static/media/keycaps.b05aa304ddbea58394e3.jpg",
+    "static/media/barebone.jpg": "/e-commerce-keyboards/static/media/barebone.468f1a6a733c1b6b06ff.jpg",
+    "static/media/switches.jpg": "/e-commerce-keyboards/static/media/switches.1d1b64da6a75a0a72431.jpg",
+    "index.html": "/e-commerce-keyboards/index.html",
+    "static/media/icon-cart.svg": "/e-commerce-keyboards/static/media/icon-cart.539ec608f50e707c94d583ec11acf99d.svg",
+    "static/media/icon-plus.svg": "/e-commerce-keyboards/static/media/icon-plus.b297868c5f938612f4f099f9f9d73aea.svg",
+    "static/media/icon-minus.svg": "/e-commerce-keyboards/static/media/icon-minus.f5073aa8273785ecf6b7811630782736.svg",
+    "static/media/icon-close.svg": "/e-commerce-keyboards/static/media/icon-close.c390448669f3a8a4c4b2ada2f9938959.svg",
+    "static/media/icon-menu.svg": "/e-commerce-keyboards/static/media/icon-menu.c6107d03f1edcf73523ebd8cbc50a443.svg",
+    "static/media/icon-previous.svg": "/e-commerce-keyboards/static/media/icon-previous.80616402c611cc0a6651d0b751da8a9b.svg",
+    "static/media/icon-next.svg": "/e-commerce-keyboards/static/media/icon-next.9621183a551a9985b4bd7536c9a69c66.svg",
+    "main.450995f0.js.map": "/e-commerce-keyboards/static/js/main.450995f0.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.450995f0.js"
+  ]
+}
