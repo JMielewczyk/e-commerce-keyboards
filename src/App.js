@@ -1,6 +1,6 @@
 //Hooks
 import React, { useState, useReducer, createContext } from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 
 //Pages
 import Nav from './components/Nav';
