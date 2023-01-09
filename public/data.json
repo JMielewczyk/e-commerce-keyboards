@@ -83,7 +83,7 @@
     "keycaps": [
       {
         "name": "Black",
-        "description": "Compatible with major-sizes keyboard including but not limited to 60%, 64-key, 65%, TKL, 75%, 96%, 1800 compact, Alice, and full-size keyboards.",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque veniam labore repellat error quis excepturi alias! Sapiente sit vitae nobis nisi, earum, fugiat molestiae nostrum fuga tempore, numquam eveniet! Dolorum.",
         "discount": false,
         "discountValue": 10,
         "price": 15.00,
@@ -98,7 +98,7 @@
       },
       {
         "name": "BlackGold",
-        "description": "Compatible with major-sizes keyboard including but not limited to 60%, 64-key, 65%, TKL, 75%, 96%.",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque veniam labore repellat error quis excepturi alias! Sapiente sit vitae nobis nisi, earum, fugiat molestiae nostrum fuga tempore, numquam eveniet! Dolorum.",
         "discount": true,
         "discountValue": 15,
         "price": 24.00,
@@ -113,7 +113,7 @@
       },
       {
         "name": "Cream",
-        "description": "Compatible with major-sizes keyboard including but not limited to 60%, 64-key, 65%, TKL, 75%, 96%, 1800 compact, Alice, and full-size keyboards.",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque veniam labore repellat error quis excepturi alias! Sapiente sit vitae nobis nisi, earum, fugiat molestiae nostrum fuga tempore, numquam eveniet! Dolorum.",
         "discount": false,
         "discountValue": 5,
         "price": 25.00,
@@ -129,8 +129,8 @@
     ],
     "barebonekits": [
       {
-        "name": "ACR TOP 75 Kit",
-        "description": "Note: This keyboard comes completely un-assembled. Top Mount Barebone Kit Brass Plate (plate files will be available)/Additional FR4 Plate for the Space Gray Aluminum Version double-shot TPU plate mount stabilizer (supports screw-in stabilizer) South-facing PCBa 5-pin Hotswap Socket Case foam is moulded Backlit RGB (Acrylic version only – backlit was removed on aluminum version to optimize sound profile).",
+        "name": "Basic kit",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque veniam labore repellat error quis excepturi alias! Sapiente sit vitae nobis nisi, earum, fugiat molestiae nostrum fuga tempore, numquam eveniet! Dolorum.",
         "discount": false,
         "discountValue": 10,
         "price": 130.00,
@@ -144,8 +144,8 @@
         "newProduct": false
       },
       {
-        "name": "ACR v2",
-        "description": "Note: This keyboard comes completely un-assembled. Top Mount Barebone Kit Brass Plate (plate files will be available)/Additional FR4 Plate for the Space Gray Aluminum Version double-shot TPU plate mount stabilizer (supports screw-in stabilizer) South-facing PCBa 5-pin Hotswap Socket Case foam is moulded Backlit RGB (Acrylic version only – backlit was removed on aluminum version to optimize sound profile).",
+        "name": "Excellent kit",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque veniam labore repellat error quis excepturi alias! Sapiente sit vitae nobis nisi, earum, fugiat molestiae nostrum fuga tempore, numquam eveniet! Dolorum.",
         "discount": false,
         "discountValue": 10,
         "price": 70.00,
@@ -159,8 +159,8 @@
         "newProduct": false
       },
       {
-        "name": "MOD002",
-        "description": "Note: This keyboard comes completely un-assembled. Top Mount Barebone Kit Brass Plate (plate files will be available)/Additional FR4 Plate for the Space Gray Aluminum Version double-shot TPU plate mount stabilizer (supports screw-in stabilizer) South-facing PCBa 5-pin Hotswap Socket Case foam is moulded Backlit RGB (Acrylic version only – backlit was removed on aluminum version to optimize sound profile).",
+        "name": "MOD setup",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque veniam labore repellat error quis excepturi alias! Sapiente sit vitae nobis nisi, earum, fugiat molestiae nostrum fuga tempore, numquam eveniet! Dolorum.",
         "discount": false,
         "discountValue": 10,
         "price": 169.99,
@@ -174,8 +174,8 @@
         "newProduct": false
       },
       {
-        "name": "MOD004",
-        "description": "Note: This keyboard comes completely un-assembled. Top Mount Barebone Kit. Brass Plate (plate files will be available)/Additional FR4 Plate for the Space Gray Aluminum Version. Double-shot TPU plate mount stabilizer (supports screw-in stabilizer). South-facing PCBa. 5-pin Hotswap Socket. Case foam is moulded. Backlit RGB (Acrylic version only – backlit was removed on aluminum version to optimize sound profile).",
+        "name": "MOD02 setup",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque veniam labore repellat error quis excepturi alias! Sapiente sit vitae nobis nisi, earum, fugiat molestiae nostrum fuga tempore, numquam eveniet! Dolorum.",
         "discount": false,
         "discountValue": 10,
         "price": 149.99,
@@ -187,8 +187,8 @@
         "newProduct": false
       },
       {
-        "name": "MOD007s",
-        "description": "Note: This keyboard comes completely un-assembled. Top Mount Barebone Kit. Brass Plate (plate files will be available)/Additional FR4 Plate for the Space Gray Aluminum Version. Double-shot TPU plate mount stabilizer (supports screw-in stabilizer). South-facing PCBa. 5-pin Hotswap Socket. Case foam is moulded. Backlit RGB (Acrylic version only – backlit was removed on aluminum version to optimize sound profile).",
+        "name": "Avarage kit",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque veniam labore repellat error quis excepturi alias! Sapiente sit vitae nobis nisi, earum, fugiat molestiae nostrum fuga tempore, numquam eveniet! Dolorum.",
         "discount": false,
         "discountValue": 10,
         "price": 59.99,
