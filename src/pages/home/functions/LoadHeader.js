@@ -23,7 +23,7 @@ const LoadHeader = ({ data, productIndex }) => {
           to={`/home/${data[productIndex].category}/${data[productIndex].name}`}>
           <RowContainerRelative>
             <ImgAbsolute
-              src={process.env.PUBLIC_URL + data[productIndex].imageTemplate}
+              src={data[productIndex].imageTemplate}
               alt={`${data[productIndex].name}`}
             />
             <DivTextContainer>
@@ -32,7 +32,7 @@ const LoadHeader = ({ data, productIndex }) => {
             </DivTextContainer>
             <DivBack
               style={{
-                backgroundImage: `url(${process.env.PUBLIC_URL + data[productIndex].imageTemplate})`
+                backgroundImage: `url(${data[productIndex].imageTemplate})`
               }}></DivBack>
           </RowContainerRelative>
         </Link>

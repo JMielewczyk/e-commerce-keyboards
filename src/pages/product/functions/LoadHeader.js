@@ -26,7 +26,7 @@ const LoadHeader = ({ loading, data, product, imageIndex, category, setImageInde
 
     return (
       <HeadWrapp>
-        <ImgCover src={process.env.PUBLIC_URL + images[imageIndex]} alt="" />
+        <ImgCover src={images[imageIndex]} alt="" />
         <ArrowContainerNext onClick={() => nextImage(images, imageIndex, setImageIndex)}>
           <Arrow src={next} alt="next image arrow" />
         </ArrowContainerNext>

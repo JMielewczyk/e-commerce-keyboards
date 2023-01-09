@@ -1,7 +1,7 @@
 export async function fetchData() {
-  const response = await fetch('/data.json');
+  const response = await fetch('https://api.jsonbin.io/v3/b/63bc36f0dfc68e59d57dfde4');
   const parsedResponse = await response.json();
-  return parsedResponse.products;
+  return parsedResponse.record.products;
 }
 
 // export async function fetchData(setData, setLoading) {
