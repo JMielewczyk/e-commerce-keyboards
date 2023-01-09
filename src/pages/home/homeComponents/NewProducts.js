@@ -32,7 +32,7 @@ const NewProducts = () => {
         <Loading />
       ) : (
         <NewProductsWrapp>
-          <P20>New Arrivals</P20>
+          <P20>New arrivals</P20>
           <ScrollContainer>
             <LoadNewProducts data={data} />
           </ScrollContainer>

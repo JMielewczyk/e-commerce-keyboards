@@ -64,7 +64,6 @@ const Shipping = () => {
     } else {
       setFormIsNotCompleted(false);
     }
-    console.log(cityInput + streetInput + postCodeInput + selectInput);
     navigate('/payment');
   };
   return (

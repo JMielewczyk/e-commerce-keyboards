@@ -29,7 +29,7 @@ const Main = () => {
 
   return (
     <HomeMainWrapper>
-      <P10CenterBold>Building Your First Mechanical Keyboard is Easier Than Ever</P10CenterBold>
+      <P10CenterBold>Building your first mechanical keyboard is easier than ever</P10CenterBold>
       <CategoriesContainer>{categoriesMap}</CategoriesContainer>
     </HomeMainWrapper>
   );

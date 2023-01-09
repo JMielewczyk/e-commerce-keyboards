@@ -66,7 +66,7 @@ const Nav = ({ toggleCart, isCartOpen, setIsCartOpen, basket, dispatch }) => {
           <NavLink to="/home/keycaps">Keycaps</NavLink>
           <NavLink to="/home/barebonekits">Barebone kits</NavLink>
           <NavLink to="/home/switches">Switches</NavLink>
-          <NavLink to="contact">Contact</NavLink>
+          <a href="https://www.linkedin.com/in/jakub-mielewczyk-b411a6221/">Contact</a>
         </A20StylesCol>
       </ColContainerFixed>
       <DivBackFixed
@@ -82,7 +82,7 @@ const Nav = ({ toggleCart, isCartOpen, setIsCartOpen, basket, dispatch }) => {
           <NavLink to="/home/keycaps">Keycaps</NavLink>
           <NavLink to="/home/barebonekits">Barebone kits</NavLink>
           <NavLink to="/home/switches">Switches</NavLink>
-          <NavLink to="contact">Contact</NavLink>
+          <a href="https://www.linkedin.com/in/jakub-mielewczyk-b411a6221/">Contact</a>
         </NavLinksMinLaptop>
       </RowContainerBR0>
       <RowContainerBR0>

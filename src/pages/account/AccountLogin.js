@@ -27,7 +27,7 @@ const AccountLogin = () => {
     <>
       <WrappFlexGrow>
         <CartWrapp>
-          <P20>Account Details</P20>
+          <P20>Account details</P20>
           <Form onSubmit={(e) => handleSubmit(e, loginValue, passwordValue, setIsLogged)}>
             <Label htmlFor="login">
               Email address

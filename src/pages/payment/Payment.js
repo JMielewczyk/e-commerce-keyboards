@@ -24,7 +24,7 @@ const Payment = () => {
   return (
     <WrappFlexGrow>
       <CartWrapp>
-        <P20>Payment Details</P20>
+        <P20>Payment details</P20>
         <Form onSubmit={submitPayment}>
           <Label htmlFor="name-on-card">
             Name on card

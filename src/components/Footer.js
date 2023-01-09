@@ -12,7 +12,7 @@ import { A10White } from '../styles/elements/Footer/A10White';
 const Footer = () => {
   return (
     <WrapperFooter>
-      <P20White>Keyboards</P20White>
+      <P20White>keyboards</P20White>
       <P10WhiteCenter>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis ullam voluptates possimus
         nobis quasi pariatur dolor quos ex, deserunt fugiat in ea atque quod placeat quis sequi a!

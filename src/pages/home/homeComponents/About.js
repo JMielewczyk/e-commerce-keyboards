@@ -8,7 +8,7 @@ import { AboutWrapp } from '../../../styles/elements/Home/About/AboutWrapp';
 const About = () => {
   return (
     <AboutWrapp>
-      <P20>About Us</P20>
+      <P20>About us</P20>
       <P10>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ab aliquid, dicta quisquam
         illo ex maxime libero blanditiis dolores sed. Suscipit accusamus ipsum excepturi! Fugiat

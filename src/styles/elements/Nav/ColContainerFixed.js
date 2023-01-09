@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from '../../mediaQueries/breakpoints';
 
 export const ColContainerFixed = styled.div`
   position: fixed;
@@ -8,8 +9,8 @@ export const ColContainerFixed = styled.div`
   flex-direction: column;
   z-index: 10;
   background-color: white;
-  height: 60vh;
-  width: 75%;
+  height: 80vh;
+  width: 90%;
   max-width: 300px;
   padding: 20px;
   border-radius: 0 0 200px 0;
@@ -17,5 +18,9 @@ export const ColContainerFixed = styled.div`
   transition: 0.3s;
   &.active {
     transform: translateX(0);
+  }
+  @media ${device.mobileM} {
+    width: 75%;
+    height: 65vh;
   }
 `;
