@@ -18,8 +18,10 @@ const CartContent = ({ basket, dispatch }) => {
         <P10>Your basket is empty</P10>
       </>
     );
+
   const renderBasket = basket.map((item, index) => {
     if (index === 0) return;
+
     return (
       <CartProductWrapp key={item.name}>
         <div>

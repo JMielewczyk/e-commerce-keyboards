@@ -1,6 +1,6 @@
 //Hooks
 import React, { useEffect, useState } from 'react';
-import { useParams, useLocation } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 //Components
 import Loading from '../../components/Loading';
@@ -20,7 +20,6 @@ const ProductElement = ({ basket }) => {
   const [orderAmount, setOrderAmount] = useState(0);
   const [imageIndex, setImageIndex] = useState(0);
   const { category, product } = useParams();
-  const location = useLocation();
   const pathToProduct = `products/${category}/${product}`;
 
   useEffect(() => {
@@ -32,7 +31,7 @@ const ProductElement = ({ basket }) => {
       setLoading(false);
     }
     loadContent();
-  }, []);
+  }, [product]);
 
   return (
     <>
@@ -48,7 +47,7 @@ const ProductElement = ({ basket }) => {
           />
           <LoadContent
             basket={basket}
-            location={location}
+            location={`/home/${pathToProduct}`}
             data={data}
             images={images}
             category={category}

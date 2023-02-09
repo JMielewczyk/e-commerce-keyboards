@@ -8,7 +8,7 @@ export function manageBasket(state, action) {
           quantity: action.payload.quantity,
           price: action.payload.price * action.payload.quantity,
           image: action.payload.image,
-          path: action.payload.pathToProduct
+          path: action.payload.path
         }
       ];
     }

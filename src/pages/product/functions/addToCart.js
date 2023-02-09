@@ -18,6 +18,7 @@ export const addToCart = (basket, location, data, images, orderAmount, dispatch)
       });
     }
   });
+
   if (alreadyInBasket === false) {
     dispatch({
       type: 'add',
@@ -26,7 +27,7 @@ export const addToCart = (basket, location, data, images, orderAmount, dispatch)
         quantity: orderAmount,
         price: data.discount ? discountedPrice : data.price,
         image: images[0],
-        pathToProduct: location.pathname
+        path: location
       }
     });
   }
