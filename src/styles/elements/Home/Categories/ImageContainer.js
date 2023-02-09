@@ -1,11 +1,10 @@
 import styled from 'styled-components';
 
-export const LinkContainerImage = styled.div`
+export const ImageContainer = styled.div`
+  position: relative;
   width: 100%;
   height: 30vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+
   border-radius: 8px;
   & a {
     display: flex;

@@ -4,7 +4,7 @@ export const MainWrapper = styled.div`
   display: flex;
   flex-grow: 1;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   min-height: 100vh;
   gap: 20px;

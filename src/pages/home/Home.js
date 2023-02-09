@@ -3,7 +3,7 @@ import React from 'react';
 //Components
 import StartLayer from './homeComponents/StartLayer';
 import Header from './homeComponents/Header';
-import Main from './homeComponents/Main';
+import Main from './homeComponents/Categories';
 import About from './homeComponents/About';
 import NewProducts from './homeComponents/NewProducts';
 import AdditionalInfo from './homeComponents/AdditionalInfo';

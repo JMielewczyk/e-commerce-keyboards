@@ -1,17 +1,44 @@
-export async function fetchData() {
-  const response = await fetch('https://api.jsonbin.io/v3/b/63bc36f0dfc68e59d57dfde4');
-  const parsedResponse = await response.json();
-  return parsedResponse.record.products;
+import { storage } from './firebase';
+import { ref, listAll, getDownloadURL } from 'firebase/storage';
+
+export async function fetchJSON(pathToProduct) {
+  if (!pathToProduct) return;
+  const url = await getDownloadURL(ref(storage, `${pathToProduct}/data.json`));
+  const data = await fetch(url)
+    .then((response) => response.json())
+    .then((data) => {
+      return data;
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+  return data;
 }
 
-// export async function fetchData(setData, setLoading) {
-//   try {
-//     setData(null);
-//     const response = await fetch("/data.json");
-//     const parsedResponse = await response.json();
-//     setData(parsedResponse.products);
-//     setLoading(false);
-//   } catch (error) {
-//     console.error(error);
-//   }
-// }
+export async function fetchImages(pathToProduct) {
+  if (!pathToProduct) return;
+  const listRef = ref(storage, `${pathToProduct}/images`);
+  const res = await listAll(listRef);
+  const promises = res.items.map((itemRef) => getDownloadURL(itemRef));
+  const images = await Promise.all(promises);
+  return images;
+}
+
+export async function getProducts(category) {
+  return new Promise((resolve) => {
+    let productsInCategory = [];
+    const listRef = ref(storage, `products/${category}`);
+    listAll(listRef)
+      .then((res) => {
+        res.prefixes.forEach((folderRef) => {
+          productsInCategory = [...productsInCategory, folderRef.fullPath];
+        });
+      })
+      .then(() => {
+        resolve(productsInCategory);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  });
+}

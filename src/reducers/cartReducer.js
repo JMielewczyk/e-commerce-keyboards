@@ -28,6 +28,10 @@ export function manageBasket(state, action) {
       const filteredState = state.filter((element) => element.name !== action.payload.name);
       return [...filteredState];
     }
+    case 'reset': {
+      const newState = [{ name: 'Your basket is empty' }];
+      return newState;
+    }
     default:
       return state;
   }

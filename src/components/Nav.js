@@ -62,10 +62,10 @@ const Nav = ({ toggleCart, isCartOpen, setIsCartOpen, basket, dispatch }) => {
       <ColContainerFixed className={menuIsActive === true ? 'active' : null}>
         <ImgSmall onClick={() => handleMenuClose(setMenuIsActive)} src={Cross} alt="" />
         <A20StylesCol>
-          <NavLink to="/home/keyboards">Keyboards</NavLink>
-          <NavLink to="/home/keycaps">Keycaps</NavLink>
-          <NavLink to="/home/barebonekits">Barebone kits</NavLink>
-          <NavLink to="/home/switches">Switches</NavLink>
+          <NavLink to="/home/products/keyboards">Keyboards</NavLink>
+          <NavLink to="/home/products/keycaps">Keycaps</NavLink>
+          <NavLink to="/home/products/barebonekits">Barebone kits</NavLink>
+          <NavLink to="/home/products/switches">Switches</NavLink>
           <a href="https://www.linkedin.com/in/jakub-mielewczyk-b411a6221/">Contact</a>
         </A20StylesCol>
       </ColContainerFixed>
@@ -78,10 +78,10 @@ const Nav = ({ toggleCart, isCartOpen, setIsCartOpen, basket, dispatch }) => {
           <Link to="home">keyboards</Link>
         </A20StylesRow>
         <NavLinksMinLaptop>
-          <NavLink to="/home/keyboards">Keyboards</NavLink>
-          <NavLink to="/home/keycaps">Keycaps</NavLink>
-          <NavLink to="/home/barebonekits">Barebone kits</NavLink>
-          <NavLink to="/home/switches">Switches</NavLink>
+          <NavLink to="/home/products/keyboards">Keyboards</NavLink>
+          <NavLink to="/home/products/keycaps">Keycaps</NavLink>
+          <NavLink to="/home/products/barebonekits">Barebone kits</NavLink>
+          <NavLink to="/home/products/switches">Switches</NavLink>
           <a href="https://www.linkedin.com/in/jakub-mielewczyk-b411a6221/">Contact</a>
         </NavLinksMinLaptop>
       </RowContainerBR0>

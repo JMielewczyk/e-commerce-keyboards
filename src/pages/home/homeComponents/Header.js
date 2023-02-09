@@ -9,26 +9,22 @@ import { loadProducts } from '../functions/loadProducts';
 
 const FeaturedProduct = () => {
   const [data, setData] = useState(null);
+  const [images, setImages] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [productIndex, setProductIndex] = useState(null);
+  const [path, setPath] = useState(null);
 
   useEffect(() => {
-    loadProducts(setData, setLoading, setProductIndex);
+    loadProducts(setData, setImages, setLoading, setPath);
   }, []);
 
   useEffect(() => {
-    if (loading === false) {
-      const imagesInterval = setInterval(() => {
-        const randomProduct = Math.floor(Math.random() * data.length - 1);
-        if (randomProduct < 0 || randomProduct > data.length - 1) return setProductIndex(0);
-        setProductIndex(randomProduct);
-      }, 3000);
-      return () => clearInterval(imagesInterval);
-    }
-  }, [productIndex]);
-
+    const interval = setInterval(() => {
+      loadProducts(setData, setImages, setLoading, setPath);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
   return (
-    <>{loading === true ? <Loading /> : <LoadHeader data={data} productIndex={productIndex} />}</>
+    <>{loading === true ? <Loading /> : <LoadHeader data={data} images={images} path={path} />}</>
   );
 };
 

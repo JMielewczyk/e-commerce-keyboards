@@ -1,0 +1,251 @@
+{
+  "products": {
+    "keyboards": [
+      {
+        "name": "Quionix75",
+        "description": "These low-profile keyboard are your perfect fast clickers. Featuring a durable rubber outer, they'll withstand bilions of clicks & drops from table (not tested).",
+        "discount": true,
+        "discountValue": 20,
+        "price": 110,
+        "currency": "$",
+        "imageTemplate": "https://i.ibb.co/7QkJ8Hy/k2-template.jpg",
+        "images": [
+          "https://i.ibb.co/sRWrG4K/k2.jpg",
+          "https://i.ibb.co/8r4QZXP/k2-2.jpg",
+          "https://i.ibb.co/Qcm4rxT/k2-3.jpg",
+          "https://i.ibb.co/JRWVSr2/k2-4.jpg"
+        ],
+        "newProduct": true
+      },
+      {
+        "name": "Outer65",
+        "description": "These low-profile keyboard are your perfect fast clickers. Featuring a durable rubber outer, they'll withstand bilions of clicks & drops from table (not tested).",
+        "discount": true,
+        "discountValue": 10,
+        "price": 80,
+        "currency": "$",
+        "imageTemplate": "https://i.ibb.co/Qd1dkVy/outer1.jpg",
+        "images": [
+          "https://i.ibb.co/Qd1dkVy/outer1.jpg",
+          "https://i.ibb.co/7jgHWvw/outer2.jpg",
+          "https://i.ibb.co/j8tkLdX/outer3.jpg",
+          "https://i.ibb.co/ftfrDj6/outer4.jpg"
+        ],
+        "newProduct": true
+      },
+      {
+        "name": "Krox80",
+        "description": "These low-profile keyboard are your perfect fast clickers. Featuring a durable rubber outer, they'll withstand bilions of clicks & drops from table (not tested).",
+        "discount": true,
+        "discountValue": 15,
+        "price": 60,
+        "currency": "$",
+        "imageTemplate": "https://i.ibb.co/gzP3LD0/krox1.jpg",
+        "images": [
+          "https://i.ibb.co/gzP3LD0/krox1.jpg",
+          "https://i.ibb.co/bd22s68/krox2.jpg",
+          "https://i.ibb.co/TKPLb8d/krox3.jpg",
+          "https://i.ibb.co/xMwpMFn/krox4.jpg",
+          "https://i.ibb.co/8jqY1ZB/krox5.jpg"
+        ],
+        "newProduct": true
+      },
+      {
+        "name": "LogiteC",
+        "description": "These low-profile keyboard are your perfect fast clickers. Featuring a durable rubber outer, they'll withstand bilions of clicks & drops from table (not tested).",
+        "discount": true,
+        "discountValue": 30,
+        "price": 100,
+        "currency": "$",
+        "imageTemplate": "https://i.ibb.co/tPf3rF5/logi1.jpg",
+        "images": [
+          "https://i.ibb.co/tPf3rF5/logi1.jpg",
+          "https://i.ibb.co/9TJkd5j/logi2.jpg",
+          "https://i.ibb.co/7r9h8R2/logi3.jpg"
+        ],
+        "newProduct": false
+      },
+      {
+        "name": "CrossX",
+        "description": "These low-profile keyboard are your perfect fast clickers. Featuring a durable rubber outer, they'll withstand bilions of clicks & drops from table (not tested).",
+        "discount": true,
+        "discountValue": 25,
+        "price": 150,
+        "currency": "$",
+        "imageTemplate": "https://i.ibb.co/GdmxjYp/cross1.jpg",
+        "images": [
+          "https://i.ibb.co/GdmxjYp/cross1.jpg",
+          "https://i.ibb.co/4tZkBB8/cross2.jpg",
+          "https://i.ibb.co/xsJVmnZ/cross3.jpg"
+        ],
+        "newProduct": false
+      }
+    ],
+    "keycaps": [
+      {
+        "name": "Black",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque veniam labore repellat error quis excepturi alias! Sapiente sit vitae nobis nisi, earum, fugiat molestiae nostrum fuga tempore, numquam eveniet! Dolorum.",
+        "discount": false,
+        "discountValue": 10,
+        "price": 15,
+        "currency": "$",
+        "imageTemplate": "https://i.ibb.co/DtskWtn/black1.jpg",
+        "images": [
+          "https://i.ibb.co/DtskWtn/black1.jpg",
+          "https://i.ibb.co/2Y37L5c/black2.jpg",
+          "https://i.ibb.co/w6VRqsL/black3.jpg"
+        ],
+        "newProduct": false
+      },
+      {
+        "name": "BlackGold",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque veniam labore repellat error quis excepturi alias! Sapiente sit vitae nobis nisi, earum, fugiat molestiae nostrum fuga tempore, numquam eveniet! Dolorum.",
+        "discount": true,
+        "discountValue": 15,
+        "price": 24,
+        "currency": "$",
+        "imageTemplate": "https://i.ibb.co/zJ0N9Yp/blackgold1.jpg",
+        "images": [
+          "https://i.ibb.co/zJ0N9Yp/blackgold1.jpg",
+          "https://i.ibb.co/7njMYLr/blackgold2.jpg",
+          "https://i.ibb.co/8gT9cc8/blackgold3.jpg"
+        ],
+        "newProduct": false
+      },
+      {
+        "name": "Cream",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque veniam labore repellat error quis excepturi alias! Sapiente sit vitae nobis nisi, earum, fugiat molestiae nostrum fuga tempore, numquam eveniet! Dolorum.",
+        "discount": false,
+        "discountValue": 5,
+        "price": 25,
+        "currency": "$",
+        "imageTemplate": "https://i.ibb.co/0DB0wLX/cream1.jpg",
+        "images": [
+          "https://i.ibb.co/0DB0wLX/cream1.jpg",
+          "https://i.ibb.co/6HpPJP5/cream2.jpg",
+          "https://i.ibb.co/k3sNpSD/cream3.jpg"
+        ],
+        "newProduct": true
+      }
+    ],
+    "barebonekits": [
+      {
+        "name": "Basic kit",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque veniam labore repellat error quis excepturi alias! Sapiente sit vitae nobis nisi, earum, fugiat molestiae nostrum fuga tempore, numquam eveniet! Dolorum.",
+        "discount": false,
+        "discountValue": 10,
+        "price": 130,
+        "currency": "$",
+        "imageTemplate": "https://i.ibb.co/hZCrJHh/acrpro1.jpg",
+        "images": [
+          "https://i.ibb.co/hZCrJHh/acrpro1.jpg",
+          "https://i.ibb.co/nnDCJwp/acrpro2.jpg",
+          "https://i.ibb.co/HT177W0/acrpro3.jpg",
+          "https://i.ibb.co/TgCQrYQ/acrpro4.jpg"
+        ],
+        "newProduct": false
+      },
+      {
+        "name": "Excellent kit",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque veniam labore repellat error quis excepturi alias! Sapiente sit vitae nobis nisi, earum, fugiat molestiae nostrum fuga tempore, numquam eveniet! Dolorum.",
+        "discount": false,
+        "discountValue": 10,
+        "price": 70,
+        "currency": "$",
+        "imageTemplate": "https://i.ibb.co/vstP40s/acr1.jpg",
+        "images": [
+          "https://i.ibb.co/vstP40s/acr1.jpg",
+          "https://i.ibb.co/xzRCVJm/acr2.jpg",
+          "https://i.ibb.co/jrdgq7m/acr3.jpg"
+        ],
+        "newProduct": false
+      },
+      {
+        "name": "MOD setup",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque veniam labore repellat error quis excepturi alias! Sapiente sit vitae nobis nisi, earum, fugiat molestiae nostrum fuga tempore, numquam eveniet! Dolorum.",
+        "discount": false,
+        "discountValue": 10,
+        "price": 169.99,
+        "currency": "$",
+        "imageTemplate": "https://i.ibb.co/jMCFq7n/mod002-1.jpg",
+        "images": [
+          "https://i.ibb.co/jMCFq7n/mod002-1.jpg",
+          "https://i.ibb.co/XXTzNfz/mod002-2.jpg",
+          "https://i.ibb.co/pfPqPv4/mod002-3.jpg",
+          "https://i.ibb.co/nmPwmqy/mod002-4.jpg"
+        ],
+        "newProduct": false
+      },
+      {
+        "name": "MOD02 setup",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque veniam labore repellat error quis excepturi alias! Sapiente sit vitae nobis nisi, earum, fugiat molestiae nostrum fuga tempore, numquam eveniet! Dolorum.",
+        "discount": false,
+        "discountValue": 10,
+        "price": 149.99,
+        "currency": "$",
+        "imageTemplate": "https://i.ibb.co/1MV1PWp/mod004.jpg",
+        "images": [
+          "https://i.ibb.co/1MV1PWp/mod004.jpg"
+        ],
+        "newProduct": false
+      },
+      {
+        "name": "Avarage kit",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque veniam labore repellat error quis excepturi alias! Sapiente sit vitae nobis nisi, earum, fugiat molestiae nostrum fuga tempore, numquam eveniet! Dolorum.",
+        "discount": false,
+        "discountValue": 10,
+        "price": 59.99,
+        "currency": "$",
+        "imageTemplate": "https://i.ibb.co/HrdWHrT/mod007s.jpg",
+        "images": [
+          "https://i.ibb.co/HrdWHrT/mod007s.jpg"
+        ],
+        "newProduct": false
+      }
+    ],
+    "switches": [
+      {
+        "name": "White switch",
+        "description": "Lubricants used during hand-lube process:",
+        "discount": false,
+        "discountValue": 10,
+        "price": 16.99,
+        "currency": "$",
+        "imageTemplate": "https://i.ibb.co/pxM3kfN/white1.jpg",
+        "images": [
+          "https://i.ibb.co/pxM3kfN/white1.jpg",
+          "https://i.ibb.co/WtyPXcS/white2.jpg"
+        ],
+        "newProduct": false
+      },
+      {
+        "name": "Blue switch",
+        "description": "Lubricants used during hand-lube process:",
+        "discount": false,
+        "discountValue": 10,
+        "price": 16.99,
+        "currency": "$",
+        "imageTemplate": "https://i.ibb.co/jL7jbHZ/blue1.jpg",
+        "images": [
+          "https://i.ibb.co/jL7jbHZ/blue1.jpg",
+          "https://i.ibb.co/fM7FBjP/blue2.jpg"
+        ],
+        "newProduct": false
+      },
+      {
+        "name": "Purple switch",
+        "description": "Lubricants used during hand-lube process:",
+        "discount": false,
+        "discountValue": 10,
+        "price": 16.99,
+        "currency": "$",
+        "imageTemplate": "https://i.ibb.co/3zyMK6Z/purple1.jpg",
+        "images": [
+          "https://i.ibb.co/3zyMK6Z/purple1.jpg",
+          "https://i.ibb.co/5KY9P3g/purple2.jpg"
+        ],
+        "newProduct": true
+      }
+    ]
+  }
+}

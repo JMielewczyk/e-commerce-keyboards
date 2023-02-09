@@ -18,12 +18,9 @@ import { Arrow } from '../../../styles/elements/Product/Header/Arrow';
 import { ArrowContainerPrevious } from '../../../styles/elements/Product/Header/ArrowContainerPrevious';
 import { ImgCover } from '../../../styles/elements/ImgCover';
 
-const LoadHeader = ({ loading, data, product, imageIndex, category, setImageIndex }) => {
-  if (loading === true || data.length === 0) return <Loading />;
+const LoadHeader = ({ loading, images, imageIndex, setImageIndex }) => {
+  if (loading === true || images.length === 0) return <Loading />;
   else {
-    const thisProduct = data[category].filter((item) => item.name === product);
-    const images = thisProduct[0].images;
-
     return (
       <HeadWrapp>
         <ImgCover src={images[imageIndex]} alt="" />

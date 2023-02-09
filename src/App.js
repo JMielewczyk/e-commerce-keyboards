@@ -6,6 +6,7 @@ import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import Nav from './components/Nav';
 import HomePage from './pages/home/Home';
 import AccountLogin from './pages/account/AccountLogin';
+import SignUp from './pages/signUp/SignUp';
 import LoggedIn from './pages/account/LoggedIn';
 import Shipping from './pages/shipping/Shipping';
 import Payment from './pages/payment/Payment';
@@ -27,6 +28,7 @@ export const BackgroundContext = createContext(null);
 
 function App() {
   const [isLogged, setIsLogged] = useState(false);
+  const [userCredential, setUserCredential] = useState('');
   const [startLayout, setStartingLayout] = useState(true);
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [basket, dispatch] = useReducer(manageBasket, initialBasket);
@@ -52,6 +54,8 @@ function App() {
             setStartingLayout,
             isLogged,
             setIsLogged,
+            setUserCredential,
+            userCredential,
             dispatch
           }}>
           <GlobalStyles />
@@ -66,11 +70,15 @@ function App() {
             <Route index element={<HomePage />} />
             <Route path="/home" element={<HomePage />} />
             <Route path="/account" element={renderAccount()} />
+            <Route path="/signup" element={<SignUp />} />
             <Route path="/shipping" element={isLogged ? <Shipping /> : renderAccount()} />
             <Route path="/payment" element={<Payment />} />
             <Route path="/orderCompleted" element={<OrderCompleted />} />
-            <Route path="/home/:category/" element={<ProductList />} />
-            <Route path="/home/:category/:product" element={<ProductElement basket={basket} />} />
+            <Route path="/home/products/:category/" element={<ProductList />} />
+            <Route
+              path="/home/products/:category/:product"
+              element={<ProductElement basket={basket} />}
+            />
             <Route path="*" element={<Navigate to="/home" replace />}></Route>
           </Routes>
           <Footer />

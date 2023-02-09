@@ -13,26 +13,21 @@ import { DivBack } from '../../../styles/elements/DivBack';
 import { RowContainer } from '../../../styles/elements/RowContainer';
 import { DivTextContainer } from '../../../styles/elements/Home/HomeHeader/DivTextContainer';
 
-const LoadHeader = ({ data, productIndex }) => {
+const LoadHeader = ({ data, images, path }) => {
   return (
     <MainHeadWrapp key={Math.floor(Math.random() * 1000000)}>
       <P20>Featured product:</P20>
       <RowContainer>
-        <Link
-          key={data[productIndex].name}
-          to={`/home/${data[productIndex].category}/${data[productIndex].name}`}>
+        <Link to={`/home/${path}`}>
           <RowContainerRelative>
-            <ImgAbsolute
-              src={data[productIndex].imageTemplate}
-              alt={`${data[productIndex].name}`}
-            />
+            <ImgAbsolute src={images[0]} alt={data.name} />
             <DivTextContainer>
-              <PKeyboard>{data[productIndex].name}</PKeyboard>
-              <PPrice>{data[productIndex].currency + data[productIndex].price}</PPrice>
+              <PKeyboard>{data.name}</PKeyboard>
+              <PPrice>{data.currency + data.price}</PPrice>
             </DivTextContainer>
             <DivBack
               style={{
-                backgroundImage: `url(${data[productIndex].imageTemplate})`
+                backgroundImage: `url(${images[0]})`
               }}></DivBack>
           </RowContainerRelative>
         </Link>

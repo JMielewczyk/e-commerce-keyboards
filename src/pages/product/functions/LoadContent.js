@@ -22,71 +22,57 @@ import { RowContainerFlexStart } from '../../../styles/elements/Product/Main/Row
 import { P20 } from '../../../styles/elements/P20';
 import { OldPrice } from '../../../styles/elements/Product/Main/OldPrice';
 import { ButtonAddToCart } from '../../../styles/elements/Product/Main/ButtonAddToCart';
-import { P10CenterBold } from '../../../styles/elements/Home/HomeMain/P10CenterBold';
+import { P10CenterBold } from '../../../styles/elements/Home/Categories/P10CenterBold';
 import { ContainerToCenter } from '../../../styles/elements/Product/Main/ContainerToCenter';
 import { AmountContainer } from '../../../styles/elements/Product/Main/AmountContainer';
 
-const LoadContent = ({
-  basket,
-  location,
-  data,
-  category,
-  product,
-  orderAmount,
-  setOrderAmount
-}) => {
+const LoadContent = ({ basket, location, data, images, category, orderAmount, setOrderAmount }) => {
   const { dispatch } = useContext(BackgroundContext);
 
-  const allElements = data[category].map((item) => {
-    if (item.name === product) {
-      const actualPrice = () => {
-        const price = item.price - item.price * (item.discountValue / 100);
-        price.toFixed(2);
-        return price;
-      };
-      return (
-        <ContentContainer key={item.name}>
-          <CategoryText>Category: {category}</CategoryText>
-          <P10>Product name : {item.name}</P10>
-          <P10>Description :</P10>
-          <P10>{item.description}</P10>
-          <PricesContainer key={item.name}>
-            {item.discount && (
-              <OldPrice className="old-price">{item.currency + item.price.toFixed(2)}</OldPrice>
-            )}
-            <RowContainerFlexStart>
-              {item.discount !== true ? <P20>{item.currency + item.price.toFixed(2)}</P20> : null}
-              {item.discount && <P20>{item.currency + actualPrice()}</P20>}
-              {item.discount && <Discount>{item.discountValue + '%'}</Discount>}
-            </RowContainerFlexStart>
-          </PricesContainer>
-          <ContainerToCenter>
-            <AmountContainer>
-              <img
-                onClick={() => handleAmount(orderAmount, setOrderAmount, 'minus')}
-                src={minus}
-                alt="Subtract amount"
-              />
-              <P10CenterBold className="amount">{orderAmount}</P10CenterBold>
-              <img
-                onClick={() => handleAmount(orderAmount, setOrderAmount, 'plus')}
-                src={plus}
-                alt="Add amount"
-              />
-            </AmountContainer>
-            <ButtonAddToCart
-              className="addToCartBtn"
-              onClick={() =>
-                addToCart(basket, location, data, category, orderAmount, product, dispatch)
-              }>
-              <img src={cart} alt="cart" />
-              Add to cart
-            </ButtonAddToCart>
-          </ContainerToCenter>
-        </ContentContainer>
-      );
-    }
-  });
-  return allElements;
+  const actualPrice = () => {
+    const price = data.price - data.price * (data.discountValue / 100);
+    price.toFixed(2);
+    return price;
+  };
+
+  return (
+    <ContentContainer key={data.name}>
+      <CategoryText>Category: {category}</CategoryText>
+      <P10>Product name : {data.name}</P10>
+      <P10>Description : {data.description}</P10>
+      <P10></P10>
+      <PricesContainer key={data.name}>
+        {data.discount && (
+          <OldPrice className="old-price">{data.currency + data.price.toFixed(2)}</OldPrice>
+        )}
+        <RowContainerFlexStart>
+          {data.discount !== true ? <P20>{data.currency + data.price.toFixed(2)}</P20> : null}
+          {data.discount && <P20>{data.currency + actualPrice()}</P20>}
+          {data.discount && <Discount>{data.discountValue + '%'}</Discount>}
+        </RowContainerFlexStart>
+      </PricesContainer>
+      <ContainerToCenter>
+        <AmountContainer>
+          <img
+            onClick={() => handleAmount(orderAmount, setOrderAmount, 'minus')}
+            src={minus}
+            alt="Subtract amount"
+          />
+          <P10CenterBold className="amount">{orderAmount}</P10CenterBold>
+          <img
+            onClick={() => handleAmount(orderAmount, setOrderAmount, 'plus')}
+            src={plus}
+            alt="Add amount"
+          />
+        </AmountContainer>
+        <ButtonAddToCart
+          className="addToCartBtn"
+          onClick={() => addToCart(basket, location, data, images, orderAmount, dispatch)}>
+          <img src={cart} alt="cart" />
+          Add to cart
+        </ButtonAddToCart>
+      </ContainerToCenter>
+    </ContentContainer>
+  );
 };
 export default LoadContent;

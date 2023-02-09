@@ -1,5 +1,5 @@
 //Hooks
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
 //Styles
@@ -13,11 +13,14 @@ import { SubmitFormInput } from '../../styles/elements/SubmitFormInput';
 import { RowContainer } from '../../styles/elements/RowContainer';
 import { LinkStyles } from '../../styles/elements/LinkStyles';
 import { CartWrapp } from '../../styles/elements/CartWrapp';
+import { BackgroundContext } from '../../App';
 
 const Payment = () => {
+  const { dispatch } = useContext(BackgroundContext);
   const navigate = useNavigate();
   const submitPayment = (e) => {
     e.preventDefault();
+    dispatch({ type: 'reset' });
     navigate('/orderCompleted');
   };
 

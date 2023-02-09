@@ -1,26 +1,19 @@
-export const addToCart = (basket, location, data, category, orderAmount, product, dispatch) => {
+export const addToCart = (basket, location, data, images, orderAmount, dispatch) => {
   if (orderAmount === 0) return;
 
   let alreadyInBasket = false;
 
-  const thisProduct = data[category].filter((item) => {
-    if (item.name === product) {
-      return item;
-    }
-  });
-
-  const discountedPrice =
-    thisProduct[0].price - thisProduct[0].price * (thisProduct[0].discountValue / 100);
+  const discountedPrice = data.price - data.price * (data.discountValue / 100);
 
   basket.forEach((element) => {
-    if (element.name === product) {
+    if (element.name === data.name) {
       alreadyInBasket = true;
       dispatch({
         type: 'change',
         payload: {
-          name: product,
+          name: data.name,
           quantity: orderAmount,
-          price: thisProduct[0].discount ? discountedPrice : thisProduct[0].price
+          price: data.discount ? discountedPrice : data.price
         }
       });
     }
@@ -29,10 +22,10 @@ export const addToCart = (basket, location, data, category, orderAmount, product
     dispatch({
       type: 'add',
       payload: {
-        name: product,
+        name: data.name,
         quantity: orderAmount,
-        price: thisProduct[0].discount ? discountedPrice : thisProduct[0].price,
-        image: thisProduct[0].imageTemplate,
+        price: data.discount ? discountedPrice : data.price,
+        image: images[0],
         pathToProduct: location.pathname
       }
     });
