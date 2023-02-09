@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/e-commerce-keyboards/static/js/main.bb29aef8.js",
+    "main.js": "/e-commerce-keyboards/static/js/main.0d1d37e2.js",
     "static/media/bg-video.mp4": "/e-commerce-keyboards/static/media/bg-video.c09150f913f40e61c1ff.mp4",
     "static/media/backlight.mp4": "/e-commerce-keyboards/static/media/backlight.0824858ae1cdf2030e6c.mp4",
     "static/media/start-background-light.jpg": "/e-commerce-keyboards/static/media/start-background-light.a49db17f352d8dbfed72.jpg",
@@ -16,9 +16,9 @@
     "static/media/icon-menu.svg": "/e-commerce-keyboards/static/media/icon-menu.c6107d03f1edcf73523ebd8cbc50a443.svg",
     "static/media/icon-previous.svg": "/e-commerce-keyboards/static/media/icon-previous.80616402c611cc0a6651d0b751da8a9b.svg",
     "static/media/icon-next.svg": "/e-commerce-keyboards/static/media/icon-next.9621183a551a9985b4bd7536c9a69c66.svg",
-    "main.bb29aef8.js.map": "/e-commerce-keyboards/static/js/main.bb29aef8.js.map"
+    "main.0d1d37e2.js.map": "/e-commerce-keyboards/static/js/main.0d1d37e2.js.map"
   },
   "entrypoints": [
-    "static/js/main.bb29aef8.js"
+    "static/js/main.0d1d37e2.js"
   ]
 }
